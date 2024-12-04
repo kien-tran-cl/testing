@@ -1,0 +1,30 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "description": "Automation testing with Playwright",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "codegen": "npx playwright codegen",
+    "report": "npx playwright show-report",
+    "install:drivers": "npx playwright install --with-deps",
+    "install:drivers:chrome": "npx playwright install --with-deps chromium",
+    "install:drivers:firefox": "npx playwright install --with-deps firefox",
+    "install:drivers:webkit": "npx playwright install --with-deps webkit",
+    "format": "npx prettier --write .",
+    "update": "npx npm-check-updates --interactive"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.1",
+    "playwright": "^1.49.0",
+    "prettier": "^3.4.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.6",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
