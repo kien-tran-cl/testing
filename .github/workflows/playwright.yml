@@ -26,14 +26,9 @@ jobs:
           CI: true
           HEADLESS_MODE: ${{ vars.HEADLESS_MODE }}
           BASE_URL: ${{ vars.BASE_URL }}
-          FREE_USER: ${{ secrets.FREE_USER }}
-          FREE_PW: ${{ secrets.FREE_PW }}
-          FREE_USER_FIRST_NAME: ${{ vars.FREE_USER_FIRST_NAME }}
-          FREE_USER_LAST_NAME: ${{ vars.FREE_USER_LAST_NAME }}
-          PREMIUM_USER: ${{ secrets.PREMIUM_USER }}
-          PREMIUM_PW: ${{ secrets.PREMIUM_PW }}
-          PREMIUM_USER_FIRST_NAME: ${{ vars.PREMIUM_USER_FIRST_NAME }}
-          PREMIUM_USER_LAST_NAME: ${{ vars.PREMIUM_USER_LAST_NAME }}
+          USER_EMAIL: ${{ var.USER_EMAIL }}
+          OTP_API_KEY: ${{ var.OTP_API_KEY }}
+          OTP_API_URL: ${{ var.OTP_API_URL }}
         run: npm run test:chromium
       - uses: actions/upload-artifact@v4
         if: always()
@@ -41,29 +36,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
-      - name: Notify Slack on success
-        if: success()
-        uses: slackapi/slack-github-action@v1
-        with:
-          payload: |
-            {
-              "channel": "#uncle-k",
-              "username": "CI Bot",
-              "text": "✅ Playwright tests passed on commit ${{ github.sha }}."
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-      - name: Notify Slack on failure
-        if: failure()
-        uses: slackapi/slack-github-action@v1
-        with:
-          payload: |
-            {
-              "channel": "#uncle-k",
-              "username": "CI Bot",
-              "text": "❌ Playwright tests failed on commit ${{ github.sha }}."
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
