@@ -1,0 +1,69 @@
+name: Playwright Tests
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tests/**'
+      - 'playwright.config.ts'
+      - 'package-lock.json'
+      - 'package.json'
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Chromium Browser
+        run: npm run install:drivers:chrome
+      - name: Run Playwright tests
+        env:
+          CI: true
+          HEADLESS_MODE: ${{ vars.HEADLESS_MODE }}
+          BASE_URL: ${{ vars.BASE_URL }}
+          FREE_USER: ${{ secrets.FREE_USER }}
+          FREE_PW: ${{ secrets.FREE_PW }}
+          FREE_USER_FIRST_NAME: ${{ vars.FREE_USER_FIRST_NAME }}
+          FREE_USER_LAST_NAME: ${{ vars.FREE_USER_LAST_NAME }}
+          PREMIUM_USER: ${{ secrets.PREMIUM_USER }}
+          PREMIUM_PW: ${{ secrets.PREMIUM_PW }}
+          PREMIUM_USER_FIRST_NAME: ${{ vars.PREMIUM_USER_FIRST_NAME }}
+          PREMIUM_USER_LAST_NAME: ${{ vars.PREMIUM_USER_LAST_NAME }}
+        run: npm run test:chromium
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Notify Slack on success
+        if: success()
+        uses: slackapi/slack-github-action@v1
+        with:
+          payload: |
+            {
+              "channel": "#uncle-k",
+              "username": "CI Bot",
+              "text": "✅ Playwright tests passed on commit ${{ github.sha }}."
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify Slack on failure
+        if: failure()
+        uses: slackapi/slack-github-action@v1
+        with:
+          payload: |
+            {
+              "channel": "#uncle-k",
+              "username": "CI Bot",
+              "text": "❌ Playwright tests failed on commit ${{ github.sha }}."
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
