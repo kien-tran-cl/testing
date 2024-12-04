@@ -1,2 +1,2 @@
 # testing
-For testing stuff
+For research & testing stuff
