@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { activitiesSelectors } from '../utils/selectors';
+import { UI } from '../utils';
 import { login, verifyOtp } from '../common';
 
 const { USER_EMAIL } = process.env;
