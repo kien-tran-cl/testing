@@ -24,6 +24,7 @@ jobs:
         working-directory: playwright-tests
         run: npm run install:drivers:chrome
       - name: Run Playwright tests
+        working-directory: playwright-tests
         env:
           CI: true
           HEADLESS_MODE: ${{ vars.HEADLESS_MODE }}
