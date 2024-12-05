@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Install dependencies
+        working-directory: playwright-tests
         run: npm ci
       - name: Install Playwright Chromium Browser
         run: npm run install:drivers:chrome
