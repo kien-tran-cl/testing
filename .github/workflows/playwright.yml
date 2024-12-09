@@ -58,7 +58,15 @@ jobs:
             {
               "channel": "#uncle-k",
               "username": "CI Bot",
-              "text": "✅ Playwright tests passed on commit ${{ github.sha }}."
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "<!here> ❌ *Playwright tests failed* on commit ${{ github.sha }}."
+                  }
+                }
+              ]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
