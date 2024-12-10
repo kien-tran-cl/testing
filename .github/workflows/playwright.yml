@@ -10,7 +10,7 @@ on:
       - 'package.json'
   schedule:
     # Run 8 times a day, starting from 09:00 AM Vietnam time (2:00 AM UTC)
-    - cron: '0 2-9 * * *'  # 09:00 AM Vietnam
+    - cron: '0 2-9 * * *'  # 09:00 AM to 5PM Vietnam
 jobs:
   test:
     timeout-minutes: 60
