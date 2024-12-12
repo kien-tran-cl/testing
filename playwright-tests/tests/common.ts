@@ -34,6 +34,24 @@ export const appUrl = (path: string = '') => {
   return baseUrl;
 };
 
+/**
+ * Helper function to generate a random OTP of a given length.
+ * @param length Length of the OTP
+ * @returns A string containing a random OTP
+ */
+export function generateRandomOtp(length: number): string {
+  let otp = '';
+  for (let i = 0; i < length; i++) {
+    otp += Math.floor(Math.random() * 10).toString(); // Generate a random digit
+  }
+  return otp;
+}
+
+/**
+ * Login to the application with the given email.
+ * @param page Playwright page instance
+ * @param email User email address to login
+ */
 export async function login(page: Page, email: string = '') {
   await page.goto(appUrl());
   await page.waitForLoadState();
@@ -70,6 +88,31 @@ export async function verifyOtp(page: Page, email: string) {
 
   // Wait for loading OTP and navigate to Activities page
   await page.waitForLoadState(); // Wait for navigation or page update
+}
+
+/**
+ * Enter an invalid OTP (6 random digits) into the OTP input fields
+ * @param page Playwright page instance
+ */
+export async function invalidOtp(page: Page) {
+  // Fetch the random OTP code generated
+  const invalidOtp = generateRandomOtp(6); // Generate a 6-digit random OTP
+  console.log(`Generated invalid OTP: ${invalidOtp}`);
+
+  // Wait for the OTP input fields to be visible
+  const otpInputs = await page.$$(loginVerificationSelectors.otpInput); // Select all OTP input fields
+
+  if (otpInputs.length !== invalidOtp.length) {
+    throw new Error('Mismatch between OTP length and input fields count.');
+  }
+
+  // Fill each character of the OTP into corresponding input fields
+  for (let i = 0; i < invalidOtp.length; i++) {
+    await otpInputs[i].fill(invalidOtp[i]); // Fill each input with the corresponding OTP character
+  }
+
+  // Wait for loading OTP and navigate to Activities page
+  await page.waitForLoadState(); // Wait for navigation or page update  
 }
 
 // export async function logout(page: Page) {}
