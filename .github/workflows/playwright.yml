@@ -23,9 +23,9 @@ jobs:
       - name: Install dependencies
         working-directory: playwright-tests
         run: npm ci
-      - name: Install Playwright Chromium Browser
+      - name: Install Playwright Browsers
         working-directory: playwright-tests
-        run: npm run install:drivers:chrome
+        run: npm run install:drivers
       - name: Run Playwright tests
         working-directory: playwright-tests
         env:
