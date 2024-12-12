@@ -33,6 +33,8 @@ jobs:
           HEADLESS_MODE: ${{ vars.HEADLESS_MODE }}
           BASE_URL: ${{ secrets.BASE_URL }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
+          INVALID_EMAIL: ${{ secrets.INVALID_EMAIL }}
+          INVALID_TENANT: ${{ secrets.INVALID_TENANT }}
           OTP_API_KEY: ${{ secrets.OTP_API_KEY }}
           OTP_API_URL: ${{ secrets.OTP_API_URL }}
         run: npm test
