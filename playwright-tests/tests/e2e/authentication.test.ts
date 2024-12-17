@@ -58,8 +58,6 @@ test.describe("E2E Tests  - Login Page", () => {
   });
 
   test("verify login with invalid OTP", async ({ page }) => {
-    console.log("USER_EMAIL:", USER_EMAIL);
-
     // Step 1: Log in with a valid email to reach the OTP verification page
     await login(page, USER_EMAIL!);
     await page.waitForSelector(loginVerificationSelectors.otpInput, {
@@ -86,8 +84,6 @@ test.describe("E2E Tests  - Login Page", () => {
   test("verify login successfully with valid email and OTP", async ({
     page,
   }) => {
-    console.log("USER_EMAIL:", USER_EMAIL);
-
     // Step 1: Log in with a valid email to reach the OTP verification page
     await login(page, USER_EMAIL!);
     await page.waitForSelector(loginVerificationSelectors.otpInput, {
