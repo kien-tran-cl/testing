@@ -1,16 +1,24 @@
 name: Playwright Tests
 on:
+  # Trigger the workflow manually
   workflow_dispatch:
+
+  # Trigger the workflow on a direct commit to the main branch
   push:
     branches: [main]
     paths:
-      - 'tests/**'
-      - 'playwright.config.ts'
-      - 'package-lock.json'
-      - 'package.json'
+      - 'playwright-tests/tests/**'
+      - 'playwright-tests/playwright.config.ts'
+      - 'playwright-tests/package-lock.json'
+      - 'playwright-tests/package.json'
+  
+  # Trigger the workflow when a Pull Request is created or merged into the main branch
+  pull_request:
+    branches: [main]
+
+  # Schedule automatic runs (8 times a day from 9:00 AM to 4:00 PM Vietnam time | 2:00 AM UTC to 9:00 AM UTC)
   schedule:
-    # Run 8 times a day, starting from 09:00 AM Vietnam time (2:00 AM UTC)
-    - cron: '0 2-9 * * *'  # 09:00 AM to 4PM Vietnam
+    - cron: '0 2-9 * * *' 
 jobs:
   test:
     timeout-minutes: 60
