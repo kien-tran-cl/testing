@@ -26,7 +26,7 @@ export const sidebarSelectors = {
   termsOfService: 'div:has-text("Terms of services") >> nth=4',
   dataPrivacy: 'div:has-text("Data privacy policy") >> nth=4',
   support: 'div:has-text("Support") >> nth=4',
-  logout: 'text=Logout',
+  logout: 'div:has-text("Logout") >> nth=4',
   userInfoFullName: '.user-info h4',
   userInfoEmail: '.user-info p',
   userInfoProfileImage: '.p-sidebar .p-avatar-image',
