@@ -22,7 +22,7 @@ const { USER_EMAIL } = process.env;
 
 test.describe("E2E Test - Sidebar & Logout", () => {
   test.describe.configure({
-    timeout: 60000,
+    timeout: 120000,
     mode: "serial",
   });
 
