@@ -18,6 +18,23 @@ export const loginVerificationSelectors = {
     otpWarningMessage: 'span.p-error',
     resendButton: 'button:has-text("Resend")',
   };
+
+export const sidebarSelectors = {
+  sidebar: '.p-sidebar',
+  hamburgerIcon: 'button.p-button-icon-only',
+  legal: 'div:has-text("Legal notice") >> nth=4',
+  termsOfService: 'div:has-text("Terms of services") >> nth=4',
+  dataPrivacy: 'div:has-text("Data privacy policy") >> nth=4',
+  support: 'div:has-text("Support") >> nth=4',
+  logout: 'text=Logout',
+  userInfoFullName: '.user-info h4',
+  userInfoEmail: '.user-info p',
+  userInfoProfileImage: '.p-sidebar .p-avatar-image',
+};
+
+export const informationPagesSelectors = {
+  backIcon: 'button.p-button-icon-only >> nth=0',
+};
   
 export const activitiesSelectors = {
     headerTitle: 'gedat-home-header',
