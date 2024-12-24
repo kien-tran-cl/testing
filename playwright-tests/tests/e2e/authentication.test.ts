@@ -4,7 +4,7 @@ import {
   loginPageSelectors,
   loginVerificationSelectors,
 } from "../utils/selectors";
-import { appUrl, invalidOtp, login, verifyOtp } from "../common";
+import { appUrl, invalidOtp, login, verifyOtp } from "../utils/auth-utils";
 
 // Environment variable checks
 const checkEnvVar = (varName: string, value: string | undefined) => {

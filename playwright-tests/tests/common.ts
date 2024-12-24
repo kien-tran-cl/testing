@@ -1,118 +1,110 @@
-import { Page } from '@playwright/test';
-import {
-  loginPageSelectors,
-  loginVerificationSelectors,
-} from './utils/selectors';
-import { UI } from './utils/utils';
-import { fetchOtpCode } from './utils/otp';
-import { config } from 'dotenv';
+import { Page, expect } from "@playwright/test";
+import { activitiesSelectors, sidebarSelectors } from "./utils/selectors";
+import { login, verifyOtp, appUrl } from "./utils/auth-utils";
 
-// Load environment variables from .env file
-config();
-
-/**
- * Get App URL with optional path.
- * @param path the path to append to the base URL.
- * @returns the full URL.
- */
-
-export const appUrl = (path: string = '') => {
-  let baseUrl = (process.env.BASE_URL ?? '').trim();
-  if (baseUrl.endsWith('/')) {
-    // Remove trailing slash
-    baseUrl = baseUrl.slice(0, -1);
+// Environment variable checks
+const checkEnvVar = (varName: string, value: string | undefined) => {
+  if (!value) {
+    throw new Error(`${varName} is not defined in environment variables.`);
   }
-
-  path = path.trim();
-  if (path) {
-    if (!path.startsWith('/')) {
-      path = `/${path}`;
-    }
-    return `${baseUrl}${path}`;
-  }
-
-  return baseUrl;
 };
 
-/**
- * Helper function to generate a random OTP of a given length.
- * @param length Length of the OTP
- * @returns A string containing a random OTP
- */
-export function generateRandomOtp(length: number): string {
-  let otp = '';
-  for (let i = 0; i < length; i++) {
-    otp += Math.floor(Math.random() * 10).toString(); // Generate a random digit
-  }
-  return otp;
-}
+// Validate required environment variables before running tests
+checkEnvVar("USER_EMAIL", process.env.USER_EMAIL);
+
+const { USER_EMAIL } = process.env;
 
 /**
- * Login to the application with the given email.
+ * Perform login as part of a common setup for tests.
  * @param page Playwright page instance
  * @param email User email address to login
  */
-export async function login(page: Page, email: string = '') {
-  await page.goto(appUrl());
-  await page.waitForLoadState();
-  await page.waitForSelector(loginPageSelectors.emailInput, {
-    state: 'visible',
+export async function loginBeforeTest(page: Page, email: string = "") {
+  console.log("Starting common login process...");
+  await login(page, USER_EMAIL!); // Reuse the login function from auth-utils
+  await page.waitForLoadState("networkidle"); // Ensure the page has fully loaded
+  await verifyOtp(page, USER_EMAIL!);
+  await page.waitForSelector(activitiesSelectors.headerTitle, {
+    state: "visible",
   });
-  const ui = UI.of(page);
-  await ui.fill(loginPageSelectors.emailInput, email);
-  await ui.click(loginPageSelectors.continueButton);
-  await page.waitForLoadState();
+
+  const activitiesHeader = page.locator(activitiesSelectors.headerTitle);
+  await expect(activitiesHeader).toHaveText("Activities", { timeout: 5000 });
+  console.log("Login completed.");
 }
 
 /**
- * Perform OTP Verification
- * @param page Playwright page instance
- * @param email User email address to fetch OTP for
+ * Get user information from API response after login
+ * Returns givenName, surname, and fullName
  */
-export async function verifyOtp(page: Page, email: string) {
-  // Fetch the OTP code from the API
-  const otp = await fetchOtpCode(email);
-  console.log(`Fetched OTP: ${otp}`); // Debug log
+export const getUserInfo = async (page: Page) => {
+  return new Promise<{
+    givenName: string;
+    surname: string;
+    fullName: string;
+  }>((resolve, reject) => {
+    page.on('response', async (response) => {
+      try {
+        // Check if the response URL matches the user info endpoint
+        if (response.url().includes('/api/v1/user/info')) {
+          const data = await response.json();
 
-  // Wait for the OTP input fields to be visible
-  const otpInputs = await page.$$(loginVerificationSelectors.otpInput); // Select all OTP input fields
+          // Ensure the response contains the expected data
+          if (data?.data?.givenName && data?.data?.surname) {
+            const givenName = data.data.givenName;
+            const surname = data.data.surname;
+            const fullName = `${givenName} ${surname}`; // Concatenate givenName and surname to get fullName
 
-  if (otpInputs.length !== otp.length) {
-    throw new Error('Mismatch between OTP length and input fields count.');
+            resolve({
+              givenName,
+              surname,
+              fullName,
+            });
+          } else {
+            reject(new Error("Missing expected fields in response"));
+          }
+        }
+      } catch (error) {
+        reject(new Error("Error parsing response: " + error));
+      }
+    });
+  });
+};
+
+/**
+ * Perform logout after a test.
+ * @param page Playwright page instance
+ */
+export async function logoutAfterTest(page: Page) {
+  console.log("Starting logout process...");
+
+  // Check if sidebar is already open
+  const isSidebarVisible = await page
+    .locator(sidebarSelectors.sidebar)
+    .isVisible();
+  if (!isSidebarVisible) {
+    console.log(
+      "Sidebar is not visible. Clicking hamburger icon to open it...",
+    );
+    await page.locator(sidebarSelectors.hamburgerIcon).click();
+  } else {
+    console.log("Sidebar is already visible. Skipping hamburger icon click...");
   }
 
-  // Fill each character of the OTP into corresponding input fields
-  for (let i = 0; i < otp.length; i++) {
-    await otpInputs[i].fill(otp[i]); // Fill each input with the corresponding OTP character
-  }
+  await page.locator(sidebarSelectors.logout).click();
+  await page.waitForLoadState("networkidle");
+  expect(page.url()).toContain(appUrl("/ui/login"));
 
-  // Wait for loading OTP and navigate to Activities page
-  await page.waitForLoadState(); // Wait for navigation or page update
+  console.log("Logout completed.");
 }
 
 /**
- * Enter an invalid OTP (6 random digits) into the OTP input fields
+ * Navigate to the application base URL.
  * @param page Playwright page instance
  */
-export async function invalidOtp(page: Page) {
-  // Fetch the random OTP code generated
-  const invalidOtp = generateRandomOtp(6); // Generate a 6-digit random OTP
-  console.log(`Generated invalid OTP: ${invalidOtp}`);
-
-  // Wait for the OTP input fields to be visible
-  const otpInputs = await page.$$(loginVerificationSelectors.otpInput); // Select all OTP input fields
-
-  if (otpInputs.length !== invalidOtp.length) {
-    throw new Error('Mismatch between OTP length and input fields count.');
-  }
-
-  // Fill each character of the OTP into corresponding input fields
-  for (let i = 0; i < invalidOtp.length; i++) {
-    await otpInputs[i].fill(invalidOtp[i]); // Fill each input with the corresponding OTP character
-  }
-
-  // Wait for loading OTP and navigate to Activities page
-  await page.waitForLoadState(); // Wait for navigation or page update  
+export async function navigateToBaseUrl(page: Page) {
+  console.log("Navigating to the base URL...");
+  await page.goto("/");
+  await page.waitForLoadState("networkidle");
+  console.log("Navigation completed.");
 }
-
-// export async function logout(page: Page) {}
