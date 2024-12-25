@@ -5,7 +5,7 @@ import {
   sidebarSelectors,
 } from "../utils/selectors";
 
-import { getUserInfo, loginBeforeTest, logoutAfterTest } from "../common";
+import { getUserInfo, loginBeforeTest, logoutAfterTest, navigateToBaseUrl } from "../common";
 import { appUrl } from "../utils/auth-utils";
 
 // Environment variable checks
@@ -37,54 +37,18 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     // Step 1: Verify clicking on burger menu open the sidebar with expected components
     await page.locator(sidebarSelectors.hamburgerIcon).click();
     await expect(page.locator(sidebarSelectors.sidebar)).toBeVisible();
-
     // Legal components
     await expect(page.locator(sidebarSelectors.legal)).toBeVisible();
     await expect(page.locator(sidebarSelectors.termsOfService)).toBeVisible();
     await expect(page.locator(sidebarSelectors.dataPrivacy)).toBeVisible();
-
     // General components
     await expect(page.locator(sidebarSelectors.support)).toBeVisible();
     await expect(page.locator(sidebarSelectors.logout)).toBeVisible();
-
     // Profile info components
-    /// Get user information from API response
-    try {
-      const userInfo = await getUserInfo(page);
-      console.log('Given Name:', userInfo.givenName);
-      console.log('Surname:', userInfo.surname);
-      console.log('Full Name:', userInfo.fullName);
+    await expect(page.locator(sidebarSelectors.userInfoFullName)).toBeVisible();
+    await expect(page.locator(sidebarSelectors.userInfoEmail)).toBeVisible();
+    await expect(page.locator(sidebarSelectors.userInfoProfileImage)).toBeVisible();
 
-      // Step 5: Verify user info full name in the UI
-      const fullNameLocator = page.locator(sidebarSelectors.userInfoFullName);
-
-      // Check if the full name element is visible
-      await expect(fullNameLocator).toBeVisible();
-
-      // Get the text content from the full name element in the UI
-      const fullNameFromUI = await fullNameLocator.innerText();
-
-      // Step 6: Assert that the full name from the UI matches the full name from the API
-      expect(fullNameFromUI).toBe(userInfo.fullName);
-    } catch (error) {
-      console.error("Error getting user info:", error);
-    }
-    
-
-    await expect(page.locator(sidebarSelectors.userInfoEmail)).toBeVisible;
-    const emailFromUI = await page
-      .locator(sidebarSelectors.userInfoEmail)
-      .innerText();
-    expect(emailFromUI).toBe(USER_EMAIL);
-    
-
-    await expect(page.locator(sidebarSelectors.userInfoProfileImage))
-      .toBeVisible;
-    const imageSrc = await page
-      .locator(sidebarSelectors.userInfoProfileImage + " img")
-      .getAttribute("src");
-    expect(imageSrc).not.toBeNull();
-    expect(imageSrc).toMatch(/^https?:\/\//);
 
     // Step 2: Verify click outside the sidebar to close it
     // Get the viewport size, if it's not null then calculate the click position
@@ -132,8 +96,46 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     await expect(page.locator(sidebarSelectors.sidebar)).not.toBeVisible();
     await expect(page).toHaveURL(appUrl("/support"));
 
+    // Step 7: Verify display of user FullName
+    await page.goto(appUrl(""));
+    await page.locator(sidebarSelectors.hamburgerIcon).click();
+    // await page.waitForTimeout(5000); // make sure side bar fully loaded
+
+    try {
+      const userInfo = await getUserInfo(page);
+      console.log('Given Name:', userInfo.givenName);
+      console.log('Surname:', userInfo.surname);
+      console.log('Full Name:', userInfo.fullName);
+
+      // Verify user info full name in the UI
+      const fullNameLocator = page.locator(sidebarSelectors.userInfoFullName);
+
+      // Check if the full name element is visible
+      await expect(fullNameLocator).toBeVisible();
+
+      // Get the text content from the full name element in the UI
+      const fullNameFromUI = await fullNameLocator.innerText();
+
+      // Assert that the full name from the UI matches the full name from the API
+      expect(fullNameFromUI).toBe(userInfo.fullName);
+    } catch (error) {
+      console.error("Error getting user info:", error);
+    };
+
+    // Step 8: Verify display of user Email
+    const emailFromUI = await page
+    .locator(sidebarSelectors.userInfoEmail)
+    .innerText();
+    expect(emailFromUI).toBe(USER_EMAIL);
+
+    // Step 9: Verify display of profile image 
+    const imageSrc = await page
+    .locator(sidebarSelectors.userInfoProfileImage + " img")
+    .getAttribute("src");
+    expect(imageSrc).not.toBeNull();
+    expect(imageSrc).toMatch(/^https?:\/\//);
+
     // Step 7: Verify Logout and redirection to login page
-    await page.locator(informationPagesSelectors.backIcon).click();
     await logoutAfterTest(page);
     await expect(page.locator(loginPageSelectors.emailInput)).toBeVisible();
   });
