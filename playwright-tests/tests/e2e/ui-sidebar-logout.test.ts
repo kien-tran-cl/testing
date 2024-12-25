@@ -4,8 +4,7 @@ import {
   loginPageSelectors,
   sidebarSelectors,
 } from "../utils/selectors";
-
-import { getUserInfo, loginBeforeTest, logoutAfterTest, navigateToBaseUrl } from "../common";
+import { getUserInfo, loginBeforeTest, logoutAfterTest} from "../common";
 import { appUrl } from "../utils/auth-utils";
 
 // Environment variable checks
@@ -22,7 +21,7 @@ const { USER_EMAIL } = process.env;
 
 test.describe("E2E Test - Sidebar & Logout", () => {
   test.describe.configure({
-    timeout: 120000,
+    timeout: 60000,
     mode: "serial",
   });
 
@@ -30,7 +29,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     await loginBeforeTest(page, USER_EMAIL);
   });
 
-  test("Verify Sidebar visibility", async ({ page }) => {
+  test("Verify Sidebar and Logout", async ({ page }) => {
     // Sub Step: Verify side bar hidden by default
     await expect(page.locator(sidebarSelectors.sidebar)).toBeHidden();
 
@@ -55,8 +54,8 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     const viewportSize = await page.viewportSize();
     if (viewportSize) {
       const { width, height } = viewportSize; // Destructure the width and height of the viewport
-      const x = width - 1; // Click position at the far right (horizontal axis)
-      const y = height / 2; // Click position at the center vertically (vertical axis)
+      const x = width - 1; // Click/Tap position at the far right (horizontal axis)
+      const y = height / 2; // Click/Tap position at the center vertically (vertical axis)
       await page.touchscreen.tap(x, y); // Use 'tap' for mobile devices to simulate a touch event
     } else {
       console.error("Unable to retrieve viewport size."); // Log error if viewport size cannot be fetched
@@ -99,7 +98,6 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     // Step 7: Verify display of user FullName
     await page.goto(appUrl(""));
     await page.locator(sidebarSelectors.hamburgerIcon).click();
-    // await page.waitForTimeout(5000); // make sure side bar fully loaded
 
     try {
       const userInfo = await getUserInfo(page);
@@ -135,7 +133,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     expect(imageSrc).not.toBeNull();
     expect(imageSrc).toMatch(/^https?:\/\//);
 
-    // Step 10: Verify Logout and redirection to login page
+    // Step 7: Verify Logout and redirection to login page
     await logoutAfterTest(page);
     await expect(page.locator(loginPageSelectors.emailInput)).toBeVisible();
   });
