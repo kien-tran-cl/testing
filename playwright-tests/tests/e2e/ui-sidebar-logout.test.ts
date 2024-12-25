@@ -135,7 +135,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     expect(imageSrc).not.toBeNull();
     expect(imageSrc).toMatch(/^https?:\/\//);
 
-    // Step 7: Verify Logout and redirection to login page
+    // Step 10: Verify Logout and redirection to login page
     await logoutAfterTest(page);
     await expect(page.locator(loginPageSelectors.emailInput)).toBeVisible();
   });
