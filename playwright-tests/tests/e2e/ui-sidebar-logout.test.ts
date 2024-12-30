@@ -69,7 +69,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
 
     await page.locator(sidebarSelectors.legal).click();
     await expect(page.locator(sidebarSelectors.sidebar)).not.toBeVisible();
-    await expect(page).toHaveURL(appUrl("/public/legal-notice"));
+    await expect(page).toHaveURL(appUrl("/legal-notice"));
 
     // Step 4: Verify navigation of 'Terms of services'
     await page.locator(informationPagesSelectors.backIcon).click();
@@ -77,7 +77,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
 
     await page.locator(sidebarSelectors.termsOfService).click();
     await expect(page.locator(sidebarSelectors.sidebar)).not.toBeVisible();
-    await expect(page).toHaveURL(appUrl("/public/term-services"));
+    await expect(page).toHaveURL(appUrl("/term-services"));
 
     // Step 5: Verify navigation of 'Data privacy policy'
     await page.locator(informationPagesSelectors.backIcon).click();
@@ -85,7 +85,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
 
     await page.locator(sidebarSelectors.dataPrivacy).click();
     await expect(page.locator(sidebarSelectors.sidebar)).not.toBeVisible();
-    await expect(page).toHaveURL(appUrl("/public/data-privacy"));
+    await expect(page).toHaveURL(appUrl("/data-privacy"));
 
     // Step 6: Verify navigation of 'Support'
     await page.locator(informationPagesSelectors.backIcon).click();
