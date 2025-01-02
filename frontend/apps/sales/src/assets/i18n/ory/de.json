@@ -1,0 +1,828 @@
+{
+  "1010001": {
+    "id": "1010001",
+    "text": "Anmelden",
+    "type": "Info"
+  },
+  "1010002": {
+    "id": "1010002",
+    "text": "Weiter",
+    "type": "Info"
+  },
+  "1010003": {
+    "id": "1010003",
+    "text": "Bitte bestätigen Sie diese Aktion, indem Sie verifizieren, dass Sie es sind.",
+    "type": "Info"
+  },
+  "1010004": {
+    "id": "1010004",
+    "text": "Bitte führen Sie die zweite Authentifizierungsaufgabe durch.",
+    "type": "Info"
+  },
+  "1010005": {
+    "id": "1010005",
+    "text": "Verifizieren",
+    "type": "Info"
+  },
+  "1010006": {
+    "id": "1010006",
+    "text": "Authentifizierungscode",
+    "type": "Info"
+  },
+  "1010007": {
+    "id": "1010007",
+    "text": "Backup-Wiederherstellungscode",
+    "type": "Info"
+  },
+  "1010008": {
+    "id": "1010008",
+    "text": "Sicherheitsschlüssel verwenden",
+    "type": "Info"
+  },
+  "1010009": {
+    "id": "1010009",
+    "text": "Authenticator verwenden",
+    "type": "Info"
+  },
+  "1010010": {
+    "id": "1010010",
+    "text": "Backup-Wiederherstellungscode verwenden",
+    "type": "Info"
+  },
+  "1010011": {
+    "id": "1010011",
+    "text": "Mit Sicherheitsschlüssel fortfahren",
+    "type": "Info"
+  },
+  "1010012": {
+    "id": "1010012",
+    "text": "Bereiten Sie Ihr WebAuthn-Gerät vor (z. B. Sicherheitsschlüssel, Biometriescanner, ...) und drücken Sie auf Fortfahren.",
+    "type": "Info"
+  },
+  "1010013": {
+    "id": "1010013",
+    "text": "Weiter",
+    "type": "Info"
+  },
+  "1010014": {
+    "id": "1010014",
+    "text": "Prüfen Sie Ihre E-Mail, wir haben einen Code verschickt an:",
+    "type": "Info"
+  },
+  "1010015": {
+    "id": "1010015",
+    "text": "Weiter",
+    "type": "Info"
+  },
+  "1010016": {
+    "context": {
+      "duplicateIdentifier": "{duplicteIdentifier}",
+      "newLoginUrl": "{newLoginUrl}",
+      "provider": "{provider}"
+    },
+    "id": "1010016",
+    "text": "Die Anmeldung verknüpft Ihr Konto mit \"{duplicteIdentifier}\" beim Anbieter \"{provider}\". Wenn Sie dieses Konto nicht verknüpfen möchten, beginnen Sie bitte einen neuen Anmeldevorgang.",
+    "type": "Info"
+  },
+  "1010017": {
+    "id": "1010017",
+    "text": "Anmelden und verknüpfen",
+    "type": "Info"
+  },
+  "1010018": {
+    "context": {
+      "provider": "{provider}"
+    },
+    "id": "1010018",
+    "text": "Mit {provider} anmelden und Anmeldeinformationen verknüpfen",
+    "type": "Info"
+  },
+  "1010019": {
+    "id": "1010019",
+    "text": "Mit Code fortfahren",
+    "type": "Info"
+  },
+  "1010020": {
+    "context": {
+      "masked_to": "{maskedIdentifier}"
+    },
+    "id": "1010020",
+    "text": "Wir senden einen Code an {maskedIdentifier}. Um zu verifizieren, dass dies Ihre Adresse ist, geben Sie sie bitte hier ein.",
+    "type": "Info"
+  },
+  "1010021": {
+    "id": "1010021",
+    "text": "Mit Passkey anmelden",
+    "type": "Info"
+  },
+  "1040001": {
+    "id": "1040001",
+    "text": "Registrieren",
+    "type": "Info"
+  },
+  "1040002": {
+    "context": {
+      "provider": "{provider}"
+    },
+    "id": "1040002",
+    "text": "Mit {provider} registrieren",
+    "type": "Info"
+  },
+  "1040003": {
+    "id": "1040003",
+    "text": "Weiter",
+    "type": "Info"
+  },
+  "1040004": {
+    "id": "1040004",
+    "text": "Mit Sicherheitsschlüssel registrieren",
+    "type": "Info"
+  },
+  "1040005": {
+    "id": "1040005",
+    "text": "Eine E-Mail mit einem Code wurde an die von Ihnen angegebene E-Mail-Adresse gesendet. Wenn Sie keine E-Mail erhalten haben, überprüfen Sie die Schreibweise der E-Mail Adresse und versuchen Sie erneut, sich zu registrieren.",
+    "type": "Info"
+  },
+  "1040006": {
+    "id": "1040006",
+    "text": "Mit Code registrieren",
+    "type": "Info"
+  },
+  "1040007": {
+    "id": "1040007",
+    "text": "Mit Passkey registrieren",
+    "type": "Info"
+  },
+  "1040008": {
+    "id": "1040008",
+    "text": "Zurück",
+    "type": "Info"
+  },
+  "1040009": {
+    "id": "1040009",
+    "text": "Bitte wählen Sie eine Anmeldeinformation zur Authentifizierung aus.",
+    "type": "Info"
+  },
+  "1050001": {
+    "id": "1050001",
+    "text": "Ihre Änderungen wurden gespeichert!",
+    "type": "erfolgreich"
+  },
+  "1050002": {
+    "context": {
+      "provider": "{provider}"
+    },
+    "id": "1050002",
+    "text": "{provider} verknüpfen",
+    "type": "Info"
+  },
+  "1050003": {
+    "context": {
+      "provider": "{provider}"
+    },
+    "id": "1050003",
+    "text": "{provider} entkoppeln",
+    "type": "Info"
+  },
+  "1050004": {
+    "id": "1050004",
+    "text": "TOTP-Authentifikator-App entkoppeln",
+    "type": "Info"
+  },
+  "1050005": {
+    "id": "1050005",
+    "text": "QR-Code der Authentifikator-App",
+    "type": "Info"
+  },
+  "1050006": {
+    "context": {
+      "secret": "{secret}"
+    },
+    "id": "1050006",
+    "text": "{secret}",
+    "type": "Info"
+  },
+  "1050007": {
+    "id": "1050007",
+    "text": "Backup-Wiederherstellungscodes enthüllen",
+    "type": "Info"
+  },
+  "1050008": {
+    "id": "1050008",
+    "text": "Neue Backup-Wiederherstellungscodes generieren",
+    "type": "Info"
+  },
+  "1050009": {
+    "context": {
+      "secret": "{secret}"
+    },
+    "id": "1050009",
+    "text": "{secret}",
+    "type": "Info"
+  },
+  "1050010": {
+    "id": "1050010",
+    "text": "Dies sind Ihre Backup-Wiederherstellungscodes. Bitte bewahren Sie sie an einem sicheren Ort auf!",
+    "type": "Info"
+  },
+  "1050011": {
+    "id": "1050011",
+    "text": "Backup-Wiederherstellungscodes bestätigen",
+    "type": "Info"
+  },
+  "1050012": {
+    "id": "1050012",
+    "text": "Sicherheitsschlüssel hinzufügen",
+    "type": "Info"
+  },
+  "1050013": {
+    "id": "1050013",
+    "text": "Name des Sicherheitsschlüssels",
+    "type": "Info"
+  },
+  "1050014": {
+    "context": {
+      "used_at": "2020-01-01T00:59:59Z",
+      "used_at_unix": "1577840399"
+    },
+    "id": "1050014",
+    "text": "Geheimnis wurde am 2020-01-01 00:59:59 +0000 UTC verwendet",
+    "type": "Info"
+  },
+  "1050015": {
+    "context": {
+      "secrets": [
+        {
+          "context": {
+            "secret": "{secret}"
+          },
+          "id": "1050009",
+          "text": "{secret}",
+          "type": "Info"
+        },
+        {
+          "context": {
+            "used_at": "2020-01-01T00:59:59Z",
+            "used_at_unix": "1577840399"
+          },
+          "id": "1050014",
+          "text": "Geheimnis wurde am 2020-01-01 00:59:59 +0000 UTC verwendet",
+          "type": "Info"
+        }
+      ]
+    },
+    "id": "1050015",
+    "text": "{secrets_list}",
+    "type": "Info"
+  },
+  "1050016": {
+    "id": "1050016",
+    "text": "Diese Methode deaktivieren",
+    "type": "Info"
+  },
+  "1050017": {
+    "id": "1050017",
+    "text": "Dies ist Ihr Geheimnis der Authentifikator-App. Verwenden Sie es, wenn Sie den QR-Code nicht scannen können.",
+    "type": "Info"
+  },
+  "1050018": {
+    "context": {
+      "added_at": "2020-01-01T00:59:59Z",
+      "added_at_unix": "1577840399",
+      "display_name": "{display_name}"
+    },
+    "id": "1050018",
+    "text": "Sicherheitsschlüssel \"{display_name}\" entfernen",
+    "type": "Info"
+  },
+  "1050019": {
+    "id": "1050019",
+    "text": "Passkey hinzufügen",
+    "type": "Info"
+  },
+  "1050020": {
+    "context": {
+      "added_at": "2020-01-01T00:59:59Z",
+      "added_at_unix": "1577840399",
+      "display_name": "{display_name}"
+    },
+    "id": "1050020",
+    "text": "Passkey \"{display_name}\" entfernen",
+    "type": "Info"
+  },
+  "1060001": {
+    "context": {
+      "privilegedSessionExpiresAt": "2020-01-01T01:01:00Z",
+      "privileged_session_expires_at": "2020-01-01T01:01:00Z",
+      "privileged_session_expires_at_unix": "1577840460"
+    },
+    "id": "1060001",
+    "text": "Sie haben Ihr Konto erfolgreich wiederhergestellt. Bitte ändern Sie Ihr Passwort oder richten Sie eine alternative Anmeldemethode (z. B. soziale Anmeldung) innerhalb der nächsten 1,00 Minuten ein.",
+    "type": "Erfolgreich"
+  },
+  "1060002": {
+    "id": "1060002",
+    "text": "Eine E-Mail mit einem Wiederherstellungslink wurde an die von Ihnen angegebene E-Mail-Adresse gesendet. Wenn Sie keine E-Mail erhalten haben, überprüfen Sie die Schreibweise der Adresse und stellen Sie sicher, dass Sie die Adresse verwenden, mit der Sie sich registriert haben.",
+    "type": "Info"
+  },
+  "1060003": {
+    "id": "1060003",
+    "text": "Eine E-Mail mit einem Wiederherstellungscode wurde an die von Ihnen angegebene E-Mail-Adresse gesendet. Wenn Sie keine E-Mail erhalten haben, überprüfen Sie die Schreibweise der Adresse und stellen Sie sicher, dass Sie die Adresse verwenden, mit der Sie sich registriert haben.",
+    "type": "Info"
+  },
+  "1070001": {
+    "id": "1070001",
+    "text": "Passwort",
+    "type": "Info"
+  },
+  "1070002": {
+    "id": "1070002",
+    "placeholder": "E-Mail",
+    "text": "Geben Sie Ihre E-Mail ein, um sich einzuloggen",
+    "type": "Info"
+  },
+  "1070003": {
+    "id": "1070003",
+    "text": "Speichern",
+    "type": "Info"
+  },
+  "1070004": {
+    "id": "1070004",
+    "text": "ID",
+    "type": "info"
+  },
+  "1070005": {
+    "id": "1070005",
+    "text": "Absenden",
+    "type": "Info"
+  },
+  "1070006": {
+    "id": "1070006",
+    "text": "Code verifizieren",
+    "type": "Info"
+  },
+  "1070007": {
+    "id": "1070007",
+    "text": "E-Mail",
+    "type": "Info"
+  },
+  "1070008": {
+    "id": "1070008",
+    "text": "Code erneut senden {count, select, 0 {} other {({{count}})}}",
+    "type": "Info"
+  },
+  "1070009": {
+    "id": "1070009",
+    "text": "Weiter",
+    "type": "Info"
+  },
+  "1070010": {
+    "id": "1070010",
+    "text": "Wiederherstellungscode",
+    "type": "Info"
+  },
+  "1070011": {
+    "id": "1070011",
+    "text": "Verifizierungscode",
+    "type": "Info"
+  },
+  "1070012": {
+    "id": "1070012",
+    "text": "Registrierungscode",
+    "type": "Info"
+  },
+  "1070013": {
+    "id": "1070013",
+    "text": "Anmeldecode",
+    "type": "Info"
+  },
+  "1070014": {
+    "id": "1070014",
+    "text": "Anmelden und Anmeldeinformationen verknüpfen",
+    "type": "Info"
+  },
+  "1080001": {
+    "id": "1080001",
+    "text": "Eine E-Mail mit einem Verifizierungslink wurde an die von Ihnen angegebene E-Mail-Adresse gesendet. Wenn Sie keine E-Mail erhalten haben, überprüfen Sie die Schreibweise der Adresse und stellen Sie sicher, dass Sie die Adresse verwenden, mit der Sie sich registriert haben.",
+    "type": "Info"
+  },
+  "1080002": {
+    "id": "1080002",
+    "text": "Sie haben Ihre E-Mail-Adresse erfolgreich verifiziert.",
+    "type": "Erfolgreich"
+  },
+  "1080003": {
+    "id": "1080003",
+    "text": "Eine E-Mail mit einem Verifizierungscode wurde an die von Ihnen angegebene E-Mail-Adresse gesendet. Wenn Sie keine E-Mail erhalten haben, überprüfen Sie die Schreibweise der Adresse und stellen Sie sicher, dass Sie die Adresse verwenden, mit der Sie sich registriert haben.",
+    "type": "info"
+  },
+  "4000001": {
+    "context": {
+      "reason": "{reason}"
+    },
+    "id": "4000001",
+    "text": "{reason}",
+    "type": "Fehler"
+  },
+  "4000002": {
+    "context": {
+      "property": "{property}"
+    },
+    "id": "4000002",
+    "text": "Eigenschaft {property} fehlt.",
+    "type": "Fehler"
+  },
+  "4000003": {
+    "context": {
+      "actual_length": "3",
+      "min_length": "5"
+    },
+    "id": "4000003",
+    "text": "Länge muss >= 5 sein, aber ist 3",
+    "type": "Fehler"
+  },
+  "4000004": {
+    "context": {
+      "pattern": "{pattern}"
+    },
+    "id": "4000004",
+    "text": "Entspricht nicht dem Muster \"{pattern}\"",
+    "type": "Fehler"
+  },
+  "4000005": {
+    "context": {
+      "reason": "{reason}"
+    },
+    "id": "4000005",
+    "text": "Das Passwort kann nicht verwendet werden, weil {reason}.",
+    "type": "error"
+  },
+  "4000006": {
+    "id": "4000006",
+    "text": "Die bereitgestellten Anmeldeinformationen sind ungültig, überprüfen Sie auf Rechtschreibfehler in Ihrem Passwort oder Benutzernamen, E-Mail-Adresse oder Telefonnummer.",
+    "type": "Fehler"
+  },
+  "4000007": {
+    "id": "4000007",
+    "text": "Es existiert bereits ein Konto mit der gleichen Kennung (E-Mail, Telefon, Benutzername, ...).",
+    "type": "Fehler"
+  },
+  "4000008": {
+    "id": "4000008",
+    "text": "Der bereitgestellte Authentifizierungscode ist ungültig, bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4000009": {
+    "id": "4000009",
+    "text": "Es konnten keine Anmeldeidentifikatoren gefunden werden. Haben Sie sie vergessen einzustellen? Dies könnte auch durch eine Serverfehlkonfiguration verursacht worden sein.",
+    "type": "Fehler"
+  },
+  "4000010": {
+    "id": "4000010",
+    "text": "Konto noch nicht aktiv. Haben Sie vergessen, Ihre E-Mail-Adresse zu verifizieren?",
+    "type": "Fehler"
+  },
+  "4000011": {
+    "id": "4000011",
+    "text": "Sie haben kein TOTP-Gerät eingerichtet.",
+    "type": "Fehler"
+  },
+  "4000012": {
+    "id": "4000012",
+    "text": "Dieser Backup-Wiederherstellungscode wurde bereits verwendet.",
+    "type": "Fehler"
+  },
+  "4000013": {
+    "id": "4000013",
+    "text": "Sie haben kein WebAuthn-Gerät eingerichtet.",
+    "type": "Fehler"
+  },
+  "4000014": {
+    "id": "4000014",
+    "text": "Sie haben keine Backup-Wiederherstellungscodes eingerichtet.",
+    "type": "Fehler"
+  },
+  "4000015": {
+    "id": "4000015",
+    "text": "Dieses Konto existiert nicht oder hat keinen Sicherheitsschlüssel eingerichtet.",
+    "type": "Fehler"
+  },
+  "4000016": {
+    "id": "4000016",
+    "text": "Der Backup-Wiederherstellungscode ist nicht gültig.",
+    "type": "Fehler"
+  },
+  "4000017": {
+    "context": {
+      "actual_length": "6",
+      "max_length": "5"
+    },
+    "id": "4000017",
+    "text": "Länge muss <= 5 sein, aber ist 6",
+    "type": "Fehler"
+  },
+  "4000018": {
+    "context": {
+      "actual": "3",
+      "minimum": "5"
+    },
+    "id": "4000018",
+    "text": "muss >= 5 sein, aber nur 3 gefunden",
+    "type": "Fehler"
+  },
+  "4000019": {
+    "context": {
+      "actual": "5",
+      "minimum": "5"
+    },
+    "id": "4000019",
+    "text": "muss > 5 sein, aber nur 5 gefunden",
+    "type": "Fehler"
+  },
+  "4000020": {
+    "context": {
+      "actual": "6",
+      "maximum": "5"
+    },
+    "id": "4000020",
+    "text": "muss <= 5 sein, aber 6 gefunden",
+    "type": "Fehler"
+  },
+  "4000021": {
+    "context": {
+      "actual": "5",
+      "maximum": "5"
+    },
+    "id": "4000021",
+    "text": "muss < 5 sein, aber gefunden 5",
+    "type": "Fehler"
+  },
+  "4000022": {
+    "context": {
+      "actual": "3",
+      "base": "7"
+    },
+    "id": "4000022",
+    "text": "3 ist kein Vielfaches von 7",
+    "type": "Fehler"
+  },
+  "4000023": {
+    "context": {
+      "actual_items": "4",
+      "max_items": "3"
+    },
+    "id": "4000023",
+    "text": "Maximum 3 Elemente erlaubt, aber 4 Elemente gefunden",
+    "type": "Fehler"
+  },
+  "4000024": {
+    "context": {
+      "actual_items": "2",
+      "min_items": "3"
+    },
+    "id": "4000024",
+    "text": "Minimum 3 Elemente erlaubt, aber 2 Elemente gefunden",
+    "type": "Fehler"
+  },
+  "4000025": {
+    "context": {
+      "index_a": "0",
+      "index_b": "2"
+    },
+    "id": "4000025",
+    "text": "Elemente an den Indizes 0 und 2 sind gleich",
+    "type": "Fehler"
+  },
+  "4000026": {
+    "context": {
+      "actual_type": "{actual_type}",
+      "allowed_types": [
+        "{allowed_types_list}"
+      ]
+    },
+    "id": "4000026",
+    "text": "Erwartet {allowed_types_list}, aber {actual_type} erhalten",
+    "type": "Fehler"
+  },
+  "4000027": {
+    "id": "4000027",
+    "text": "Ein Konto mit demselben Identifier (E-Mail, Telefon, Benutzername, ...) existiert bereits. Bitte melden Sie sich an Ihrem vorhandenen Konto an, um Ihr soziales Profil zu verknüpfen.",
+    "type": "Fehler"
+  },
+  "4000028": {
+    "context": {
+      "available_credential_types": [
+        "{available_credential_types_list}"
+      ],
+      "available_oidc_providers": [
+        "{available_oidc_providers_list}"
+      ],
+      "credential_identifier_hint": "{credential_identifier_hint}"
+    },
+    "id": "4000028",
+    "text": "Sie haben versucht, sich mit {credential_identifier_hint} anzumelden, das bereits von einem anderen Konto verwendet wird. Sie können sich mit {available_credential_types_list} anmelden. Sie können sich mit einem der folgenden Anbieter für soziale Anmeldungen anmelden: {Available_oidc_providers_list}.",
+    "type": "Fehler"
+  },
+  "4000029": {
+    "context": {
+      "expected": "{expected}"
+    },
+    "id": "4000029",
+    "text": "Muss gleich der Konstante {expected} sein",
+    "type": "Fehler"
+  },
+  "4000030": {
+    "id": "4000030",
+    "text": "Konstante fehlgeschlagen",
+    "type": "Fehler"
+  },
+  "4000031": {
+    "id": "4000031",
+    "text": "Das Passwort kann nicht verwendet werden, weil es dem Identifier zu ähnlich ist.",
+    "type": "Error"
+  },
+  "4000032": {
+    "context": {
+      "actual_length": "5",
+      "min_length": "6"
+    },
+    "id": "4000032",
+    "text": "Das Passwort muss mindestens 6 Zeichen lang sein, ist aber nur 5 Zeichen lang.",
+    "type": "Fehler"
+  },
+  "4000033": {
+    "context": {
+      "actual_length": "80",
+      "max_length": "72"
+    },
+    "id": "4000033",
+    "text": "Das Passwort darf höchstens 72 Zeichen lang sein, ist aber 80 Zeichen lang.",
+    "type": "Fehler"
+  },
+  "4000034": {
+    "context": {
+      "breaches": "101"
+    },
+    "id": "4000034",
+    "text": "Das Passwort wurde in Datendiebstählen gefunden und darf nicht mehr verwendet werden.",
+    "type": "Fehler"
+  },
+  "4000035": {
+    "id": "4000035",
+    "text": "Ein Fehler ist aufgetreten, bitte kontaktieren Sie den Administrator.",
+    "type": "Fehler"
+  },
+  "4000036": {
+    "id": "4000036",
+    "text": "Die bereitgestellten Merkmale stimmen nicht mit den zuvor mit diesem Vorgang verknüpften Merkmalen überein.",
+    "type": "error"
+  },
+  "4010001": {
+    "context": {
+      "expired_at": "2020-01-01T00:59:59Z",
+      "expired_at_unix": "1577840399"
+    },
+    "id": "4010001",
+    "text": "Der Anmeldevorgang ist vor 1,00 Minuten abgelaufen, bitte versuchen Sie es erneut.",
+    "type": "error"
+  },
+  "4010002": {
+    "id": "4010002",
+    "text": "Es konnte keine Strategie gefunden werden, um Sie anzumelden. Haben Sie das Formular korrekt ausgefüllt?",
+    "type": "Fehler"
+  },
+  "4010003": {
+    "id": "4010003",
+    "text": "Es konnte keine Strategie gefunden werden, um Sie zu registrieren. Haben Sie das Formular korrekt ausgefüllt?",
+    "type": "Fehler"
+  },
+  "4010004": {
+    "id": "4010004",
+    "text": "Es konnte keine Strategie gefunden werden, um Ihre Einstellungen zu aktualisieren. Haben Sie das Formular korrekt ausgefüllt?",
+    "type": "Fehler"
+  },
+  "4010005": {
+    "id": "4010005",
+    "text": "Es konnte keine Strategie gefunden werden, um Ihr Konto wiederherzustellen. Haben Sie das Formular korrekt ausgefüllt?",
+    "type": "Fehler"
+  },
+  "4010006": {
+    "id": "4010006",
+    "text": "Es konnte keine Strategie gefunden werden, um Ihr Konto zu verifizieren. Haben Sie das Formular korrekt ausgefüllt?",
+    "type": "Fehler"
+  },
+  "4010007": {
+    "id": "4010007",
+    "text": "Die Anfrage wurde bereits erfolgreich abgeschlossen und kann nicht erneut versucht werden.",
+    "type": "Fehler"
+  },
+  "4010008": {
+    "id": "4010008",
+    "text": "Der Anmeldecode ist ungültig oder wurde bereits verwendet. Bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4010009": {
+    "id": "4010009",
+    "text": "Verknüpfte Anmeldeinformationen stimmen nicht überein.",
+    "type": "Fehler"
+  },
+  "4010010": {
+    "id": "4010010",
+    "text": "Die eingegebene Adresse entspricht keiner bekannten Adresse im aktuellen Konto.",
+    "type": "Fehler"
+  },
+  "4040001": {
+    "context": {
+      "expired_at": "2020-01-01T00:59:59Z",
+      "expired_at_unix": "1577840399"
+    },
+    "id": "4040001",
+    "text": "Der Registrierungsvorgang ist vor 1 Minute abgelaufen, bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4040002": {
+    "id": "4040002",
+    "text": "Die Anfrage wurde bereits erfolgreich abgeschlossen und kann nicht erneut versucht werden.",
+    "type": "Fehler"
+  },
+  "4040003": {
+    "id": "4040003",
+    "text": "Der Registrierungscode ist ungültig oder wurde bereits verwendet. Bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4050001": {
+    "context": {
+      "expired_at": "2020-01-01T00:59:59Z",
+      "expired_at_unix": "1577840399"
+    },
+    "id": "4050001",
+    "text": "Der Einstellungsvorgang ist vor 1 Minute abgelaufen, bitte versuchen Sie es erneut.",
+    "type": "error"
+  },
+  "4060001": {
+    "id": "4060001",
+    "text": "Die Anfrage wurde bereits erfolgreich abgeschlossen und kann nicht erneut versucht werden.",
+    "type": "Fehler"
+  },
+  "4060002": {
+    "id": "4060002",
+    "text": "Der Wiederherstellungsvorgang hat einen Fehlerzustand erreicht und muss erneut versucht werden.",
+    "type": "Fehler"
+  },
+  "4060004": {
+    "id": "4060004",
+    "text": "Der Wiederherstellungs-Token ist ungültig oder wurde bereits verwendet. Bitte versuchen Sie den Vorgang erneut.",
+    "type": "Fehler"
+  },
+  "4060005": {
+    "context": {
+      "expired_at": "2020-01-01T00:59:59Z",
+      "expired_at_unix": "1577840399"
+    },
+    "id": "4060005",
+    "text": "Der Wiederherstellungsvorgang ist vor 1 Minute abgelaufen, bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4060006": {
+    "id": "4060006",
+    "text": "Der Wiederherstellungscode ist ungültig oder wurde bereits verwendet. Bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4070001": {
+    "id": "4070001",
+    "text": "Der Verifizierungs-Code ist ungültig oder wurde bereits verwendet. Bitte versuchen Sie den Vorgang erneut.",
+    "type": "Fehler"
+  },
+  "4070002": {
+    "id": "4070002",
+    "text": "Die Anfrage wurde bereits erfolgreich abgeschlossen und kann nicht erneut versucht werden.",
+    "type": "Fehler"
+  },
+  "4070003": {
+    "id": "4070003",
+    "text": "Der Verifizierungsvorgang hat einen Fehlerzustand erreicht und muss erneut versucht werden.",
+    "type": "Fehler"
+  },
+  "4070005": {
+    "context": {
+      "expired_at": "2020-01-01T00:59:59Z",
+      "expired_at_unix": "1577840399"
+    },
+    "id": "4070005",
+    "text": "Der Verifizierungsvorgang ist vor 1,00 Minuten abgelaufen, bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "4070006": {
+    "id": "4070006",
+    "text": "Der Verifizierungscode ist ungültig oder wurde bereits verwendet. Bitte versuchen Sie es erneut.",
+    "type": "Fehler"
+  },
+  "5000001": {
+    "context": {
+      "reason": "{reason}"
+    },
+    "id": "5000001",
+    "text": "{reason}",
+    "type": "error"
+  }
+}
