@@ -33,9 +33,51 @@ export const sidebarSelectors = {
 };
 
 export const informationPagesSelectors = {
-  backIcon: 'button.p-button-icon-only >> nth=0',
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-home-header',
 };
   
 export const activitiesSelectors = {
-    headerTitle: 'gedat-home-header',
+  headerTitle: 'gedat-home-header',
+  greeting: 'gedat-h1',
+  userInfoProfileImage: '.p-avatar-image',
+  inquiriesCard: '.card-item >> nth=0',
+  salesActivitiesCard: '.card-item >> nth=1',
+  sentProfileCard: '.card-item >> nth=2',
+  ordersCard: '.card-item >> nth=3',
+  workerComplaintsCard: '.card-item >> nth=4',
+  billingComplaintsCard: '.card-item >> nth=5',
+  cardIcon: 'i[class*="icon-"]',
+  cardMetricNumber: 'gedat-h2',
+  cardTitle: 'gedat-h4',
+};
+
+export const inquiriesPageSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+};
+
+export const salesActivitiesPageSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+};
+
+export const sentProfilePageSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+};
+
+export const ordersPageSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+};
+
+export const workerComplaintsPageSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+};
+
+export const billingComplaintsPageSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
 };

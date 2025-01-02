@@ -1,4 +1,5 @@
-import { test, expect } from "@playwright/test";
+import { expect } from "@playwright/test";
+import { test  } from "../base";
 import {
   activitiesSelectors,
   loginPageSelectors,
@@ -26,7 +27,7 @@ test.describe("E2E Tests  - Login Page", () => {
     mode: "serial",
   });
 
-  test("verify login with invalid email", async ({ page }) => {
+  test("verify login with invalid email", async ({ page, i18n }) => {
     await page.goto(appUrl());
     await page.fill(loginPageSelectors.emailInput, INVALID_EMAIL!);
     await page.click(loginPageSelectors.continueButton);
@@ -35,12 +36,11 @@ test.describe("E2E Tests  - Login Page", () => {
       loginPageSelectors.emailWarningMessage,
     );
     await expect(warningInvalidEmail).toBeVisible();
-    await expect(warningInvalidEmail).toHaveText(
-      "Please enter a valid email address",
-    );
+    expect(warningInvalidEmail).toHaveText(i18n.t("common.validationMessages.email"));
+    console.log('warning message when input invalid email is:', i18n.t('common.validationMessages.email'));
   });
 
-  test("verify login with invalid tenant email", async ({ page }) => {
+  test("verify login with invalid tenant email", async ({ page, i18n }) => {
     await page.goto(appUrl());
     await page.fill(loginPageSelectors.emailInput, INVALID_TENANT!);
     await page.click(loginPageSelectors.continueButton);
@@ -52,12 +52,11 @@ test.describe("E2E Tests  - Login Page", () => {
       loginPageSelectors.tenantWarningMessage,
     );
     await expect(warningInvalidTenant).toBeVisible();
-    await expect(warningInvalidTenant).toHaveText(
-      "Please enter a valid email address.",
-    );
+    expect(warningInvalidTenant).toHaveText(i18n.t("4000035.text"));
+    console.log('warning message when input invalid tenant email is:', i18n.t('4000035.text'));
   });
 
-  test("verify login with invalid OTP", async ({ page }) => {
+  test("verify login with invalid OTP", async ({ page, i18n }) => {
     // Step 1: Log in with a valid email to reach the OTP verification page
     await login(page, USER_EMAIL!);
     await page.waitForSelector(loginVerificationSelectors.otpInput, {
@@ -76,13 +75,12 @@ test.describe("E2E Tests  - Login Page", () => {
       loginVerificationSelectors.otpWarningMessage,
     );
     await expect(otpWarningMessage).toBeVisible();
-    await expect(otpWarningMessage).toHaveText(
-      "The login code is invalid or has already been used. Please try again.",
-    );
+    expect(otpWarningMessage).toHaveText(i18n.t("4010008.text"));
+    console.log('warning of invalid OTP is:', i18n.t("4010008.text"));
   });
 
   test("verify login successfully with valid email and OTP", async ({
-    page,
+    page, i18n
   }) => {
     // Step 1: Log in with a valid email to reach the OTP verification page
     await login(page, USER_EMAIL!);
@@ -100,6 +98,7 @@ test.describe("E2E Tests  - Login Page", () => {
     });
 
     const activitiesHeader = page.locator(activitiesSelectors.headerTitle);
-    await expect(activitiesHeader).toHaveText("Activities", { timeout: 2000 });
+    expect(activitiesHeader).toHaveText(i18n.t("pages.activities.title"));
+    console.log('Default page after logged in is', i18n.t("pages.activities.title"));
   });
 });

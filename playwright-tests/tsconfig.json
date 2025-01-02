@@ -6,7 +6,8 @@
     "allowSyntheticDefaultImports": true,
     "target": "ESNext",
     "strict": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "resolveJsonModule": true
   },
   "include": [
     "tests/**/*.ts",

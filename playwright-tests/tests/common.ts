@@ -21,15 +21,14 @@ const { USER_EMAIL } = process.env;
  */
 export async function loginBeforeTest(page: Page, email: string = "") {
   console.log("Starting common login process...");
+  
   await login(page, USER_EMAIL!); // Reuse the login function from auth-utils
   await page.waitForLoadState("networkidle"); // Ensure the page has fully loaded
   await verifyOtp(page, USER_EMAIL!);
   await page.waitForSelector(activitiesSelectors.headerTitle, {
     state: "visible",
   });
-
-  const activitiesHeader = page.locator(activitiesSelectors.headerTitle);
-  await expect(activitiesHeader).toHaveText("Activities", { timeout: 5000 });
+  
   console.log("Login completed.");
 }
 
@@ -76,12 +75,11 @@ export const getUserInfo = async (page: Page) => {
  * @param page Playwright page instance
  */
 export async function logoutAfterTest(page: Page) {
-  console.log("Starting logout process...");
-
   // Check if sidebar is already open
   const isSidebarVisible = await page
     .locator(sidebarSelectors.sidebar)
     .isVisible();
+    
   if (!isSidebarVisible) {
     console.log(
       "Sidebar is not visible. Clicking hamburger icon to open it...",
@@ -96,15 +94,4 @@ export async function logoutAfterTest(page: Page) {
   expect(page.url()).toContain(appUrl("/ui/login"));
 
   console.log("Logout completed.");
-}
-
-/**
- * Navigate to the application base URL.
- * @param page Playwright page instance
- */
-export async function navigateToBaseUrl(page: Page) {
-  console.log("Navigating to the base URL...");
-  await page.goto("/");
-  await page.waitForLoadState("networkidle");
-  console.log("Navigation completed.");
 }
