@@ -20,12 +20,15 @@ const { USER_EMAIL } = process.env;
  * @param email User email address to login
  */
 export async function loginBeforeTest(page: Page, email: string = "") {
+  console.log("Starting logout process...");
   await login(page, USER_EMAIL!); // Reuse the login function from auth-utils
   await page.waitForLoadState("networkidle"); // Ensure the page has fully loaded
   await verifyOtp(page, USER_EMAIL!);
   await page.waitForSelector(activitiesSelectors.headerTitle, {
     state: "visible",
   });
+  
+  console.log("Login completed.");
 }
 
 /**
@@ -81,9 +84,13 @@ export async function logoutAfterTest(page: Page) {
       "Sidebar is not visible. Clicking hamburger icon to open it...",
     );
     await page.locator(sidebarSelectors.hamburgerIcon).click();
+  } else {
+    console.log("Sidebar is already visible. Skipping hamburger icon click...");
   }
 
   await page.locator(sidebarSelectors.logout).click();
   await page.waitForLoadState("networkidle");
   expect(page.url()).toContain(appUrl("/ui/login"));
+
+  console.log("Logout completed.");
 }
