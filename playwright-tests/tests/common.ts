@@ -20,7 +20,8 @@ const { USER_EMAIL } = process.env;
  * @param email User email address to login
  */
 export async function loginBeforeTest(page: Page, email: string = "") {
-  console.log("Starting logout process...");
+  console.log("Starting common login process...");
+  
   await login(page, USER_EMAIL!); // Reuse the login function from auth-utils
   await page.waitForLoadState("networkidle"); // Ensure the page has fully loaded
   await verifyOtp(page, USER_EMAIL!);
