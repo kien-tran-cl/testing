@@ -141,7 +141,7 @@ export const appUrl = (path: string = '') => {
     }
   
     // Add a small delay before checking the values to avoid race condition
-    await page.waitForTimeout(200);  // Adjust the time if needed
+    await page.waitForTimeout(500);  
   
     // Verify if all OTP fields are empty
     for (let i = 0; i < count; i++) {
