@@ -134,11 +134,10 @@ export const appUrl = (path: string = '') => {
       elementHandle
     );
   
-    // Clear OTP fields by pressing the Backspace key
+    // Clear OTP fields by filling them with empty values
     for (let i = 0; i < count; i++) {
-      await page.keyboard.press("Backspace");
-      await page.waitForTimeout(100); // Simulate user behavior with a small delay
-    }
+      await otpInputs.nth(i).fill("");
+    };
   
     // Add a small delay before checking the values to avoid race condition
     await page.waitForTimeout(500);  
