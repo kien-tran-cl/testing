@@ -5,7 +5,7 @@ import {
   loginPageSelectors,
   loginVerificationSelectors,
 } from "../utils/selectors";
-import { appUrl, invalidOtp, login, verifyOtp } from "../utils/auth-utils";
+import { appUrl, invalidOtp, clearOtp, verifyOtp } from "../utils/auth-utils";
 
 // Environment variable checks
 const checkEnvVar = (varName: string, value: string | undefined) => {
@@ -80,14 +80,16 @@ test.describe("E2E Tests - Login with email OTP code", () => {
         });
 
         await test.step("Verify login successfully with valid email and OTP", async () => {
-            page.waitForTimeout(5000);
+            // Step 1: Clear the existing invalid OTP
+            await clearOtp(page);
 
-            // Step 1: Submit the valid OTP
+            // Step 2: Fill in the valid OTP
             await verifyOtp(page, USER_EMAIL!);
 
-            // Step 2: Verify login successfully, user navigated to the Activities page
+            // Step 3: Verify login successfully, user navigated to the Activities page
             await page.waitForSelector(activitiesSelectors.headerTitle, {
                 state: "visible",
+                timeout: 30000,
             });
           
             const activitiesHeader = page.locator(activitiesSelectors.headerTitle);
