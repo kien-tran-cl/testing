@@ -117,29 +117,36 @@ export const appUrl = (path: string = '') => {
    * @param page Playwright page instance
    */
   export async function clearOtp(page: Page) {
-    // Select all OTP input fields
     const otpInputs = page.locator(loginVerificationSelectors.otpInput);
-
-    // Get the number of OTP input fields
     const count = await otpInputs.count();
-
+  
     if (count === 0) {
       throw new Error("No OTP input fields found.");
     }
-
-    // Click into the last OTP input field
-    await otpInputs.nth(count - 1).click();
-
-    // Simulate pressing Backspace repeatedly to clear OTP fields from right to left
+  
+    const lastOtpInput = otpInputs.nth(count - 1);
+    await lastOtpInput.click();
+  
+    // Wait until the OTP input field is focused
+    const elementHandle = await lastOtpInput.elementHandle();
+    await page.waitForFunction(
+      (element) => element === document.activeElement,
+      elementHandle
+    );
+  
+    // Clear OTP fields by pressing the Backspace key
     for (let i = 0; i < count; i++) {
       await page.keyboard.press("Backspace");
-      // Add a slight delay to mimic real user behavior
-      await page.waitForTimeout(100);
+      await page.waitForTimeout(100); // Simulate user behavior with a small delay
     }
-
-    // Verify all OTP fields are empty
+  
+    // Add a small delay before checking the values to avoid race condition
+    await page.waitForTimeout(200);  // Adjust the time if needed
+  
+    // Verify if all OTP fields are empty
     for (let i = 0; i < count; i++) {
       const value = await otpInputs.nth(i).inputValue();
+      console.log(`OTP field value at index ${i}: "${value}"`);  // Log to check the value
       if (value !== "") {
         throw new Error(`OTP input field at index ${i} is not empty.`);
       }
