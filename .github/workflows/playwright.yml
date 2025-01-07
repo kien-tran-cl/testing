@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'playwright-tests/tests/**'
+      - '!playwright-tests/tests/component-testing/**' # Exclude component-testing
       - 'playwright-tests/playwright.config.ts'
       - 'playwright-tests/package-lock.json'
       - 'playwright-tests/package.json'
