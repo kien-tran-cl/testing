@@ -111,3 +111,37 @@ export const appUrl = (path: string = '') => {
     await page.waitForLoadState(); // Wait for navigation or page update  
   }
   
+  /**
+   * Clear OTP input fields like a real user.
+   * Simulates clicking the last OTP input and pressing Backspace repeatedly.
+   * @param page Playwright page instance
+   */
+  export async function clearOtp(page: Page) {
+    // Select all OTP input fields
+    const otpInputs = page.locator(loginVerificationSelectors.otpInput);
+
+    // Get the number of OTP input fields
+    const count = await otpInputs.count();
+
+    if (count === 0) {
+      throw new Error("No OTP input fields found.");
+    }
+
+    // Click into the last OTP input field
+    await otpInputs.nth(count - 1).click();
+
+    // Simulate pressing Backspace repeatedly to clear OTP fields from right to left
+    for (let i = 0; i < count; i++) {
+      await page.keyboard.press("Backspace");
+      // Add a slight delay to mimic real user behavior
+      await page.waitForTimeout(100);
+    }
+
+    // Verify all OTP fields are empty
+    for (let i = 0; i < count; i++) {
+      const value = await otpInputs.nth(i).inputValue();
+      if (value !== "") {
+        throw new Error(`OTP input field at index ${i} is not empty.`);
+      }
+    }
+  }
