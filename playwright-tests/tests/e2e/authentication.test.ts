@@ -6,6 +6,7 @@ import {
   loginVerificationSelectors,
 } from "../utils/selectors";
 import { appUrl, invalidOtp, clearOtp, verifyOtp } from "../utils/auth-utils";
+import { handleTestFailure } from "../utils/oryErrorHandler";
 
 // Environment variable checks
 const checkEnvVar = (varName: string, value: string | undefined) => {
@@ -25,6 +26,12 @@ test.describe("E2E Tests - Login with email OTP code", () => {
     test.describe.configure({
         timeout: 60000,
         mode: "serial",
+    });
+
+    test.afterEach(async ({ page }, testInfo) => {
+      if (testInfo.status === "failed") {
+        await handleTestFailure(page, testInfo); 
+      }
     });
 
     test("Verify Login with email OTP code", async ({ page, i18n }) => {
