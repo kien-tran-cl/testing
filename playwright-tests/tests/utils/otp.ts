@@ -43,7 +43,7 @@ export async function fetchOtpCode(recipient: string): Promise<string> {
   try {
     // Send a GET request to the API
     const response = await fetch(
-      `${apiUrl}?status=sent&recipient=${encodeURIComponent(recipient)}`,
+      `${apiUrl}?recipient=${encodeURIComponent(recipient)}`,
       {
         method: 'GET',
         headers,
