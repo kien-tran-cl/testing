@@ -51,6 +51,7 @@ jobs:
         env:
           CI: true
           HEADLESS_MODE: ${{ vars.HEADLESS_MODE }}
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
           BASE_URL: ${{ secrets.BASE_URL }}
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           INVALID_EMAIL: ${{ secrets.INVALID_EMAIL }}
