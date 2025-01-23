@@ -68,7 +68,6 @@ export const appUrl = (path: string = '') => {
   export async function verifyOtp(page: Page, email: string) {
     // Fetch the OTP code from the API
     const otp = await fetchOtpCode(email);
-    console.log(`Fetched OTP: ${otp}`); // Debug log
   
     // Wait for the OTP input fields to be visible
     const otpInputs = await page.$$(loginVerificationSelectors.otpInput); // Select all OTP input fields
@@ -93,7 +92,6 @@ export const appUrl = (path: string = '') => {
   export async function invalidOtp(page: Page) {
     // Fetch the random OTP code generated
     const invalidOtp = generateRandomOtp(6); // Generate a 6-digit random OTP
-    console.log(`Generated invalid OTP: ${invalidOtp}`);
   
     // Wait for the OTP input fields to be visible
     const otpInputs = await page.$$(loginVerificationSelectors.otpInput); // Select all OTP input fields
