@@ -55,6 +55,13 @@ export const activitiesSelectors = {
 export const inquiriesPageSelectors = {
   backArrow: 'button.p-button-icon-only >> nth=0',
   headerTitle: 'gedat-header',
+  inquiriesItem: 'gedat-activity-item',
+  inquiriesSkeletonItem: 'gedat-activity-status lib-skeleton',
+  status: '.p-tag',
+  occupation: 'h4.title',
+  numberOfWorker: 'p.subtitle', 
+  companyNameAndCity: 'p.gap-1',
+  date: 'p.text-common-label.min-w-10',
 };
 
 export const salesActivitiesPageSelectors = {
@@ -80,4 +87,29 @@ export const workerComplaintsPageSelectors = {
 export const billingComplaintsPageSelectors = {
   backArrow: 'button.p-button-icon-only >> nth=0',
   headerTitle: 'gedat-header',
+};
+
+export const searchFilter = {
+  inputField: 'gedat-input-field >> input',
+  clearInputField: 'gedat-input-field >> button',
+  clientFilter: 'gedat-company-filter',
+  clientFilterText: 'gedat-company-filter p',
+  multiselectFilter: 'gedat-sub-filter-multiselect-label',
+  multiselectFilterText: 'gedat-sub-filter-multiselect-label label',
+  filterFormOverlay: '.p-sidebar-bottom',
+  filterOptions: '.p-sidebar-content gedat-select-row',
+  closeFilter: '.p-sidebar-close-icon',
+  emptyFilterMessage: 'gedat-empty-filtering >> div >> div >> nth=1',
+  emptyFilterResetButton: 'gedat-empty-filtering button',
+};
+
+export const dialogSort = {
+  sortIcon: 'gedat-dialog-sort >> i',
+  sortText: 'gedat-dialog-sort p',
+  dialogSort: 'role=dialog',
+  sortOptions: 'gedat-select-row',
+  dateAscending: 'gedat-select-row>>nth=0',
+  dateDescending: 'gedat-select-row>>nth=1',
+  iconCheck: '.icon-check',
+  applyButton: '.p-button-primary',
 };
