@@ -1,3 +1,5 @@
+export const allChild = ':scope > *';
+
 export const loginPageSelectors = {
   title: 'title',
   logo: 'svg-icon',
@@ -89,9 +91,32 @@ title: '',
 };
 
 export const salesActivitiesPageSelectors = {
-backArrow: 'button.p-button-icon-only >> nth=0',
-headerTitle: 'gedat-header',
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+  gedatActivitiesEle: 'gedat-activities'//ele
 };
+
+export const salesActivitiesDetailsSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+
+  itemTitle: 'gedat-h2 h2',//ele ele
+  itemCompanyName: '.font-medium.text-common-info.ng-star-inserted',//class chain
+  itemStatus: 'gedat-activity-status span',//ele ele
+  itemCreated: 'gedat-activity-details-item >> nth=0',//1st ele
+  itemFollowUp: 'gedat-activity-details-item >> nth=1',//2nd ele
+  itemKind: 'gedat-activity-details-item >> nth=2',//3rd ele
+  itemContactPerson: 'gedat-activity-details-item >> nth=3',//4th ele
+  itemReporters: 'gedat-activity-details-item >> nth=4',//5th ele
+  itemForwardedTo: 'gedat-activity-details-item >> nth=5',//6th ele
+};
+
+export const contactDetailSelectors = {
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+
+  contactName: '.min-w-12.ng-star-inserted',
+}
 
 export const sentProfilePageSelectors = {
 backArrow: 'button.p-button-icon-only >> nth=0',
