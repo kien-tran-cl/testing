@@ -22,12 +22,14 @@
     "email": "Email",
     "emptyFilter": {
       "button": "Reset filters",
-      "desc": "Sorry, but we couldn't find any results for your search. Don't worry - this just means it's your chance to search again for something different!"
+      "desc": "Sorry, but we couldn't find any results for your search. Don't worry - this just means it's your chance to search again for something different!",
+      "reset": "Reset"
     },
     "error": "Error",
     "filters": {
       "searchInput": {
-        "title": "Search"
+        "title": "Search",
+        "tableTitle": "Search table data"
       }
     },
     "function": "function",
@@ -37,9 +39,9 @@
     "newVersion": "A new version is available. Please refresh to update.",
     "noInternet": "No internet connection",
     "notAvailable": "Not available",
+    "occupation": "Occupation",
     "phone": "Phone",
     "qualification": "Qualification",
-    "occupation": "Occupation",
     "sorts": {
       "options": {
         "activeCountOrderAscending": "Active orders ascending",
@@ -61,6 +63,9 @@
       },
       "label": "Status"
     },
+    "table": {
+      "total": "{{count}} items"
+    },
     "title": "Title",
     "updatedOn": "Updated on {{date}}",
     "validationMessages": {
@@ -70,9 +75,6 @@
       "maxSize": "Maximum {{maxSize}} bytes",
       "maxlength": "Maximum {{requiredLength}} characters",
       "required": "This field is required"
-    },
-    "table":{
-      "total": "{{count}} items"
     }
   },
   "oauth": {
@@ -86,14 +88,8 @@
     "title": "Login"
   },
   "pages": {
-    "job-index": {
-      "title": "Job index"
-    },
-    "source_jobId": {
-      "title": "Job details"
-    },
     "activities": {
-      "activityCount": "{count, plural, =0 {0 {{activityType}}} one {1 {{activityType}}} other {# {{activityType}}s}}",
+      "activityCount": "{count, plural, =0 {0 {{activityType}}} one {1 {{activityType}}} other {# {{activityType}}}}",
       "activityDetails": {
         "address": "Address",
         "contactPerson": "Contact person",
@@ -105,17 +101,17 @@
         "kind": "Kind",
         "maximumLoanPeriod": "Maximum loan period (HÜD)",
         "notAvailable": "Not available",
-        "orderNumber": "Order number",
         "occupation": "Occupation",
+        "orderNumber": "Order number",
+        "quickView": {
+          "title": "{{type}} details"
+        },
         "reporter": "Reporters",
         "runningNumber": "Running number (LfdNr)",
         "startDate": "Start date",
         "startOfEmployment": "Start of employment",
         "temporaryWorker": "Temporary workers",
-        "typeOfEmployment": "Type of employment",
-        "quickView": {
-          "title": "{{type}} details"
-        }
+        "typeOfEmployment": "Type of employment"
       },
       "activityType": {
         "billing-complaints": "Billing complaints",
@@ -129,7 +125,6 @@
         "title": "Billing complaints"
       },
       "clients": {
-        
         "activities": {
           "sections": {
             "activities": {
@@ -221,14 +216,14 @@
       "equalPay": "Equal pay",
       "filters": {
         "noStatus": "No status",
+        "occupation": {
+          "placeholder": "Occupations",
+          "title": "Occupations"
+        },
         "orderCount": "{{number}} Orders",
         "qualification": {
           "placeholder": "Qualifications",
           "title": "Qualifications"
-        },
-        "occupation": {
-          "placeholder": "Occupations",
-          "title": "Occupations"
         },
         "status": {
           "active": "Active",
@@ -303,6 +298,31 @@
         "wait-client-respond": "Waiting for the client to respond",
         "wait-solution": "Waiting for solution"
       },
+      "table": {
+        "title": {
+          "client": "Client",
+          "complainTitle": "Complaint title",
+          "contactPerson": "Contact person",
+          "created": "Created",
+          "endOfEmployment": "End of employment",
+          "equalPayStartDate": "Equal pay start date",
+          "followUp": "Follow-up",
+          "location": "Location",
+          "maxLoanPeriod": "Maximum loan period (HÜD)",
+          "occupation": "Occupation",
+          "profile": "Profile",
+          "qualification": "Qualification",
+          "sentDate": "Sent date",
+          "startDate": "Start date",
+          "startOfEmployment": "Start of employment",
+          "status": "Status",
+          "temporaryWorker": "Temporary worker",
+          "temporaryWorkerCount": "Temporary workers",
+          "title": "Title",
+          "type": "Type",
+          "typeOfEmployment": "Type of employment"
+        }
+      },
       "title": "Activities",
       "tmp-worker-complaints": {
         "title": "Temporary worker complaints"
@@ -314,18 +334,33 @@
         "new": "Add new order"
       }
     },
+    "activityId": {
+      "title": "{{activityType}} details",
+      "params": {
+        "activityType": {
+          "billing-complaints": "Billing complaint",
+          "inquiries": "Inquiry",
+          "orders": "Order",
+          "sales-activities": "Sales activity",
+          "sent-profiles": "Sent profile",
+          "tmp-worker-complaints": "Worker complaint"
+        }
+      }
+    },
+    "activityType": {
+      "title": "{{activityType}}",
+      "params": {
+        "activityType": {
+          "billing-complaints": "Billing complaints",
+          "inquiries": "Inquiries",
+          "orders": "Orders",
+          "sales-activities": "Sales activities",
+          "sent-profiles": "Sent profiles",
+          "tmp-worker-complaints": "Worker complaints"
+        }
+      }
+    },
     "clients": {
-      "table": {
-          "title": {
-            "client": "Client",
-            "activeOrders": "Active orders",
-            "contractedOrders": "Contracted orders",
-            "companyId": "Company id",
-            "industry": "Industry",
-            "location": "Location",
-            "scoring": "Scoring"
-          }
-        },
       "activeOrder": "{count, plural, =0 {0 Active order} one {1 Active order} other {# Active orders}}",
       "activities": {
         "billing-complaints": {
@@ -357,15 +392,17 @@
         }
       },
       "contacts": {
-        "title": "Contacts"
+        "title": "Contacts",
+        "table": {
+          "title": {
+            "contactName": "Contact name",
+            "rolePosition": "Role/Position",
+            "phone": "Phone"
+          }
+        }
       },
       "count": "{count, plural, =0 {0 Clients} one {1 Client} other {# Clients}}",
       "filters": {
-        "clientSelect": {
-          "all": "All  clients",
-          "assignToMe": "Clients assigned to me",
-          "title": "Show clients"
-        },
         "creditScoreSelect": {
           "options": {
             "A": "A",
@@ -393,7 +430,6 @@
           }
         }
       },
-
       "masterData": {
         "sections": {
           "branches": {
@@ -416,10 +452,24 @@
         "title": "Master data"
       },
       "sortTitle": "Sort clients",
+      "table": {
+        "title": {
+          "activeOrders": "Active orders",
+          "client": "Client",
+          "companyId": "Company ID",
+          "contractedOrders": "Contracted orders",
+          "industry": "Industry",
+          "location": "Location",
+          "scoring": "Scoring"
+        }
+      },
       "title": "Clients"
     },
     "contactType": {
-      "title": "{{contactType}}"
+      "title": "Contacts"
+    },
+    "master-data":{
+      "title": "Master data"
     },
     "contacts": {
       "contactDetails": {
@@ -444,13 +494,6 @@
         "branchOfficeSelect": {
           "placeholder": "Branch office",
           "title": "Show branch office"
-        },
-        "clientSelect": {
-          "options": {
-            "all": "All clients",
-            "assignToMe": "Assigned to me"
-          },
-          "title": "Show clients"
         },
         "functionSelect": {
           "placeholder": "Function",
@@ -489,8 +532,12 @@
         },
         "companySelect": {
           "options": {
-            "all": "All companies"
-          }
+            "all": "All companies",
+            "assignToMe": "Assigned to me"
+          },
+          "placeholder": "Company",
+          "title": "Show companies"
+
         },
         "functionSelect": {
           "options": {
@@ -515,6 +562,19 @@
             "all": "All occupation fields"
           }
         },
+        "occupationSelect": {
+          "options": {
+            "all": "All occupations",
+            "no": "No occupation available"
+          },
+          "placeholder": "Occupation",
+          "title": "Show occupation"
+        },
+        "occupations": {
+          "options": {
+            "all": "All occupations"
+          }
+        },
         "positionSelect": {
           "options": {
             "all": "All positions",
@@ -527,12 +587,6 @@
             "no": "No qualification available"
           }
         },
-        "occupationSelect": {
-          "options": {
-            "all": "All occupations",
-            "no": "No occupation available"
-          }
-        },
         "qualifications": {
           "options": {
             "all": "All qualifications"
@@ -542,16 +596,13 @@
           "options": {
             "all": "All statuses",
             "no": "No status available"
-          }
+          },
+          "placeholder": "Status",
+          "title": "Show status"
         },
         "workingHours": {
           "options": {
             "all": "All working hours"
-          }
-        },
-        "occupations": {
-          "options": {
-            "all": "All occupations"
           }
         }
       }
@@ -567,64 +618,57 @@
         "termsOfServices": "Terms of services"
       }
     },
+    "job-index": {
+      "title": "Job index"
+    },
     "jobs": {
-      "index": {
-        "desc": "Index (planned for 2025)",
-        "title": "Index",
-        "contactUs": "Contact us",
-        "support": {
-          "title": "Support"
-        }
-      },
-      "title": "Jobs",
-      "count": "{hasMore, select, true {{count, plural, one {>1 job} other {># jobs}}} false {{count, plural, one {1 job} other {# jobs}}} other {{count, plural, one {1 job} other {# jobs}}}}",
       "allCompanies": "All companies",
-      "filters": {
-        "sources": "Sources",
-        "occupationFields": {
-          "title": "Occupational fields",
-          "placeholder": "Occupational fields"
-        },
-        "industries": {
-          "title": "Industries",
-          "placeholder": "Industries"
-        },
-        "locations": {
-          "title": "Locations",
-          "placeholder": "Locations"
-        },
-        "occupations": {
-          "title": "Occupations",
-          "placeholder": "Occupations"
-        },
-        "workingHours": {
-          "title": "Working hours",
-          "placeholder": "Working hours"
-        }
-      },
+      "count": "{hasMore, select, true {{count, plural, one {>1 job} other {># jobs}}} false {{count, plural, one {1 job} other {# jobs}}} other {{count, plural, one {1 job} other {# jobs}}}}",
       "details": {
-        "title": "Job details",
-        "datePublished": "Date published",
-        "startDate": "Start date",
-        "location": "Location",
         "contractTerm": "Contract term",
-        "workingHour": "Working hours",
+        "datePublished": "Date published",
+        "description": "Description",
+        "location": "Location",
         "occupation": "Occupation",
         "occupationalField": "Occupational field",
-        "description": "Description",
-        "viewJobList": "View job listing"
+        "startDate": "Start date",
+        "title": "Job details",
+        "viewJobList": "View job listing",
+        "workingHour": "Working hours"
       },
-      "sortTitle": "Sort jobs",
+      "filters": {
+        "industries": {
+          "placeholder": "Industries",
+          "title": "Industries"
+        },
+        "locations": {
+          "placeholder": "Locations",
+          "title": "Locations"
+        },
+        "occupationFields": {
+          "placeholder": "Occupational fields",
+          "title": "Occupational fields"
+        },
+        "occupations": {
+          "placeholder": "Occupations",
+          "title": "Occupations"
+        },
+        "sources": "Sources",
+        "workingHours": {
+          "placeholder": "Working hours",
+          "title": "Working hours"
+        }
+      },
+      "index": {
+        "contactUs": "Contact us",
+        "desc": "Index (planned for 2025)",
+        "support": {
+          "title": "Support"
+        },
+        "title": "Index"
+      },
       "industries": {
         "1": "Bau, Architektur",
-        "2": "Chemie, Pharma, Biotechnologie",
-        "3": "Elektro, Feinmechanik, Optik, Medizintechnik",
-        "4": "Bildung, Erziehung, Unterricht",
-        "5": "Fahrzeugbau, Fahrzeuginstandhaltung",
-        "6": "Banken, Finanzdienstleistungen, Immobilien, Versicherungen",
-        "7": "Gesundheit, Soziales",
-        "8": "Rohstoffverarbeitung, Glas, Keramik, Kunststoff, Holz",
-        "9": "Einzelhandel, Großhandel, Außenhandel",
         "10": "Hotel, Gaststätten, Tourismus, Kunst, Kultur, Freizeit",
         "11": "IT, Computer, Telekommunikation",
         "12": "Landwirtschaft, Forstwirtschaft, Gartenbau",
@@ -635,6 +679,7 @@
         "17": "Nahrungs- / Genussmittelherstellung",
         "18": "Öffentlicher Dienst, Organisationen",
         "19": "Papier, Druck, Verpackung",
+        "2": "Chemie, Pharma, Biotechnologie",
         "20": "Rohstoffgewinnung, Rohstoffaufbereitung",
         "21": "Logistik, Transport, Verkehr",
         "22": "Abfallwirtschaft, Energieversorgung, Wasserversorgung",
@@ -644,15 +689,38 @@
         "26": "Luftfahrttechnik, Raumfahrttechnik",
         "27": "Arbeitsvermittlung, privat",
         "28": "Arbeitnehmerüberlassung, Zeitarbeit",
-        "29": "Sonstige Dienstleistungen"
-      }
+        "29": "Sonstige Dienstleistungen",
+        "3": "Elektro, Feinmechanik, Optik, Medizintechnik",
+        "4": "Bildung, Erziehung, Unterricht",
+        "5": "Fahrzeugbau, Fahrzeuginstandhaltung",
+        "6": "Banken, Finanzdienstleistungen, Immobilien, Versicherungen",
+        "7": "Gesundheit, Soziales",
+        "8": "Rohstoffverarbeitung, Glas, Keramik, Kunststoff, Holz",
+        "9": "Einzelhandel, Großhandel, Außenhandel"
+      },
+      "jobSchedule": {
+        "part-time": "Part time",
+        "shift-and-night": "Shift and night"
+      },
+      "sortTitle": "Sort jobs",
+      "title": "Jobs"
     },
     "notFound": {
       "backHome": "Back home",
       "message": "This page could not be found."
     },
-    "pageType": {
-      "title": "{{pageType}}"
+    "pagePublicType": {
+      "title": "{{pagePublicType}}",
+      "params": {
+        "pagePublicType": {
+          "data-privacy": "Data privacy",
+          "term-services": "Terms of service",
+          "legal-notice": "Legal notice"
+        }
+      }
+    },
+    "source_jobId": {
+      "title": "Job details"
     },
     "support": {
       "info": {
@@ -751,15 +819,41 @@
       "Friday",
       "Saturday"
     ],
-    "dayNamesMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
-    "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "dayNamesMin": [
+      "Su",
+      "Mo",
+      "Tu",
+      "We",
+      "Th",
+      "Fr",
+      "Sa"
+    ],
+    "dayNamesShort": [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat"
+    ],
     "emptyFilterMessage": "No results found",
     "emptyMessage": "No available options",
     "emptySearchMessage": "No results found",
     "emptySelectionMessage": "No selected item",
     "endsWith": "Ends with",
     "equals": "Equals",
-    "fileSizeTypes": ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+    "fileSizeTypes": [
+      "B",
+      "KB",
+      "MB",
+      "GB",
+      "TB",
+      "PB",
+      "EB",
+      "ZB",
+      "YB"
+    ],
     "filter": "Filter",
     "firstDayOfWeek": "0",
     "gt": "Greater than",
@@ -772,30 +866,30 @@
     "monthNames": [
       "January",
       "February",
-      "March",
-      "April",
-      "May",
-      "June",
       "July",
       "August",
       "September",
       "October",
       "November",
-      "December"
+      "December",
+      "March",
+      "April",
+      "May",
+      "June"
     ],
     "monthNamesShort": [
       "Jan",
       "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
       "Jul",
       "Aug",
       "Sep",
       "Oct",
       "Nov",
-      "Dec"
+      "Dec",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun"
     ],
     "nextDecade": "Next Decade",
     "nextHour": "Next Hour",
