@@ -22,7 +22,8 @@
     "email": "E-Mail",
     "emptyFilter": {
       "button": "Filter zurücksetzen",
-      "desc": "Leider konnten wir für Ihre Suche keine Ergebnisse finden. Keine Sorge – das bedeutet nur, dass Sie jetzt erneut die Chance haben, nach etwas anderem zu suchen!"
+      "desc": "Leider konnten wir für Ihre Suche keine Ergebnisse finden. Keine Sorge – das bedeutet nur, dass Sie jetzt erneut die Chance haben, nach etwas anderem zu suchen!",
+      "reset": "Reset"
     },
     "error": "Fehler",
     "filters": {
@@ -34,9 +35,10 @@
     "industry": "Industry",
     "location": "Standort",
     "mobile": "Mobil",
-    "newVersion": "A new version is available. Please refresh to update.",
+    "newVersion": "Eine neue Version ist verfügbar. Bitte laden Sie die Seite neu.",
     "noInternet": "Keine Internetverbindung",
     "notAvailable": "Nicht verfügbar",
+    "occupation": "Occupation",
     "phone": "Telefon",
     "qualification": "Qualifikation",
     "sorts": {
@@ -45,12 +47,12 @@
         "activeCountOrderDescending": "Aktive Aufträge absteigend",
         "dateAscending": "Datum aufsteigend",
         "dateDescending": "Datum absteigend",
-        "modificationDateDescending": "Modification Date Descending",
+        "modificationDateDescending": "Änderungsdatum Absteigend",
         "nameAscending": "Alphabetisch aufsteigend",
         "nameDescending": "Alphabetisch absteigend",
-        "publishingDateDescending": "Publishing Date Descending",
-        "relevanceDescending": "Relevance Descending",
-        "startDateDescending": "Start Date Descending"
+        "publishingDateDescending": "Veröffentlichungsdatum Absteigend",
+        "relevanceDescending": "Relevanz Absteigend",
+        "startDateDescending": "Startdatum Absteigend"
       }
     },
     "status": {
@@ -59,6 +61,9 @@
         "true": "Aktiv"
       },
       "label": "Status"
+    },
+    "table": {
+      "total": "{{count}} Einträge"
     },
     "title": "Titel",
     "updatedOn": "Aktualisiert am {{date}}",
@@ -83,9 +88,9 @@
   },
   "pages": {
     "activities": {
-      "activityCount": "{count, plural, =0 {no {{activityType}}} one {1 {{activityType}}} other {# {{activityType}}s}}",
+      "activityCount": "{hasMore, select, true {>{{count}} {{activityType}}} false {{{count}} {{activityType}}} other {{{count}} {{activityType}}}}",
       "activityDetails": {
-        "address": "Address",
+        "address": "Addresse",
         "contactPerson": "Kontaktperson",
         "created": "Erstellt",
         "endOfEmployment": "Ende des Arbeitsverhältnisses",
@@ -94,9 +99,12 @@
         "forwardTo": "Weitergeleitet zu",
         "kind": "Typ",
         "maximumLoanPeriod": "HÜD",
-        "notAvailable": "Not available",
+        "notAvailable": "Nicht verfügbar",
+        "occupation": "Beruf",
         "orderNumber": "Auftragsnummer",
-        "qualification": "Qualifikation",
+        "quickView": {
+          "title": "{{type}} Details"
+        },
         "reporter": "Reporter",
         "runningNumber": "LfdNr",
         "startDate": "Startdatum",
@@ -207,6 +215,10 @@
       "equalPay": "Equal Pay",
       "filters": {
         "noStatus": "Kein Status",
+        "occupation": {
+          "placeholder": "Berufe",
+          "title": "Berufe"
+        },
         "orderCount": "{{number}} Aufträge",
         "qualification": {
           "placeholder": "Qualifikation",
@@ -285,6 +297,31 @@
         "wait-client-respond": "Wartet auf Antwort vom Kunden",
         "wait-solution": "Wartet auf Lösung"
       },
+      "table": {
+        "title": {
+          "client": "Kunde",
+          "complainTitle": "Complaint title",
+          "contactPerson": "Contact person",
+          "created": "Created",
+          "endOfEmployment": "Ende der Beschäftigung",
+          "equalPayStartDate": "Equal Pay Startzeitpunkt",
+          "followUp": "Follow-up",
+          "location": "Location",
+          "maxLoanPeriod": "Höchstüberlassungsdauer (HÜD)",
+          "occupation": "Occupation",
+          "profile": "Profile",
+          "qualification": "Qualifikation",
+          "sentDate": "Sent date",
+          "startDate": "Start date",
+          "startOfEmployment": "Start der Beschäftigung",
+          "status": "Status",
+          "temporaryWorker": "Zeitarbeitnehmer",
+          "temporaryWorkerCount": "Zeitarbeitnehmer",
+          "title": "Title",
+          "type": "Type",
+          "typeOfEmployment": "Type of employment"
+        }
+      },
       "title": "Aktivitäten",
       "tmp-worker-complaints": {
         "title": "Beschwerden über Zeitarbeitnehmer"
@@ -292,12 +329,18 @@
       "tmpWorkerCount": "{{count}} Zeitarbeitnehmer",
       "viewOptions": {
         "kanban": "Wechseln zur KanBan Ansicht",
-        "list": "Switch to list view",
-        "new": "Add new order"
+        "list": "Wechseln zur Listenansicht",
+        "new": "Neuer Auftrag"
       }
     },
+    "activityId": {
+      "title": "{{activityType}} Details"
+    },
+    "activityType": {
+      "title": "{{activityType}}"
+    },
     "clients": {
-      "activeOrder": "{count, plural, =0 {0 Active order} one {1 Active order} other {# Active orders}}",
+      "activeOrder": "{count, plural, =0 {0 aktive Aufträge} one {1 aktiver Auftrag} other {# aktive Aufträge}}",
       "activities": {
         "billing-complaints": {
           "title": "Reklamationen zu Abrechnungen"
@@ -350,11 +393,11 @@
         },
         "industrySelect": {
           "options": {
-            "all": "All industries",
-            "no": "No industry available"
+            "all": "Alle Branchen",
+            "no": "Keine Branche verfügbar"
           },
-          "placeholder": "Industries",
-          "title": "Show industries"
+          "placeholder": "Branchen",
+          "title": "Branchen anzeigen"
         }
       },
       "master-data": {
@@ -386,18 +429,29 @@
         "title": "Stammdaten"
       },
       "sortTitle": "Kunden sortieren",
+      "table": {
+        "title": {
+          "activeOrders": "Aktive Aufträge",
+          "client": "Kunde",
+          "companyId": "Kundennummer",
+          "contractedOrders": "erteilte Aufträge",
+          "industry": "Branche",
+          "location": "Standort",
+          "scoring": "Wertigkeit"
+        }
+      },
       "title": "Kunden"
     },
+    "contactType": {
+      "title": "Kontakte"
+    },
     "contacts": {
-      "clients": {
-        "title": "Kontakte"
-      },
       "contactDetails": {
         "details": "Details",
         "emptyOrders": "Keine Aufträge bisher",
         "orders": "Aufträge"
       },
-      "count": "{count, plural, =0 {0 Kontakte} one {1 Kontakte} other {# Kontakte}}",
+      "count": "{hasMore, select, true {>{{count}} Kontakte} false {{{count}} Kontakte} other {{{count}} Kontakte}}",
       "coworkers": {
         "title": "Kontakte"
       },
@@ -441,34 +495,39 @@
         }
       },
       "sortTitle": "Kontakte sortieren",
-      "temporary-workers": {
-        "title": "Kontakte"
-      },
       "title": "Kontakte"
     },
     "default": {
       "filters": {
         "availabilitySelect": {
           "options": {
-            "all": "All availabilities",
+            "all": "Alle Vergüfbarkeiten",
             "no": "No availability available"
           }
         },
         "branchOfficeSelect": {
           "options": {
-            "all": "All branch offices",
-            "no": "No branch office available"
+            "all": "Alle Niederlassungen",
+            "no": "Keine Niederlassung verfügbar"
           }
+        },
+        "clientSelect": {
+          "options": {
+            "all": "All clients",
+            "assignToMe": "Assigned to me"
+          },
+          "placeholder": "Client",
+          "title": "Show clients"
         },
         "companySelect": {
           "options": {
-            "all": "All companies"
+            "all": "Alle Unternehmen"
           }
         },
         "functionSelect": {
           "options": {
             "all": "All functions",
-            "no": "No function available"
+            "no": "Keine Funktion verfügbar"
           }
         },
         "industries": {
@@ -478,14 +537,27 @@
         },
         "locationSelect": {
           "options": {
-            "all": "All locations"
+            "all": "Alle Standorte"
           },
-          "placeholder": "Location",
-          "title": "Show location"
+          "placeholder": "Standort",
+          "title": "Standort anzeigen"
         },
         "occupationFields": {
           "options": {
-            "all": "All occupation fields"
+            "all": "Alle Berufsgruppen"
+          }
+        },
+        "occupationSelect": {
+          "options": {
+            "all": "Alle Berufe",
+            "no": "Kein Beruf verfügbar"
+          },
+          "placeholder": "Occupation",
+          "title": "Show occupation"
+        },
+        "occupations": {
+          "options": {
+            "all": "Alle Berufe"
           }
         },
         "positionSelect": {
@@ -507,13 +579,15 @@
         },
         "statusSelect": {
           "options": {
-            "all": "All statuses",
+            "all": "Alle Status",
             "no": "No status available"
-          }
+          },
+          "placeholder": "Status",
+          "title": "Show status"
         },
         "workingHours": {
           "options": {
-            "all": "All working hours"
+            "all": "Alle Arbeitszeiten"
           }
         }
       }
@@ -529,21 +603,23 @@
         "termsOfServices": "AGB"
       }
     },
+    "job-index": {
+      "title": "Job Index"
+    },
     "jobs": {
-      "allCompanies": "All companies",
-      "count": "{hasMore, select, true {>{{count}} job} false {{{count}} job} other {{{count}} job}}",
+      "allCompanies": "Alle Unternehmen",
+      "count": "{hasMore, select, true {{count, plural, one {>1 job}\n{># jobs}}\n{{count, plural, one {1 job}\n{# jobs}}\n{{count, plural, one {1 job}\n{# jobs}}",
       "details": {
+        "contractTerm": "Contract term",
         "datePublished": "Date published",
-        "description": "Description",
-        "industry": "Industry",
-        "limitation": "Limitation",
+        "description": "Beschreibung",
         "location": "Location",
+        "occupation": "Occupation",
         "occupationalField": "Occupational field",
-        "qualification": "Qualification",
-        "startDate": "Start date",
-        "title": "Job details",
+        "startDate": "Anfangsdatum",
+        "title": "Stellenbeschreibung",
         "viewJobList": "View job listing",
-        "workingHour": "Working hours"
+        "workingHour": "Arbeitszeiten"
       },
       "filters": {
         "industries": {
@@ -551,41 +627,33 @@
           "title": "Industries"
         },
         "locations": {
-          "placeholder": "Locations",
-          "title": "Locations"
+          "placeholder": "Standorte",
+          "title": "Standorte"
         },
         "occupationFields": {
           "placeholder": "Occupational fields",
           "title": "Occupational fields"
         },
-        "qualifications": {
-          "placeholder": "Qualifications",
-          "title": "Qualifications"
+        "occupations": {
+          "placeholder": "Occupations",
+          "title": "Occupations"
         },
         "sources": "Sources",
         "workingHours": {
-          "placeholder": "Working hours",
-          "title": "Working hours"
+          "placeholder": "Arbeitszeiten",
+          "title": "Arbeitszeiten"
         }
       },
       "index": {
-        "contactUs": "Contact us",
+        "contactUs": "Kontakt aufnehmen",
+        "desc": "Index (geplant für 2025)",
         "support": {
           "title": "Support"
         },
         "title": "Index"
       },
-      "title": "Jobs",
       "industries": {
         "1": "Bau, Architektur",
-        "2": "Chemie, Pharma, Biotechnologie",
-        "3": "Elektro, Feinmechanik, Optik, Medizintechnik",
-        "4": "Bildung, Erziehung, Unterricht",
-        "5": "Fahrzeugbau, Fahrzeuginstandhaltung",
-        "6": "Banken, Finanzdienstleistungen, Immobilien, Versicherungen",
-        "7": "Gesundheit, Soziales",
-        "8": "Rohstoffverarbeitung, Glas, Keramik, Kunststoff, Holz",
-        "9": "Einzelhandel, Großhandel, Außenhandel",
         "10": "Hotel, Gaststätten, Tourismus, Kunst, Kultur, Freizeit",
         "11": "IT, Computer, Telekommunikation",
         "12": "Landwirtschaft, Forstwirtschaft, Gartenbau",
@@ -596,6 +664,7 @@
         "17": "Nahrungs- / Genussmittelherstellung",
         "18": "Öffentlicher Dienst, Organisationen",
         "19": "Papier, Druck, Verpackung",
+        "2": "Chemie, Pharma, Biotechnologie",
         "20": "Rohstoffgewinnung, Rohstoffaufbereitung",
         "21": "Logistik, Transport, Verkehr",
         "22": "Abfallwirtschaft, Energieversorgung, Wasserversorgung",
@@ -605,23 +674,31 @@
         "26": "Luftfahrttechnik, Raumfahrttechnik",
         "27": "Arbeitsvermittlung, privat",
         "28": "Arbeitnehmerüberlassung, Zeitarbeit",
-        "29": "Sonstige Dienstleistungen"
-      }
+        "29": "Sonstige Dienstleistungen",
+        "3": "Elektro, Feinmechanik, Optik, Medizintechnik",
+        "4": "Bildung, Erziehung, Unterricht",
+        "5": "Fahrzeugbau, Fahrzeuginstandhaltung",
+        "6": "Banken, Finanzdienstleistungen, Immobilien, Versicherungen",
+        "7": "Gesundheit, Soziales",
+        "8": "Rohstoffverarbeitung, Glas, Keramik, Kunststoff, Holz",
+        "9": "Einzelhandel, Großhandel, Außenhandel"
+      },
+      "jobSchedule": {
+        "part-time": "Part time",
+        "shift-and-night": "Shift and night"
+      },
+      "sortTitle": "Jobs sortieren",
+      "title": "Stellen"
     },
     "notFound": {
       "backHome": "Zurück",
       "message": "Diese Seite konnte nicht gefunden werden"
     },
-    "public": {
-      "data-privacy": {
-        "title": "Data Privacy"
-      },
-      "legal-notice": {
-        "title": "Impressum"
-      },
-      "term-services": {
-        "title": "AGB"
-      }
+    "pagePublicType": {
+      "title": "{{pagePublicType}}"
+    },
+    "source_jobId": {
+      "title": "Stellenbeschreibung"
     },
     "support": {
       "info": {
@@ -720,15 +797,41 @@
       "Freitag",
       "Samstag"
     ],
-    "dayNamesMin": ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
-    "dayNamesShort": ["Son", "Mon", "Die", "Mit", "Don", "Fre", "Sam"],
+    "dayNamesMin": [
+      "So",
+      "Mo",
+      "Di",
+      "Mi",
+      "Do",
+      "Fr",
+      "Sa"
+    ],
+    "dayNamesShort": [
+      "Son",
+      "Mon",
+      "Die",
+      "Mit",
+      "Don",
+      "Fre",
+      "Sam"
+    ],
     "emptyFilterMessage": "Keine Ergebnisse gefunden",
     "emptyMessage": "Keine Einträge gefunden",
     "emptySearchMessage": "Keine Ergebnisse gefunden",
     "emptySelectionMessage": "Kein ausgewähltes Element",
     "endsWith": "Endet mit",
     "equals": "Ist gleich",
-    "fileSizeTypes": ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+    "fileSizeTypes": [
+      "B",
+      "KB",
+      "MB",
+      "GB",
+      "TB",
+      "PB",
+      "EB",
+      "ZB",
+      "YB"
+    ],
     "filter": "Filtern",
     "firstDayOfWeek": "0",
     "gt": "Größer als",
@@ -741,30 +844,30 @@
     "monthNames": [
       "Januar",
       "Februar",
-      "März",
-      "April",
-      "Mai",
-      "Juni",
       "Juli",
       "August",
       "September",
       "Oktober",
       "November",
-      "Dezember"
+      "Dezember",
+      "März",
+      "April",
+      "Mai",
+      "Juni"
     ],
     "monthNamesShort": [
       "Jan",
       "Feb",
-      "Mär",
-      "Apr",
-      "Mai",
-      "Jun",
       "Jul",
       "Aug",
       "Sep",
       "Okt",
       "Nov",
-      "Dez"
+      "Dez",
+      "Mär",
+      "Apr",
+      "Mai",
+      "Jun"
     ],
     "nextDecade": "Nächstes Jahrzehnt",
     "nextHour": "Nächste Stunde",
