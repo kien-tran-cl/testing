@@ -216,10 +216,10 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       // -> Find in the list and focus on the first company that has item >=1
       // Capture that number and call it companyTotalItems (A), also capture company name and call it companyName (B), then click on that company
       const numberElements = await page.locator(
-        `${searchFilter.filterOptions} p.font-medium.text-common-info-bold`,
+        `${searchFilter.filterOptions} div.grid p`,
       ); // Locator for the number part
       const textElements = await page.locator(
-        `${searchFilter.filterOptions} p.break-all`,
+        `${searchFilter.filterOptions} p.flex-1`,
       ); // Locator for the text part
 
       const numbers: number[] = [];
@@ -230,7 +230,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       let companyName = ""; // Name of the corresponding company with the most items in the list
       let maxIndex = -1;
 
-      for (let i = 0; i < itemCount; i++) {
+      for (let i = 1; i < itemCount; i++) {
         const numberText = await numberElements.nth(i).innerText();
         const number = parseInt(numberText.trim(), 10); // Get the Items in the company
         const text = await textElements.nth(i).innerText(); // Get the company name
@@ -339,10 +339,10 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
 
       // -> FInd in the list and focus on the first status that has item >=1 then capture that number and call it C, also capture status name and call it D -> then click on that filter -> then click on Done
       const numberElements = await page.locator(
-        `${searchFilter.filterOptions} p.font-medium.text-common-info-bold`,
+        `${searchFilter.filterOptions} div.grid p`,        
       ); // Locator for the number part - which is C
       const textElements = await page.locator(
-        `${searchFilter.filterOptions} p.break-all`,
+        `${searchFilter.filterOptions} p.flex-1`,
       ); // Locator for the text part - which is D
 
       const numbers: number[] = [];
@@ -353,7 +353,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       let companyName = ""; // Name of the corresponding status with the most items in the list
       let maxIndex = -1;
 
-      for (let i = 0; i < itemCount; i++) {
+      for (let i = 1; i < itemCount; i++) {
         const numberText = await numberElements.nth(i).innerText();
         const number = parseInt(numberText.trim(), 10); // Get the Items in the status
         const text = await textElements.nth(i).innerText(); // Get the status name
@@ -389,7 +389,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       }
 
       // -> Select an additional status above or below the current selection
-      if (maxIndex > 0) {
+      if (maxIndex > 1) {
         // If not the first row, select the status above
         const itemAbove = page.locator(
           `${searchFilter.filterOptions} >> nth=${maxIndex - 1}`,
@@ -398,7 +398,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
         console.log(
           "Clicked on the status option above the largest item status.",
         );
-      } else if (maxIndex === 0 && itemCount > 1) {
+      } else if (maxIndex === 1 && itemCount > 2) {
         // If the first row, select the status below (if available)
         const itemBelow = page.locator(
           `${searchFilter.filterOptions} >> nth=${maxIndex + 1}`,
@@ -450,7 +450,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
 
       // Verify the dropdown is now displaying the selected status
       const multiselectFilterText = await page
-        .locator(`${searchFilter.multiselectFilter} >> nth=0`)
+        .locator(`${searchFilter.multiselectFilter} >> nth=1`)
         .innerText();
       console.log(
         "Dropdown text displayed on the filter:",
@@ -503,7 +503,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
     await test.step("Step 6: Verify filtering inquiries based on occupations", async () => {
       // Click on the the All occupations
       const multiselectFilter = page.locator(searchFilter.multiselectFilter);
-      await multiselectFilter.nth(1).click();
+      await multiselectFilter.nth(2).click();
 
       // -> Verify Occupations filter displayed, and included at least 1 occupation to filter
       await page.waitForSelector(searchFilter.filterOptions, {
@@ -513,7 +513,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       // Find in the list and Select the first filter option that has 0 item
       // Get the list of numbers (item counts) and corresponding company names
       const numberElements = await page.locator(
-        `${searchFilter.filterOptions} p.font-medium.text-common-info-bold`,
+        `${searchFilter.filterOptions} div.grid p`,
       ); // Locator for item count
       const textElements = await page.locator(
         `${searchFilter.filterOptions} p.break-all`,
@@ -522,7 +522,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       const itemCount = await numberElements.count();
       let zeroItemIndex = -1;
 
-      for (let i = 0; i < itemCount; i++) {
+      for (let i = 1; i < itemCount; i++) {
         const numberText = await numberElements.nth(i).innerText();
         const number = parseInt(numberText.trim(), 10); // Convert text to number
 
@@ -585,7 +585,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
 
       // -> Verify the selected status are shown separated by comma in the status filter button
       const currentStatusFilterText = await page
-        .locator(`${searchFilter.multiselectFilter} >> nth=0`)
+        .locator(`${searchFilter.multiselectFilter} >> nth=1`)
         .innerText();
       console.log(
         "Currently displayed dropdown text:",
@@ -605,7 +605,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       // -> Verify the selected qualification is shown in the qualification filter button (active state)
       const currentQualificationFilterText = await page
         .locator(searchFilter.multiselectFilter)
-        .nth(1)
+        .nth(2)
         .innerText();
       console.log(
         "Currently displayed qualification filter text:",
@@ -644,9 +644,13 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
       await page.locator(searchFilter.emptyFilterResetButton).click();
 
       // -> Verify all filter options are in inactive state and hidden
-      await page.waitForSelector(searchFilter.multiselectFilter, {
+      await page.waitForSelector(`${searchFilter.multiselectFilter} >> nth=1`, {
         state: "hidden",
       });
+      await page.waitForSelector(`${searchFilter.multiselectFilter} >> nth=2`, {
+        state: "hidden",
+      });
+      
 
       // -> Verify the list is not empty
       await page.waitForSelector(inquiriesPageSelectors.inquiriesItem, {

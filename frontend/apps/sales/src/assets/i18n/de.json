@@ -1,536 +1,581 @@
 {
   "common": {
-    "action": "Aktion",
-    "activities": "Aktivitäten",
-    "address": "Adresse",
-    "apply": "Anwenden",
-    "ascending": "Alphabetisch aufsteigend",
+    "action": "Action",
+    "activities": "Activities",
+    "address": "Address",
+    "apply": "Apply",
+    "ascending": "Alphabetical ascending",
     "availableStatus": {
-      "now": "Verfügbar",
+      "now": "Available",
       "title": "{{time}}"
     },
     "buttons": {
-      "discard": "Verwerfen",
-      "resend": "Erneut senden",
-      "save": "Speichern"
+      "discard": "Discard",
+      "resend": "Resend",
+      "save": "Save"
     },
     "cancel": "Cancel",
-    "contactPerson": "Kontaktperson",
-    "descending": "Alphabetisch absteigend",
-    "description": "Beschreibung",
-    "done": "Erledigt",
-    "email": "E-Mail",
+    "contactPerson": "Contact person",
+    "descending": "Alphabetical descending",
+    "description": "Description",
+    "done": "Done",
+    "ok": "Ok",
+    "email": "Email",
     "emptyFilter": {
-      "button": "Filter zurücksetzen",
-      "desc": "Leider konnten wir für Ihre Suche keine Ergebnisse finden. Keine Sorge – das bedeutet nur, dass Sie jetzt erneut die Chance haben, nach etwas anderem zu suchen!",
+      "button": "Reset filters",
+      "desc": "Sorry, but we couldn't find any results for your search. Don't worry - this just means it's your chance to search again for something different!",
       "reset": "Reset"
     },
-    "error": "Fehler",
+    "error": "Error",
     "filters": {
       "searchInput": {
-        "title": "Suche"
+        "title": "Search",
+        "tableTitle": "Search table data"
       }
     },
-    "function": "Funktion",
+    "function": "function",
     "industry": "Industry",
-    "location": "Standort",
-    "mobile": "Mobil",
-    "newVersion": "Eine neue Version ist verfügbar. Bitte laden Sie die Seite neu.",
-    "noInternet": "Keine Internetverbindung",
-    "notAvailable": "Nicht verfügbar",
+    "location": "location",
+    "mobile": "Mobile",
+    "newVersionContent": "A new version of the application is available. Confirm to refresh the page and load the latest changes.",
+    "newVersionTitle": "Version update",
+    "noInternet": "No internet connection",
+    "notAvailable": "Not available",
     "occupation": "Occupation",
-    "phone": "Telefon",
-    "qualification": "Qualifikation",
+    "phone": "Phone",
+    "qualification": "Qualification",
     "sorts": {
       "options": {
-        "activeCountOrderAscending": "Aktive Aufträge aufsteigend",
-        "activeCountOrderDescending": "Aktive Aufträge absteigend",
-        "dateAscending": "Datum aufsteigend",
-        "dateDescending": "Datum absteigend",
-        "modificationDateDescending": "Änderungsdatum Absteigend",
-        "nameAscending": "Alphabetisch aufsteigend",
-        "nameDescending": "Alphabetisch absteigend",
-        "publishingDateDescending": "Veröffentlichungsdatum Absteigend",
-        "relevanceDescending": "Relevanz Absteigend",
-        "startDateDescending": "Startdatum Absteigend"
+        "activeCountOrderAscending": "Active orders ascending",
+        "activeCountOrderDescending": "Active orders descending",
+        "dateAscending": "Date Ascending",
+        "dateDescending": "Date Descending",
+        "modificationDateDescending": "Modification Date Descending",
+        "nameAscending": "Alphabetical ascending",
+        "nameDescending": "Alphabetical descending",
+        "publishingDateDescending": "Publishing Date Descending",
+        "relevanceDescending": "Relevance Descending",
+        "startDateDescending": "Start Date Descending"
       }
     },
     "status": {
       "enum": {
-        "false": "Inaktiv",
-        "true": "Aktiv"
+        "false": "Inactive",
+        "true": "Active"
       },
       "label": "Status"
     },
     "table": {
-      "total": "{{count}} Einträge"
+      "total": "{{count}} items"
     },
-    "title": "Titel",
-    "updatedOn": "Aktualisiert am {{date}}",
+    "title": "Title",
+    "updatedOn": "Updated on {{date}}",
     "validationMessages": {
-      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-      "invalid": "Ungültiger Wert",
-      "invalidPhone": "Ungültige Telefonnummer",
-      "maxSize": "Maximal {{maxSize}} Bytes",
-      "maxlength": "Maximal {{requiredLength}} Zeichen",
-      "required": "Dieses Feld ist erforderlich"
+      "email": "Please enter a valid email address",
+      "invalid": "Invalid value",
+      "invalidPhone": "Invalid phone number",
+      "maxSize": "Maximum {{maxSize}} bytes",
+      "maxlength": "Maximum {{requiredLength}} characters",
+      "required": "This field is required"
     }
   },
   "oauth": {
-    "dataPrivacy": "Datenschutz",
-    "didNotReceiveCode": "Code nicht erhalten?",
+    "dataPrivacy": "Data privacy",
+    "didNotReceiveCode": "Didn't get the code?",
     "footNote": "© TIME JOB sales",
-    "legalNotice": "Impressum",
-    "otpNoti": "Wir haben einen Code an Ihre E-Mail gesendet:",
-    "otpTitle": "Loginprüfung",
-    "termsOfServices": "AGB",
+    "legalNotice": "Legal notice",
+    "otpNoti": "We've sent a code to your email:",
+    "otpTitle": "Login verification",
+    "termsOfServices": "Terms of service",
     "title": "Login"
   },
   "pages": {
+    "clientId": {
+      "title": "Client details"
+    },
     "activities": {
-      "activityCount": "{hasMore, select, true {>{{count}} {{activityType}}} false {{{count}} {{activityType}}} other {{{count}} {{activityType}}}}",
+      "activityCount": "{count, plural, =0 {0 {{activityType}}} one {1 {{activityType}}} other {# {{activityType}}}}",
       "activityDetails": {
-        "address": "Addresse",
-        "contactPerson": "Kontaktperson",
-        "created": "Erstellt",
-        "endOfEmployment": "Ende des Arbeitsverhältnisses",
+        "address": "Address",
+        "contactPerson": "Contact person",
+        "created": "Created",
+        "endOfEmployment": "End of employment",
         "equalPay": "Equal pay",
         "followUp": "Follow-up",
-        "forwardTo": "Weitergeleitet zu",
-        "kind": "Typ",
-        "maximumLoanPeriod": "HÜD",
-        "notAvailable": "Nicht verfügbar",
-        "occupation": "Beruf",
-        "orderNumber": "Auftragsnummer",
+        "forwardTo": "Forwarded to",
+        "kind": "Kind",
+        "maximumLoanPeriod": "Maximum loan period (HÜD)",
+        "notAvailable": "Not available",
+        "occupation": "Occupation",
+        "orderNumber": "Order number",
         "quickView": {
-          "title": "{{type}} Details"
+          "title": "{{type}} details"
         },
-        "reporter": "Reporter",
-        "runningNumber": "LfdNr",
-        "startDate": "Startdatum",
-        "startOfEmployment": "Start des Arbeitsverhältnisses",
-        "temporaryWorker": "Zeitarbeitnehmer",
-        "typeOfEmployment": "Art der Anstellung"
+        "reporter": "Reporters",
+        "runningNumber": "Running number (LfdNr)",
+        "startDate": "Start date",
+        "startOfEmployment": "Start of employment",
+        "temporaryWorker": "Temporary workers",
+        "typeOfEmployment": "Type of employment"
       },
       "activityType": {
-        "billing-complaints": "Reklamationen zu Abrechnungen",
-        "inquiries": "Anfragen",
-        "orders": "Aufträge",
-        "sales-activities": "Sales-Aktivitäten",
-        "sent-profiles": "Versendete Profile",
-        "tmp-worker-complaints": "Beschwerden über Zeitarbeitnehmer"
+        "billing-complaints": "Billing complaints",
+        "inquiries": "Inquiries",
+        "orders": "Orders",
+        "sales-activities": "Sales activities",
+        "sent-profiles": "Sent profiles",
+        "tmp-worker-complaints": "Worker complaints"
       },
       "billing-complaints": {
-        "title": "Reklamationen zu Abrechnungen"
+        "title": "Billing complaints"
       },
       "clients": {
         "activities": {
           "sections": {
             "activities": {
-              "title": "Kundenaktivitäten"
+              "title": "Client activities"
             },
             "recentActivities": {
-              "title": "Letzte Aktivitäten"
+              "title": "Recent activities"
             }
           },
-          "title": "Aktivitäten"
+          "title": "Activities"
         },
         "contacts": {
-          "title": "Kontakte"
+          "title": "Contacts"
         },
         "filters": {
           "clientSelect": {
-            "title": "Kunden anzeigen"
+            "title": "Show clients"
           }
         },
         "masterData": {
           "sections": {
             "branches": {
-              "title": "Einsatzorte"
+              "title": "Branches"
             },
             "company": {
-              "title": "Unternehmensname"
+              "title": "Company Name"
             },
             "industry": {
-              "title": "Branchen"
+              "title": "Industries"
             },
             "mainOffice": {
-              "title": "Hauptniederlassung"
+              "title": "Main office"
             }
           },
-          "title": "Stammdaten"
+          "title": "Master data"
         },
-        "sortTitle": "Kunden sortieren",
-        "title": "Kontakte"
+        "sortTitle": "Sort clients",
+        "title": "Clients"
       },
       "contacts": {
         "clients": {
-          "title": "Kontakte"
+          "title": "Contacts"
         },
-        "count": "{{number}} Kontakte",
+        "count": "{{number}} Contacts",
         "coworkers": {
-          "title": "Kontakte"
+          "title": "Contacts"
         },
         "filters": {
           "availabilitySelect": {
             "options": {
-              "not": "Nicht verfügbar",
-              "now": "Verfügbar",
-              "soon": "Bald verfügbar (≤ 1 Monat)"
+              "not": "Not available",
+              "now": "Available",
+              "soon": "Available soon (≤ 1 month)"
             },
-            "placeholder": "Verfügbarkeit",
-            "title": "Verfügbarkeit anzeigen"
+            "placeholder": "Availability",
+            "title": "Show availability"
           },
           "branchOfficeSelect": {
-            "placeholder": "Niederlassung",
-            "title": "Niederlassung anzeigen"
+            "placeholder": "Branch office",
+            "title": "Show branch office"
           },
           "clientSelect": {
-            "title": "Kunden anzeigen"
+            "title": "Show clients"
           },
           "functionSelect": {
-            "placeholder": "Funktion",
-            "title": "Funktion anzeigen"
+            "placeholder": "Function",
+            "title": "Show function"
           },
           "positionSelect": {
             "placeholder": "Position",
-            "title": "Position anzeigen"
+            "title": "Show position"
           },
           "qualificationSelect": {
-            "placeholder": "Qualifikation",
-            "title": "Qualifikationen anzeigen"
+            "placeholder": "Qualifications",
+            "title": "Show qualifications"
           },
           "tabs": {
-            "clients": "Kunde",
-            "coworkers": "Kollegen",
-            "temporary-workers": "Zeitarbeitnehmer"
+            "clients": "Client",
+            "coworkers": "Co-workers",
+            "temporary-workers": "Temporary workers"
           }
         },
-        "sortTitle": "Kontakte sortieren",
+        "sortTitle": "Sort contacts",
         "temporary-workers": {
-          "title": "Kontakte"
+          "title": "Contacts"
         },
-        "title": "Kontakte"
+        "title": "Contacts"
       },
-      "equalPay": "Equal Pay",
+      "equalPay": "Equal pay",
       "filters": {
-        "noStatus": "Kein Status",
+        "noStatus": "No status",
         "occupation": {
-          "placeholder": "Berufe",
-          "title": "Berufe"
+          "placeholder": "Occupations",
+          "title": "Occupations"
         },
-        "orderCount": "{{number}} Aufträge",
+        "orderCount": "{{number}} Orders",
         "qualification": {
-          "placeholder": "Qualifikation",
-          "title": "Qualifikation"
+          "placeholder": "Qualifications",
+          "title": "Qualifications"
         },
         "status": {
-          "active": "Aktive",
-          "blocked": "Blockiert",
-          "completed": "Abgeschlossen",
-          "discuss": "In Diskussion",
-          "done": "Abgeschlossen",
-          "open": "Offen",
+          "active": "Active",
+          "blocked": "Blocked",
+          "completed": "Completed",
+          "discuss": "In discussion",
+          "done": "Done",
+          "open": "Open",
           "placeholder": "Status",
-          "progress": "In Bearbeitung",
-          "sent": "Versendet",
+          "progress": "progress",
+          "sent": "Sent",
           "title": "Status",
-          "upcoming": "Anstehend",
-          "wait-client-respond": "Wartet auf Antwort vom Kunden",
-          "wait-solution": "Wartet auf Lösung"
+          "upcoming": "Upcoming",
+          "wait-client-respond": "Waiting for the client to respond",
+          "wait-solution": "Waiting for solution"
         },
-        "title": "Aktivitäten",
+        "title": "Activities",
         "tmp-worker-complaints": {
-          "title": "Beschwerden über Zeitarbeitnehmer"
+          "title": "Temporary worker complaints"
         },
-        "tmpWorkerCount": "{{count}} Zeitarbeitnehmer"
+        "tmpWorkerCount": "{{count}} Temporary workers"
       },
       "greeting": {
-        "afternoon": "Guten Tag, {{name}}",
-        "evening": "Guten Abend, {{name}}",
-        "morning": "Guten Morgen, {{name}}"
+        "afternoon": "Good afternoon, {{name}}",
+        "evening": "Good evening, {{name}}",
+        "morning": "Good morning, {{name}}"
       },
       "home": {
         "sideMenu": {
-          "dataPrivacyPolicy": "Datenschutz",
-          "general": "Allgemeines",
-          "legal": "Rechtliches",
-          "legalNotice": "Impressum",
-          "logout": "Ausloggen",
+          "dataPrivacyPolicy": "Data Policy privacy",
+          "general": "General",
+          "legal": "Legal",
+          "legalNotice": "Legal notice",
+          "logout": "Logout",
           "support": "Support",
-          "termsOfServices": "Nutzungsbedingungen"
+          "termsOfServices": "Terms of services"
         }
       },
       "inquiries": {
-        "title": "Anfragen"
+        "title": "Inquiries"
       },
-      "maxLoanPeriod": "HÜD",
-      "noQualification": "Keine Qualifikation",
-      "noStatus": "Kein Status verfügbar",
-      "orderCount": "{hasMore, select, true {>{{count}} Aufträge} false {{{count}} Aufträge} other {Other Value}}",
+      "maxLoanPeriod": "Maximum loan period (HÜD)",
+      "noQualification": "No qualification",
+      "noStatus": "No status available",
+      "orderCount": "{hasMore, select, true {>{{count}} Orders} false {{{count}} Orders} other {Other Value}}",
       "orders": {
-        "title": "Aufträge"
+        "title": "Orders"
       },
       "sales-activities": {
-        "title": "Sales-Aktivitäten"
+        "title": "Sales activities"
       },
       "sent-profiles": {
-        "title": "Versendete Profile",
-        "viewPdf": "PDF Dokumente anschauen"
+        "title": "Sent profiles",
+        "viewPdf": "View PDF documents"
       },
-      "sortTitle": "Aktivitäten sortieren",
+      "sortTitle": "Sort activities",
       "status": {
-        "active": "Aktiv",
-        "blocked": "Geblockt",
-        "completed": "Abgeschlossen",
-        "discuss": "In Diskussion",
-        "done": "Erledigt",
+        "active": "Active",
+        "blocked": "Blocked",
+        "completed": "Completed",
+        "discuss": "In discussion",
+        "done": "Done",
         "enum": {
-          "1": "Anstehend",
-          "2": "Aktiv",
-          "4": "Abgeschlossen"
+          "1": "Upcoming",
+          "2": "Active",
+          "4": "Completed"
         },
-        "open": "Offen",
-        "progress": "in Fortschritt",
-        "sent": "Versendet",
-        "upcoming": "Anstehend",
-        "wait-client-respond": "Wartet auf Antwort vom Kunden",
-        "wait-solution": "Wartet auf Lösung"
+        "open": "Open",
+        "progress": "progress",
+        "sent": "Sent",
+        "upcoming": "Upcoming",
+        "wait-client-respond": "Waiting for the client to respond",
+        "wait-solution": "Waiting for solution"
       },
       "table": {
         "title": {
-          "client": "Kunde",
+          "client": "Client",
           "complainTitle": "Complaint title",
           "contactPerson": "Contact person",
           "created": "Created",
-          "endOfEmployment": "Ende der Beschäftigung",
-          "equalPayStartDate": "Equal Pay Startzeitpunkt",
+          "endOfEmployment": "End of employment",
+          "equalPayStartDate": "Equal pay start date",
           "followUp": "Follow-up",
           "location": "Location",
-          "maxLoanPeriod": "Höchstüberlassungsdauer (HÜD)",
+          "maxLoanPeriod": "Maximum loan period (HÜD)",
           "occupation": "Occupation",
           "profile": "Profile",
-          "qualification": "Qualifikation",
+          "qualification": "Qualification",
           "sentDate": "Sent date",
           "startDate": "Start date",
-          "startOfEmployment": "Start der Beschäftigung",
+          "startOfEmployment": "Start of employment",
           "status": "Status",
-          "temporaryWorker": "Zeitarbeitnehmer",
-          "temporaryWorkerCount": "Zeitarbeitnehmer",
+          "temporaryWorker": "Temporary worker",
+          "temporaryWorkerCount": "Temporary workers",
           "title": "Title",
           "type": "Type",
           "typeOfEmployment": "Type of employment"
         }
       },
-      "title": "Aktivitäten",
+      "title": "Activities",
       "tmp-worker-complaints": {
-        "title": "Beschwerden über Zeitarbeitnehmer"
+        "title": "Temporary worker complaints"
       },
-      "tmpWorkerCount": "{{count}} Zeitarbeitnehmer",
+      "tmpWorkerCount": "{{count}} Temporary workers",
       "viewOptions": {
-        "kanban": "Wechseln zur KanBan Ansicht",
-        "list": "Wechseln zur Listenansicht",
-        "new": "Neuer Auftrag"
+        "kanban": "Switch to Kanban view",
+        "list": "Switch to list view",
+        "new": "Add new order"
       }
     },
     "activityId": {
-      "title": "{{activityType}} Details"
+      "title": "{{activityType}} details",
+      "params": {
+        "activityType": {
+          "billing-complaints": "Billing complaint",
+          "inquiries": "Inquiry",
+          "orders": "Order",
+          "sales-activities": "Sales activity",
+          "sent-profiles": "Sent profile",
+          "tmp-worker-complaints": "Worker complaint"
+        }
+      }
     },
     "activityType": {
-      "title": "{{activityType}}"
+      "title": "{{activityType}}",
+      "params": {
+        "activityType": {
+          "billing-complaints": "Billing complaints",
+          "inquiries": "Inquiries",
+          "orders": "Orders",
+          "sales-activities": "Sales activities",
+          "sent-profiles": "Sent profiles",
+          "tmp-worker-complaints": "Worker complaints"
+        }
+      }
+    },
+    "master-data": {
+      "title": "Master data"
     },
     "master-data": {
       "title": "Stammdaten"
     },
     "clients": {
-      "activeOrder": "{count, plural, =0 {0 aktive Aufträge} one {1 aktiver Auftrag} other {# aktive Aufträge}}",
+      "activeOrder": "{count, plural, =0 {0 Active order} one {1 Active order} other {# Active orders}}",
       "activities": {
         "billing-complaints": {
-          "title": "Reklamationen zu Abrechnungen"
+          "title": "Billing complaints"
         },
         "inquiries": {
-          "title": "Anfragen"
+          "title": "Inquiries"
         },
         "orders": {
-          "title": "Aufträge"
+          "title": "Orders"
         },
         "sales-activities": {
-          "title": "Sales-Aktivitäten"
+          "title": "Sales activities"
         },
         "sections": {
           "activities": {
-            "title": "Kundenaktivitäten"
+            "title": "Client activities"
           },
           "recentActivities": {
-            "title": "Letzte Aktivitäten"
+            "title": "Recent activities"
           }
         },
         "sent-profiles": {
-          "title": "Versendete Profile"
+          "title": "Sent profiles"
         },
-        "title": "Aktivitäten",
+        "title": "Activities",
         "tmp-worker-complaints": {
-          "title": "Beschwerden über Zeitarbeitnehmer"
+          "title": "Temporary worker complaints"
         }
       },
       "contacts": {
-        "title": "Kontakte"
+        "title": "Contacts",
+        "table": {
+          "title": {
+            "contactName": "Contact name",
+            "rolePosition": "Role/Position",
+            "phone": "Phone"
+          }
+        }
       },
       "count": "{count, plural, =0 {0 Clients} one {1 Client} other {# Clients}}",
       "filters": {
-        "clientSelect": {
-          "all": "Alle Kunden",
-          "assignToMe": "Meine Kunden",
-          "title": "Kunden anzeigen"
-        },
         "creditScoreSelect": {
           "options": {
             "A": "A",
             "B": "B",
             "C": "C",
-            "NA": "Keine Wertungsoptionen verfügbar",
-            "all": "Alle Wertungsoptionen"
+            "NA": "No Scoring Available",
+            "all": "All scoring options"
           },
-          "placeholder": "Wertung",
-          "title": "Zeige Wertung"
+          "placeholder": "Scoring",
+          "title": "Show scoring"
         },
         "industrySelect": {
           "options": {
-            "all": "Alle Branchen",
-            "no": "Keine Branche verfügbar"
+            "all": "All industries",
+            "no": "No industry available"
           },
-          "placeholder": "Branchen",
-          "title": "Branchen anzeigen"
+          "placeholder": "Industries",
+          "title": "Show industries"
         }
       },
       "master-data": {
         "activities": {
           "orders": {
-            "title": "Aufträge"
+            "title": "Orders"
           }
         }
       },
       "masterData": {
         "sections": {
           "branches": {
-            "title": "Einsatzorte"
+            "title": "Branches"
           },
           "company": {
-            "activeOrder": "Aktive Aufträge (Zeitarbeitnehmer)",
-            "companyId": "Unternehmens-ID",
-            "contractedOrder": "Alle Aufträge",
-            "scoring": "Rating",
-            "title": "Unternehmensname"
+            "activeOrder": "Active orders (temporary workers)",
+            "companyId": "Company ID",
+            "contractedOrder": "Contracted orders (temporary workers)",
+            "scoring": "Scoring",
+            "title": "Company Name"
           },
           "industry": {
-            "title": "Branchen"
+            "title": "Industries"
           },
           "mainOffice": {
-            "title": "Hauptniederlassung"
+            "title": "Main office"
           }
         },
-        "title": "Stammdaten"
+        "title": "Master data"
       },
-      "sortTitle": "Kunden sortieren",
+      "sortTitle": "Sort clients",
       "table": {
         "title": {
-          "activeOrders": "Aktive Aufträge",
-          "client": "Kunde",
-          "companyId": "Kundennummer",
-          "contractedOrders": "erteilte Aufträge",
-          "industry": "Branche",
-          "location": "Standort",
-          "scoring": "Wertigkeit"
+          "activeOrders": "Active orders",
+          "client": "Client",
+          "companyId": "Company ID",
+          "contractedOrders": "Contracted orders",
+          "industry": "Industry",
+          "location": "Location",
+          "scoring": "Scoring"
         }
       },
-      "title": "Kunden"
+      "title": "Clients"
+    },
+    "contactId": {
+      "title": "Contact details"
     },
     "contactType": {
-      "title": "Kontakte"
+      "title": "Contacts"
+    },
+    "master-data": {
+      "title": "Master data"
     },
     "contacts": {
       "contactDetails": {
         "details": "Details",
-        "emptyOrders": "Keine Aufträge bisher",
-        "orders": "Aufträge"
+        "emptyOrders": "No orders yet",
+        "orders": "Orders"
       },
-      "count": "{hasMore, select, true {>{{count}} Kontakte} false {{{count}} Kontakte} other {{{count}} Kontakte}}",
+      "count": "{count, plural, =0 {0 Contacts} one {1 Contact} other {# Contacts}}",
       "coworkers": {
-        "title": "Kontakte"
+        "title": "Contacts"
       },
       "filters": {
         "availabilitySelect": {
           "options": {
-            "not": "Nicht verfügbar",
-            "now": "Verfügbar",
-            "soon": "Bald verfügbar (≤ 1 Monat)"
+            "not": "Not available",
+            "now": "Available",
+            "soon": "Available soon (≤ 1 month)"
           },
-          "placeholder": "Verfügbarkeit",
-          "title": "Verfügbarkeit anzeigen"
+          "placeholder": "Availability",
+          "title": "Show availability"
         },
         "branchOfficeSelect": {
-          "placeholder": "Niederlassung",
-          "title": "Niederlassung anzeigen"
-        },
-        "clientSelect": {
-          "options": {
-            "all": "Alle Kunden",
-            "assignToMe": "Mir zugewiesen"
-          },
-          "title": "Kunden anzeigen"
+          "placeholder": "Branch office",
+          "title": "Show branch office"
         },
         "functionSelect": {
-          "placeholder": "Funktion",
-          "title": "Funktion anzeigen"
+          "placeholder": "Function",
+          "title": "Show function"
         },
         "positionSelect": {
           "placeholder": "Position",
-          "title": "Position anzeigen"
+          "title": "Show position"
         },
         "qualificationSelect": {
-          "placeholder": "Qualifikation",
-          "title": "Qualifikation anzeigen"
+          "placeholder": "Qualifications",
+          "title": "Show qualification"
+        },
+        "occupationSelect": {
+          "placeholder": "Occupations",
+          "title": "Show occupation"
         },
         "tabs": {
-          "clients": "Kunde",
-          "coworkers": "Kollegen",
-          "temporary-workers": "Zeitarbeitnehmer"
+          "clients": "Client",
+          "coworkers": "Co-workers",
+          "temporary-workers": "Temporary workers"
+        }
+        
+      },
+      "table": {
+        "title": {
+          "contactName": "Contact name",
+          "occupation": "Occupation",
+          "availability": "Availability",
+          "phone": "Phone",
+          "location": "Location",
+          "position": "Position",
+          "role": "Role",
+          "function": "Function",
+          "client": "Client",
+          "companyAndBranch": "Company and branch" 
         }
       },
-      "sortTitle": "Kontakte sortieren",
-      "title": "Kontakte"
+      "sortTitle": "Sort contacts",
+      "title": "Contacts"
     },
     "default": {
       "filters": {
         "availabilitySelect": {
           "options": {
-            "all": "Alle Vergüfbarkeiten",
+            "all": "All availabilities",
             "no": "No availability available"
           }
         },
         "branchOfficeSelect": {
           "options": {
-            "all": "Alle Niederlassungen",
-            "no": "Keine Niederlassung verfügbar"
+            "all": "All branch offices",
+            "no": "No branch office available"
           }
         },
-        "clientSelect": {
+        "companySelect": {
           "options": {
             "all": "All clients",
             "assignToMe": "Assigned to me"
           },
-          "placeholder": "Client",
+          "placeholder": "Company",
           "title": "Show clients"
-        },
-        "companySelect": {
-          "options": {
-            "all": "Alle Unternehmen"
-          }
+
         },
         "functionSelect": {
           "options": {
             "all": "All functions",
-            "no": "Keine Funktion verfügbar"
+            "no": "No function available"
           }
         },
         "industries": {
@@ -540,27 +585,27 @@
         },
         "locationSelect": {
           "options": {
-            "all": "Alle Standorte"
+            "all": "All locations"
           },
-          "placeholder": "Standort",
-          "title": "Standort anzeigen"
+          "placeholder": "Location",
+          "title": "Show location"
         },
         "occupationFields": {
           "options": {
-            "all": "Alle Berufsgruppen"
+            "all": "All occupation fields"
           }
         },
         "occupationSelect": {
           "options": {
-            "all": "Alle Berufe",
-            "no": "Kein Beruf verfügbar"
+            "all": "All occupations",
+            "no": "No occupation available"
           },
           "placeholder": "Occupation",
           "title": "Show occupation"
         },
         "occupations": {
           "options": {
-            "all": "Alle Berufe"
+            "all": "All occupations"
           }
         },
         "positionSelect": {
@@ -582,7 +627,7 @@
         },
         "statusSelect": {
           "options": {
-            "all": "Alle Status",
+            "all": "All statuses",
             "no": "No status available"
           },
           "placeholder": "Status",
@@ -590,39 +635,39 @@
         },
         "workingHours": {
           "options": {
-            "all": "Alle Arbeitszeiten"
+            "all": "All working hours"
           }
         }
       }
     },
     "home": {
       "sideMenu": {
-        "dataPrivacyPolicy": "Datenschutz",
-        "general": "Allgemeines",
-        "legal": "Rechtliches",
-        "legalNotice": "Impressum",
+        "dataPrivacyPolicy": "Data privacy policy",
+        "general": "General",
+        "legal": "Legal",
+        "legalNotice": "Legal notice",
         "logout": "Logout",
         "support": "Support",
-        "termsOfServices": "AGB"
+        "termsOfServices": "Terms of services"
       }
     },
     "job-index": {
-      "title": "Job Index"
+      "title": "Job index"
     },
     "jobs": {
-      "allCompanies": "Alle Unternehmen",
-      "count": "{hasMore, select, true {{count, plural, one {>1 job}\n{># jobs}}\n{{count, plural, one {1 job}\n{# jobs}}\n{{count, plural, one {1 job}\n{# jobs}}",
+      "allCompanies": "All companies",
+      "count": "{hasMore, select, true {{count, plural, one {>1 job} other {># jobs}}} false {{count, plural, one {1 job} other {# jobs}}} other {{count, plural, one {1 job} other {# jobs}}}}",
       "details": {
         "contractTerm": "Contract term",
         "datePublished": "Date published",
-        "description": "Beschreibung",
+        "description": "Description",
         "location": "Location",
         "occupation": "Occupation",
         "occupationalField": "Occupational field",
-        "startDate": "Anfangsdatum",
-        "title": "Stellenbeschreibung",
+        "startDate": "Start date",
+        "title": "Job details",
         "viewJobList": "View job listing",
-        "workingHour": "Arbeitszeiten"
+        "workingHour": "Working hours"
       },
       "filters": {
         "industries": {
@@ -630,8 +675,8 @@
           "title": "Industries"
         },
         "locations": {
-          "placeholder": "Standorte",
-          "title": "Standorte"
+          "placeholder": "Locations",
+          "title": "Locations"
         },
         "occupationFields": {
           "placeholder": "Occupational fields",
@@ -643,13 +688,13 @@
         },
         "sources": "Sources",
         "workingHours": {
-          "placeholder": "Arbeitszeiten",
-          "title": "Arbeitszeiten"
+          "placeholder": "Working hours",
+          "title": "Working hours"
         }
       },
       "index": {
-        "contactUs": "Kontakt aufnehmen",
-        "desc": "Index (geplant für 2025)",
+        "contactUs": "Contact us",
+        "desc": "Index (planned for 2025)",
         "support": {
           "title": "Support"
         },
@@ -690,173 +735,159 @@
         "part-time": "Part time",
         "shift-and-night": "Shift and night"
       },
-      "sortTitle": "Jobs sortieren",
-      "title": "Stellen"
+      "sortTitle": "Sort jobs",
+      "title": "Jobs"
     },
     "notFound": {
-      "backHome": "Zurück",
-      "message": "Diese Seite konnte nicht gefunden werden"
+      "backHome": "Back home",
+      "message": "This page could not be found."
     },
     "pagePublicType": {
-      "title": "{{pagePublicType}}"
+      "title": "{{pagePublicType}}",
+      "params": {
+        "pagePublicType": {
+          "data-privacy": "Data privacy",
+          "term-services": "Terms of service",
+          "legal-notice": "Legal notice"
+        }
+      }
     },
     "source_jobId": {
-      "title": "Stellenbeschreibung"
+      "title": "Job details"
     },
     "support": {
       "info": {
-        "email": "Schreiben Sie uns",
-        "phone": "Rufen Sie an"
+        "email": "Write us",
+        "phone": "Call us"
       },
       "questionCates": {
-        "filter": "Filterung verstehen",
-        "listing": "Filterung verstehen"
+        "filter": "Understanding filtering",
+        "listing": "Understanding listings"
       },
       "title": "Support"
+    },
+    "notfound": {
+      "desc": "Sorry, but we were unable to locate the requested resource.",
+      "backBtn": "Back to Overview",
+      "title": "Resource not found"
     }
   },
   "primeng": {
-    "accept": "Ja",
-    "addRule": "Regel hinzufügen",
+    "accept": "Yes",
+    "addRule": "Add Rule",
     "am": "AM",
-    "apply": "Übernehmen",
+    "apply": "Apply",
     "aria": {
-      "cancelEdit": "Änderung abbrechen",
-      "close": "Schließen",
-      "collapseLabel": "Einklappen",
-      "collapseRow": "Zeile eingeklappt",
-      "editRow": "Zeile bearbeiten",
-      "expandLabel": "Ausklappen",
-      "expandRow": "Zeile ausgeklappt",
-      "falseLabel": "Falsch",
-      "filterConstraint": "Filterbeschränkung",
-      "filterOperator": "Filter Operator",
-      "firstPageLabel": "Erste Seite",
-      "gridView": "Rasteransicht",
-      "hideFilterMenu": "Filtermenü ausblenden",
-      "jumpToPageDropdownLabel": "Zum Dropdown springen",
-      "jumpToPageInputLabel": "Zum Eingabefeld springen",
-      "lastPageLabel": "Letzte Seite",
-      "listView": "Listenansicht",
-      "moveAllToSource": "Alle zur Quelle bewegen",
-      "moveAllToTarget": "Alle zum Ziel bewegen",
-      "moveBottom": "Zum Ende bewegen",
-      "moveDown": "Nach unten bewegen",
-      "moveToSource": "Zur Quelle bewegen",
-      "moveToTarget": "Zum Ziel bewegen",
-      "moveTop": "Zum Anfang bewegen",
-      "moveUp": "Nach oben bewegen",
+      "cancelEdit": "Cancel edit",
+      "close": "Close",
+      "collapseLabel": "Collapse",
+      "collapseRow": "Row collapsed",
+      "editRow": "Edit Row",
+      "expandLabel": "Expand",
+      "expandRow": "Row expanded",
+      "falseLabel": "False",
+      "filterConstraint": "Filter constraint",
+      "filterOperator": "Filter operator",
+      "firstPageLabel": "First page",
+      "gridView": "Grid view",
+      "hideFilterMenu": "Hide filter menu",
+      "jumpToPageDropdownLabel": "Jump to page dropdown",
+      "jumpToPageInputLabel": "Jump to page input",
+      "lastPageLabel": "Last page",
+      "listView": "List view",
+      "moveAllToSource": "Move all to source",
+      "moveAllToTarget": "Move all to target",
+      "moveBottom": "Move bottom",
+      "moveDown": "Move down",
+      "moveToSource": "Move to source",
+      "moveToTarget": "Move to target",
+      "moveTop": "Move top",
+      "moveUp": "Move up",
       "navigation": "Navigation",
-      "next": "Nächste",
-      "nextPageLabel": "Nächste Seite",
-      "nullLabel": "Nicht ausgewählt",
-      "otpLabel": "Bitte geben Sie den Login-Code {0} ein.",
-      "pageLabel": "Seite {page}",
-      "passwordHide": "Passwort verbergen",
-      "passwordShow": "Passwort anzeigen",
-      "previous": "Vorherige",
-      "previousPageLabel": "Vorherige Seite",
-      "rotateLeft": "Nach links drehen",
-      "rotateRight": "Nach rechts drehen",
-      "rowsPerPageLabel": "Zeilen pro Seite",
-      "saveEdit": "Änderungen speichern",
-      "scrollTop": "Nach oben scrollen",
-      "selectAll": "Alle Elemente ausgewählt",
-      "selectLabel": "Auswählen",
-      "selectRow": "Zeile ausgewählt",
-      "showFilterMenu": "Filtermenü anzeigen",
-      "slide": "Folie",
+      "next": "Next",
+      "nextPageLabel": "Next page",
+      "nullLabel": "Not selected",
+      "otpLabel": "Please enter one time password character {0}",
+      "pageLabel": "Page {page}",
+      "passwordHide": "Hide Password",
+      "passwordShow": "Show Password",
+      "previous": "Previous",
+      "previousPageLabel": "Previous Page",
+      "rotateLeft": "Rotate Left",
+      "rotateRight": "Rotate Right",
+      "rowsPerPageLabel": "Rows per page",
+      "saveEdit": "Save Edit",
+      "scrollTop": "Scroll Top",
+      "selectAll": "All items selected",
+      "selectLabel": "Select",
+      "selectRow": "Row Selected",
+      "showFilterMenu": "Show Filter Menu",
+      "slide": "Slide",
       "slideNumber": "{slideNumber}",
-      "star": "1 Stern",
-      "stars": "{star} Sterne",
-      "trueLabel": "Wahr",
-      "unselectAll": "Alle Elemente abgewählt",
-      "unselectLabel": "Auswahl aufheben",
-      "unselectRow": "Zeile abgewählt",
-      "zoomImage": "Bild vergrößern",
-      "zoomIn": "Vergrößern",
-      "zoomOut": "Verkleinern"
+      "star": "1 star",
+      "stars": "{star} stars",
+      "trueLabel": "True",
+      "unselectAll": "All items unselected",
+      "unselectLabel": "Unselect",
+      "unselectRow": "Row Unselected",
+      "zoomImage": "Zoom Image",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out"
     },
-    "cancel": "Abbrechen",
-    "choose": "Auswählen",
-    "chooseDate": "Datum wählen",
-    "chooseMonth": "Monat wählen",
-    "chooseYear": "Jahr wählen",
-    "clear": "Löschen",
-    "completed": "Abgeschlossen",
-    "contains": "Enthält",
-    "custom": "Benutzerdefiniert",
-    "dateAfter": "Datum ist nach",
-    "dateBefore": "Datum ist vor",
-    "dateFormat": "dd.mm.yy",
-    "dateIs": "Datum ist",
-    "dateIsNot": "Datum ist nicht",
+    "cancel": "Cancel",
+    "choose": "Choose",
+    "chooseDate": "Choose Date",
+    "chooseMonth": "Choose Month",
+    "chooseYear": "Choose Year",
+    "clear": "Clear",
+    "completed": "Completed",
+    "contains": "Contains",
+    "custom": "Custom",
+    "dateAfter": "Date is after",
+    "dateBefore": "Date is before",
+    "dateFormat": "mm/dd/yy",
+    "dateIs": "Date is",
+    "dateIsNot": "Date is not",
     "dayNames": [
-      "Sonntag",
-      "Montag",
-      "Dienstag",
-      "Mittwoch",
-      "Donnerstag",
-      "Freitag",
-      "Samstag"
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
     ],
-    "dayNamesMin": [
-      "So",
-      "Mo",
-      "Di",
-      "Mi",
-      "Do",
-      "Fr",
-      "Sa"
-    ],
-    "dayNamesShort": [
-      "Son",
-      "Mon",
-      "Die",
-      "Mit",
-      "Don",
-      "Fre",
-      "Sam"
-    ],
-    "emptyFilterMessage": "Keine Ergebnisse gefunden",
-    "emptyMessage": "Keine Einträge gefunden",
-    "emptySearchMessage": "Keine Ergebnisse gefunden",
-    "emptySelectionMessage": "Kein ausgewähltes Element",
-    "endsWith": "Endet mit",
-    "equals": "Ist gleich",
-    "fileSizeTypes": [
-      "B",
-      "KB",
-      "MB",
-      "GB",
-      "TB",
-      "PB",
-      "EB",
-      "ZB",
-      "YB"
-    ],
-    "filter": "Filtern",
+    "dayNamesMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    "emptyFilterMessage": "No results found",
+    "emptyMessage": "No available options",
+    "emptySearchMessage": "No results found",
+    "emptySelectionMessage": "No selected item",
+    "endsWith": "Ends with",
+    "equals": "Equals",
+    "fileSizeTypes": ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+    "filter": "Filter",
     "firstDayOfWeek": "0",
-    "gt": "Größer als",
-    "gte": "Größer oder gleich",
-    "lt": "Kleiner als",
-    "lte": "Kleiner oder gleich",
-    "matchAll": "Passt auf alle",
-    "matchAny": "Passt auf einige",
-    "medium": "Mittel",
+    "gt": "Greater than",
+    "gte": "Greater than or equal to",
+    "lt": "Less than",
+    "lte": "Less than or equal to",
+    "matchAll": "Match All",
+    "matchAny": "Match Any",
+    "medium": "Medium",
     "monthNames": [
-      "Januar",
-      "Februar",
-      "Juli",
+      "January",
+      "February",
+      "July",
       "August",
       "September",
-      "Oktober",
+      "October",
       "November",
-      "Dezember",
-      "März",
+      "December",
+      "March",
       "April",
-      "Mai",
-      "Juni"
+      "May",
+      "June"
     ],
     "monthNamesShort": [
       "Jan",
@@ -864,43 +895,43 @@
       "Jul",
       "Aug",
       "Sep",
-      "Okt",
+      "Oct",
       "Nov",
-      "Dez",
-      "Mär",
+      "Dec",
+      "Mar",
       "Apr",
-      "Mai",
+      "May",
       "Jun"
     ],
-    "nextDecade": "Nächstes Jahrzehnt",
-    "nextHour": "Nächste Stunde",
-    "nextMinute": "Nächste Minute",
-    "nextMonth": "Nächster Monat",
-    "nextSecond": "Nächste Sekunde",
-    "nextYear": "Nächstes Jahr",
-    "noFilter": "Kein Filter",
-    "notContains": "Enthält nicht",
-    "notEquals": "Ist ungleich",
-    "now": "Verfügbar",
-    "passwordPrompt": "Passwort eingeben",
-    "pending": "Ausstehend",
+    "nextDecade": "Next Decade",
+    "nextHour": "Next Hour",
+    "nextMinute": "Next Minute",
+    "nextMonth": "Next Month",
+    "nextSecond": "Next Second",
+    "nextYear": "Next Year",
+    "noFilter": "No Filter",
+    "notContains": "Not contains",
+    "notEquals": "Not equals",
+    "now": "Available",
+    "passwordPrompt": "Enter a password",
+    "pending": "Pending",
     "pm": "PM",
-    "prevDecade": "Vorheriges Jahrzehnt",
-    "prevHour": "Vorherige Stunde",
-    "prevMinute": "Vorherige Minute",
-    "prevMonth": "Vorheriger Monat",
-    "prevSecond": "Vorherige Sekunde",
-    "prevYear": "Vorheriges Jahr",
-    "reject": "Nein",
-    "removeRule": "Regel entfernen",
-    "searchMessage": "{0} Ergebnisse verfügbar",
-    "selectionMessage": "{0} Elemente ausgewählt",
+    "prevDecade": "Previous Decade",
+    "prevHour": "Previous Hour",
+    "prevMinute": "Previous Minute",
+    "prevMonth": "Previous Month",
+    "prevSecond": "Previous Second",
+    "prevYear": "Previous Year",
+    "reject": "No",
+    "removeRule": "Remove Rule",
+    "searchMessage": "{0} results are available",
+    "selectionMessage": "{0} items selected",
     "showMonthAfterYear": false,
-    "startsWith": "Beginnt mit",
-    "strong": "Stark",
-    "today": "Heute",
-    "upload": "Hochladen",
-    "weak": "Schwach",
-    "weekHeader": "KW"
+    "startsWith": "Starts with",
+    "strong": "Strong",
+    "today": "Today",
+    "upload": "Upload",
+    "weak": "Weak",
+    "weekHeader": "Wk"
   }
 }
