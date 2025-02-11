@@ -339,6 +339,9 @@
     "activityType": {
       "title": "{{activityType}}"
     },
+    "master-data": {
+      "title": "Stammdaten"
+    },
     "clients": {
       "activeOrder": "{count, plural, =0 {0 aktive Aufträge} one {1 aktiver Auftrag} other {# aktive Aufträge}}",
       "activities": {
