@@ -19,6 +19,7 @@
     "descending": "Alphabetical descending",
     "description": "Description",
     "done": "Done",
+    "ok": "Ok",
     "email": "Email",
     "emptyFilter": {
       "button": "Reset filters",
@@ -36,7 +37,8 @@
     "industry": "Industry",
     "location": "location",
     "mobile": "Mobile",
-    "newVersion": "A new version is available. Please refresh to update.",
+    "newVersionContent": "A new version of the application is available. Confirm to refresh the page and load the latest changes.",
+    "newVersionTitle": "Version update",
     "noInternet": "No internet connection",
     "notAvailable": "Not available",
     "occupation": "Occupation",
@@ -88,6 +90,9 @@
     "title": "Login"
   },
   "pages": {
+    "clientId": {
+      "title": "Client details"
+    },
     "activities": {
       "activityCount": "{count, plural, =0 {0 {{activityType}}} one {1 {{activityType}}} other {# {{activityType}}}}",
       "activityDetails": {
@@ -360,6 +365,9 @@
         }
       }
     },
+    "master-data": {
+      "title": "Master data"
+    },
     "clients": {
       "activeOrder": "{count, plural, =0 {0 Active order} one {1 Active order} other {# Active orders}}",
       "activities": {
@@ -465,10 +473,13 @@
       },
       "title": "Clients"
     },
+    "contactId": {
+      "title": "Contact details"
+    },
     "contactType": {
       "title": "Contacts"
     },
-    "master-data":{
+    "master-data": {
       "title": "Master data"
     },
     "contacts": {
@@ -507,10 +518,29 @@
           "placeholder": "Qualifications",
           "title": "Show qualification"
         },
+        "occupationSelect": {
+          "placeholder": "Occupations",
+          "title": "Show occupation"
+        },
         "tabs": {
           "clients": "Client",
           "coworkers": "Co-workers",
           "temporary-workers": "Temporary workers"
+        }
+        
+      },
+      "table": {
+        "title": {
+          "contactName": "Contact name",
+          "occupation": "Occupation",
+          "availability": "Availability",
+          "phone": "Phone",
+          "location": "Location",
+          "position": "Position",
+          "role": "Role",
+          "function": "Function",
+          "client": "Client",
+          "companyAndBranch": "Company and branch" 
         }
       },
       "sortTitle": "Sort contacts",
@@ -532,11 +562,11 @@
         },
         "companySelect": {
           "options": {
-            "all": "All companies",
+            "all": "All clients",
             "assignToMe": "Assigned to me"
           },
           "placeholder": "Company",
-          "title": "Show companies"
+          "title": "Show clients"
 
         },
         "functionSelect": {
@@ -732,6 +762,11 @@
         "listing": "Understanding listings"
       },
       "title": "Support"
+    },
+    "notfound": {
+      "desc": "Sorry, but we were unable to locate the requested resource.",
+      "backBtn": "Back to Overview",
+      "title": "Resource not found"
     }
   },
   "primeng": {
@@ -819,41 +854,15 @@
       "Friday",
       "Saturday"
     ],
-    "dayNamesMin": [
-      "Su",
-      "Mo",
-      "Tu",
-      "We",
-      "Th",
-      "Fr",
-      "Sa"
-    ],
-    "dayNamesShort": [
-      "Sun",
-      "Mon",
-      "Tue",
-      "Wed",
-      "Thu",
-      "Fri",
-      "Sat"
-    ],
+    "dayNamesMin": ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     "emptyFilterMessage": "No results found",
     "emptyMessage": "No available options",
     "emptySearchMessage": "No results found",
     "emptySelectionMessage": "No selected item",
     "endsWith": "Ends with",
     "equals": "Equals",
-    "fileSizeTypes": [
-      "B",
-      "KB",
-      "MB",
-      "GB",
-      "TB",
-      "PB",
-      "EB",
-      "ZB",
-      "YB"
-    ],
+    "fileSizeTypes": ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
     "filter": "Filter",
     "firstDayOfWeek": "0",
     "gt": "Greater than",
