@@ -368,6 +368,9 @@
     "master-data": {
       "title": "Master data"
     },
+    "master-data": {
+      "title": "Stammdaten"
+    },
     "clients": {
       "activeOrder": "{count, plural, =0 {0 Active order} one {1 Active order} other {# Active orders}}",
       "activities": {
