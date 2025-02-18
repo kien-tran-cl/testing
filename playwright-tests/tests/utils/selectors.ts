@@ -93,7 +93,14 @@ title: '',
 export const salesActivitiesPageSelectors = {
   backArrow: 'button.p-button-icon-only >> nth=0',
   headerTitle: 'gedat-header',
-  gedatActivitiesEle: 'gedat-activities'//ele
+  gedatActivitiesEle: 'gedat-activities',//ele
+  salesActivitiesItem: 'gedat-activity-item',
+  salesActivitiesSkeletonItem: 'gedat-activity-status lib-skeleton',
+  status: '.p-tag',
+  title: 'h4.text-common-info-bold.title',
+  contactPerson: 'p.text-common-label.subtitle',
+  companyName: 'p.gap-1',
+  date: 'p.text-common-label.min-w-10', 
 };
 
 export const salesActivitiesDetailsSelectors = {
@@ -141,12 +148,15 @@ headerTitle: 'gedat-header',
 export const searchFilter = {
 inputField: 'gedat-input-field >> input',
 clearInputField: 'gedat-input-field >> button',
+cancelSearch: 'p-button[gedatresetfilter] button',
 clientFilter: 'gedat-company-filter',
 clientFilterText: 'gedat-label >> div >> nth=0',
 multiselectFilter: 'gedat-select-label',
 multiselectFilterText: 'gedat-select-label label',
 filterFormOverlay: 'role=dialog',
 filterOptions: 'gedat-selectable-option',
+companyFilterCount: "gedat-selectable-option div.grid p",
+companyFilterLabel: "gedat-selectable-option p.flex-1",
 closeFilter: 'gedat-close-button-dialog-form',
 emptyFilterMessage: 'gedat-empty-filtering >> div >> div >> nth=1',
 emptyFilterResetButton: 'gedat-empty-filtering button',
