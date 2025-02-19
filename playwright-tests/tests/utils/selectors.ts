@@ -72,16 +72,16 @@ headerTitle: 'gedat-header',
 occupation: 'gedat-activity-details >> h2', 
 companyName: 'gedat-activity-details >> p',
 status: 'gedat-activity-status',
-inquiriesDetailItem: 'gedat-activity-details-item',
-inquiriesDetailItemTitle: 'gedat-activity-details-item h5',
-inquiriesDetailItemValue: 'gedat-activity-details-item h4',
-creationDate: 'gedat-activity-details-item h4 >> nth=0', 
-startDate: 'gedat-activity-details-item h4 >> nth=1',
-numberOfTemporaryWorkers: 'gedat-activity-details-item h4 >> nth=2',
-typeOfEmployment: 'gedat-activity-details-item h4 >> nth=3',
-address: 'gedat-activity-details-item h4 >> nth=4',
-contactPerson: 'gedat-activity-details-item h4 >> nth=5 >> span',
-runningNumber: 'gedat-activity-details-item h4 >> nth=6',
+inquiriesDetailItem: 'gedat-detail-item',
+inquiriesDetailItemTitle: 'gedat-detail-item h5',
+inquiriesDetailItemValue: 'gedat-detail-item h4',
+creationDate: 'gedat-detail-item h4 >> nth=0', 
+startDate: 'gedat-detail-item h4 >> nth=1',
+numberOfTemporaryWorkers: 'gedat-detail-item h4 >> nth=2',
+typeOfEmployment: 'gedat-detail-item h4 >> nth=3',
+address: 'gedat-detail-item h4 >> nth=4',
+contactPerson: 'gedat-detail-item h4 >> nth=5 >> span',
+runningNumber: 'gedat-detail-item h4 >> nth=6',
 };
 
 export const contactDetailPage = {
@@ -110,12 +110,12 @@ export const salesActivitiesDetailsSelectors = {
   itemTitle: 'gedat-h2 h2',//ele ele
   itemCompanyName: '.font-medium.text-common-info.ng-star-inserted',//class chain
   itemStatus: 'gedat-activity-status span',//ele ele
-  itemCreated: 'gedat-activity-details-item >> nth=0',//1st ele
-  itemFollowUp: 'gedat-activity-details-item >> nth=1',//2nd ele
-  itemKind: 'gedat-activity-details-item >> nth=2',//3rd ele
-  itemContactPerson: 'gedat-activity-details-item >> nth=3',//4th ele
-  itemReporters: 'gedat-activity-details-item >> nth=4',//5th ele
-  itemForwardedTo: 'gedat-activity-details-item >> nth=5',//6th ele
+  itemCreated: 'gedat-detail-item >> nth=0',//1st ele
+  itemFollowUp: 'gedat-detail-item >> nth=1',//2nd ele
+  itemKind: 'gedat-detail-item >> nth=2',//3rd ele
+  itemContactPerson: 'gedat-detail-item >> nth=3',//4th ele
+  itemReporters: 'gedat-detail-item >> nth=4',//5th ele
+  itemForwardedTo: 'gedat-detail-item >> nth=5',//6th ele
 };
 
 export const contactDetailSelectors = {
