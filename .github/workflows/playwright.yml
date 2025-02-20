@@ -65,6 +65,23 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
+      
+      - name: Extract test results
+        if: always()
+        run: |
+          PASSED=$(jq '[.suites[].specs[] | select(.ok == true)] | length' playwright-tests/playwright-report/results.json)
+          FAILED=$(jq '[.suites[].specs[] | select(.ok == false)] | length' playwright-tests/playwright-report/results.json)
+          PASSED_TESTS=$(jq -r '[.suites[].specs[] | select(.ok == true)] | map(.title) | join("\n")' playwright-tests/playwright-report/results.json)
+          FAILED_TESTS=$(jq -r '[.suites[].specs[] | select(.ok == false)] | map(.title) | join("\n")' playwright-tests/playwright-report/results.json)
+          echo "PASSED=$PASSED" >> $GITHUB_ENV
+          echo "FAILED=$FAILED" >> $GITHUB_ENV
+          echo "PASSED_TESTS<<EOF" >> $GITHUB_ENV
+          echo "$PASSED_TESTS" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+          echo "FAILED_TESTS<<EOF" >> $GITHUB_ENV
+          echo "$FAILED_TESTS" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+        shell: bash
 
       - name: Notify Slack on success
         if: success()
@@ -74,7 +91,7 @@ jobs:
             {
               "channel": "#uncle-k",
               "username": "CI Bot",
-              "text": "✅ Playwright tests passed on commit ${{ github.sha }}."
+              "text": "✅ Playwright tests passed on commit ${{ github.sha }}.\n📊 Passed: ${{ env.PASSED }}\n\n✅ *Passed Tests:*\n```\n${{ env.PASSED_TESTS }}\n```"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -87,7 +104,7 @@ jobs:
             {
               "channel": "#uncle-k",
               "username": "CI Bot",
-              "text": "❌ Playwright tests failed on commit ${{ github.sha }}."
+              "text": "❌ Playwright tests failed on commit ${{ github.sha }}.\n📊 Passed: ${{ env.PASSED }} | ❌ Failed: ${{ env.FAILED }}\n\n✅ *Passed Tests:*\n```\n${{ env.PASSED_TESTS }}\n```\n\n❌ *Failed Tests:*\n```\n${{ env.FAILED_TESTS }}\n```"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
