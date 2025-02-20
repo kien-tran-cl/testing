@@ -46,6 +46,8 @@ jobs:
       - name: Install Playwright Browsers
         working-directory: playwright-tests
         run: npm run install:drivers
+      - name: Create report folder
+        run: mkdir -p playwright-tests/playwright-report
       - name: Run Playwright tests
         working-directory: playwright-tests
         env:
@@ -59,6 +61,14 @@ jobs:
           OTP_API_KEY: ${{ secrets.OTP_API_KEY }}
           OTP_API_URL: ${{ secrets.OTP_API_URL }}
         run: npm test
+      - name: Check if results.json exists
+        run: |
+          if [ ! -f playwright-tests/playwright-report/results.json ]; then
+            echo "results.json not found!"
+            exit 1
+          else
+            echo "results.json found."
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
