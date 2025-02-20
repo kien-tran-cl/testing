@@ -91,7 +91,7 @@ jobs:
             {
               "channel": "#uncle-k",
               "username": "CI Bot",
-              "text": "✅ Playwright tests passed on commit ${{ github.sha }}.\n📊 Passed: ${{ env.PASSED }}\n\n✅ *Passed Tests:*\n```\n${{ env.PASSED_TESTS }}\n```"
+              "text": "✅ Playwright tests passed on commit ${{ github.sha }}.\n📊 Passed: ${{ env.PASSED }} | ❌ Failed: ${{ env.FAILED }}\n\n✅ *Passed Tests:*\n\`\`\`${{ env.PASSED_TESTS }}\n\`\`\`"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -104,7 +104,11 @@ jobs:
             {
               "channel": "#uncle-k",
               "username": "CI Bot",
-              "text": "❌ Playwright tests failed on commit ${{ github.sha }}.\n📊 Passed: ${{ env.PASSED }} | ❌ Failed: ${{ env.FAILED }}\n\n✅ *Passed Tests:*\n```{{ env.PASSED_TESTS }}```\n\n❌ *Failed Tests:*\n```{{ env.FAILED_TESTS }}```"
+              "text": "❌ Playwright tests failed on commit ${{ github.sha }}.\n📊 Passed: ${{ env.PASSED }} | ❌ Failed: ${{ env.FAILED }}\n\n✅ *Passed Tests:*\n\`\`\`${{ env.PASSED_TESTS }}\n\`\`\`\n\n❌ *Failed Tests:*\n\`\`\`${{ env.FAILED_TESTS }}\n\`\`\`"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          PASSED: ${{ env.PASSED }}
+          FAILED: ${{ env.FAILED }}
+          PASSED_TESTS: ${{ env.PASSED_TESTS }}
+          FAILED_TESTS: ${{ env.FAILED_TESTS }}
