@@ -251,6 +251,8 @@ test.describe('E2E - Orders Search And Filtering', () => {
     });
 
     await test.step('Step 2: Scroll the list to the bottom', async () => {
+			console.log('Step 2: Scroll the list to the bottom');
+
 			await page.unrouteAll();
 			await page.reload();
 			const response = await page.waitForResponse(response => 
