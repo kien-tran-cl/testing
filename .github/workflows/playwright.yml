@@ -61,7 +61,7 @@ jobs:
         run: npm test
 
       - name: Upload Playwright traces
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always() # Always upload trace files, even if the test passes or fails
         with:
           name: playwright-traces
