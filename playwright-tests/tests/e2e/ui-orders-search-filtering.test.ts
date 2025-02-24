@@ -9,6 +9,8 @@ import { appUrl } from '../utils/auth-utils';
 import { loginBeforeTest } from '../common';
 import mockDataOrderListPage1Pagesize20Sort4 from '../mockData/path/order/list/params/page1_pageSize20_searchKey_sort4.json' assert { type: 'json' };
 import mockDataOrderListPage2Pagesize20Sort4 from '../mockData/path/order/list/params/page2_pageSize20_searchKey_sort4.json' assert { type: 'json' };
+import exp from 'constants';
+import { clear } from 'console';
 
 function verifyValidStatus(orderStatus : number) {
 	const expectOrderStatuses = [1,2,4];
@@ -212,6 +214,7 @@ test.describe('E2E - Orders Search And Filtering', () => {
 			clearFilterButton: i18n.t("common.emptyFilter.button"),
 		}
     await test.step('Step 1: Click on the orders card', async () => {
+			console.log(process.env.ENVIRONMENT);
 			console.log('Step 1: Click on the orders card');
 
 			await page.route('*/**/api/v1/activity/order**', async route => {
@@ -385,8 +388,14 @@ test.describe('E2E - Orders Search And Filtering', () => {
 					if (!dateStr) {
 						return null;
 					}
-					const [month, day, year] = dateStr.split('/').map(Number);
-					return new Date(year, month - 1, day);
+					if (process.env.ENVIRONMENT == 'STG' || process.env.ENVIRONMENT == 'PRD') {
+						const [day, month, year] = dateStr.split('.').map(Number);
+						return new Date(year, month - 1, day);
+					}
+					else {
+						const [month, day, year] = dateStr.split('/').map(Number);
+						return new Date(year, month - 1, day);	
+					}
 				})
 				.filter((date): date is Date => date != null);
 			  
@@ -563,15 +572,15 @@ test.describe('E2E - Orders Search And Filtering', () => {
 				expect(bgColor).toEqual('rgb(50, 121, 237)');
 				expect(textColor).toEqual('rgb(255, 255, 255)');
 				
-				const sorryMessageEle = page.locator("//*[normalize-space(text())=\""+expectedTextsInUI.errorMessage+"\"]");
-				const clearFilterButton = page.locator('//button//*[normalize-space(text())=\''+expectedTextsInUI.clearFilterButton+'\']');
+				const sorryMessageEle = page.getByText(expectedTextsInUI.errorMessage);
+				const clearFilterButton = page.getByText(expectedTextsInUI.clearFilterButton);
 	
 				//assert that the error message and the clear filter button displayed in UI is the same as the one selected in filter
 				expect(await sorryMessageEle.isVisible()).toBeTruthy();
 				expect(await clearFilterButton.count()).toBeTruthy();
 			}
 			else {
-				console.log('There is no occupation with count equal 0');
+				console.log('Skip step 6 because there is no occupation with count equal 0');
 			}
     });
 
@@ -639,8 +648,9 @@ test.describe('E2E - Orders Search And Filtering', () => {
     await test.step('Step 8: Enter value in the search bar', async () => {
 			console.log('Step 8: Enter value in the search bar');
 			
-			const searchInputEle = page.getByPlaceholder(expectedTextsInUI.searchPlacholder);
-			searchInputEle.fill(storeCompanyNameForStep4.companyNameShort);
+			console.log('Step 8.1: Search for term that leads to result')
+			let searchInputEle = page.getByPlaceholder(expectedTextsInUI.searchPlacholder);
+			await searchInputEle.fill(storeCompanyNameForStep4.companyNameShort);
 			const response = await page.waitForResponse(response => 
 				response.url().includes('/api/v1/activity/order?page=') && response.status() == 200
 			);
@@ -654,6 +664,20 @@ test.describe('E2E - Orders Search And Filtering', () => {
 				// assert that the company short name displayed in UI is the same as the one selected in filter
 				expect((await companyShortEle.textContent())?.trim()).toEqual(storeCompanyNameForStep4.companyNameShort);
 			}
+
+			console.log('Step 8.2: Search for term that leads to no result');
+			const dummyText = 'abcdefghijklmn!@#';
+
+			await searchInputEle.fill('');
+			await searchInputEle.fill(dummyText);
+			await page.waitForResponse(response => 
+				response.url().includes('/api/v1/activity/order?page=') && response.status() == 200
+			);
+
+			const sorryMessageEle = page.getByText(expectedTextsInUI.errorMessage);
+			const clearFilterButton = page.getByText(expectedTextsInUI.clearFilterButton);
+			expect(await sorryMessageEle.isVisible()).toBeTruthy();
+			expect(await clearFilterButton.isVisible()).toBeTruthy();
     });
 
     await test.step('Step 9: Click on the x icon in the search bar', async () => {
