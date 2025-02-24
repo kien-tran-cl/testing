@@ -1,0 +1,359 @@
+{
+	"count": 60,
+	"facets": null,
+	"data": [
+			{
+					"id": "bfab515e-9453-4f29-8001-f958c3f6673c",
+					"companyNameShort": "GEDAT MR",
+					"companyName": "GEDAT Montage GmbH ",
+					"occupationName": "Bürohilfskraft",
+					"employee": null,
+					"employmentStartDate": "2024-12-02T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-09-02T00:00:00+00:00",
+					"maximumLoanPeriod": "2026-06-01T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "ca168a63-1850-46d1-bb7b-400dc1b9d528",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": null,
+					"employee": null,
+					"employmentStartDate": "2024-09-25T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-06-25T00:00:00+00:00",
+					"maximumLoanPeriod": "2026-03-24T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "d99626f6-a267-4066-8169-c1ab53e2e89a",
+					"companyNameShort": "HAUS SONNENSCHEIN",
+					"companyName": "Haus Sonnenschein MS ",
+					"occupationName": "Altenpfleger/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/80ab07cf-545a-4602-ab21-939c64715719?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=bKbAy9pGHdufWadVq3A0KccdtaeyQFQi6E0e7Xfdi6w%3D",
+							"id": "80ab07cf-545a-4602-ab21-939c64715719",
+							"email": null,
+							"givenName": "Claudine",
+							"surname": "Sprotte",
+							"title": null
+					},
+					"employmentStartDate": "2024-07-01T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-04-01T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-12-31T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "11aa82bc-1752-4dc2-bc5e-4a6005d41e2c",
+					"companyNameShort": "CK",
+					"companyName": "Ck GmbH ",
+					"occupationName": null,
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=81Sj12cU9oj6h0PFr85VWrt99XXXIxWOGxWzK00zIW0%3D",
+							"id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+							"email": null,
+							"givenName": "Christian",
+							"surname": "Kraft",
+							"title": null
+					},
+					"employmentStartDate": "2024-06-10T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-09-10T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-12-09T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "ec043b09-ac43-41b3-9a11-2e0ceacb359d",
+					"companyNameShort": "GEDAT MR",
+					"companyName": "GEDAT Montage GmbH ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": null,
+					"employmentStartDate": "2024-06-03T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-03-03T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-12-02T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "869be07c-601e-496e-9071-0de88cce2fa9",
+					"companyNameShort": "MUSTER",
+					"companyName": "Musterfirma GmbH ",
+					"occupationName": null,
+					"employee": null,
+					"employmentStartDate": "2024-05-16T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-02-16T00:00:00+00:00",
+					"maximumLoanPeriod": "2026-05-15T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "523b394f-334c-41e2-b7f1-f04ed76ac41b",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Fachlagerist/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/e0490a75-9431-4692-a57c-e75970ae9a04?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=tREdIWWXPo62Q7ckz1m4dGE1vwqpoaKqhhSGkwtCfpQ%3D",
+							"id": "e0490a75-9431-4692-a57c-e75970ae9a04",
+							"email": null,
+							"givenName": "Christian",
+							"surname": "Kraft",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-29T00:00:00+00:00",
+					"employmentEndDate": "2024-05-28T00:00:00+00:00",
+					"equalPayDate": "2025-01-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "db597e51-660e-41ca-95a6-0eac6839857c",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Fachlagerist/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/cbb051dc-6e01-4f3a-9f70-46488ad5ed49?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=GiPdCcCGp43IXrPJ1Lv0bYUvAFBMX%2FQto%2BEj8TJr8KI%3D",
+							"id": "cbb051dc-6e01-4f3a-9f70-46488ad5ed49",
+							"email": null,
+							"givenName": "Klaus",
+							"surname": "Kliewer",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-29T00:00:00+00:00",
+					"employmentEndDate": "2024-05-28T00:00:00+00:00",
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "95fcb178-750d-43e2-8a37-2413ed4cc3dc",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Fachlagerist/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/820fbff6-a46b-4bbf-a320-a0ecc915f908?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=LKf5ytVuEYS%2B4QTgAfhmBQjuFmLR3WXwehR7bTABG6M%3D",
+							"id": "820fbff6-a46b-4bbf-a320-a0ecc915f908",
+							"email": null,
+							"givenName": "Jana",
+							"surname": "Meier",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-22T00:00:00+00:00",
+					"employmentEndDate": "2024-04-30T00:00:00+00:00",
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "22e9cdb0-e23e-4cb9-8877-94bf1fdeb5fe",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Fachlagerist/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=81Sj12cU9oj6h0PFr85VWrt99XXXIxWOGxWzK00zIW0%3D",
+							"id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+							"email": null,
+							"givenName": "Christian",
+							"surname": "Kraft",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-22T00:00:00+00:00",
+					"employmentEndDate": "2024-05-22T00:00:00+00:00",
+					"equalPayDate": "2024-06-04T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-03-03T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "1493b0fd-37bc-454c-a982-8e8e9aee6434",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Fachlagerist/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/7974e08b-9e03-4a84-869d-e5a1097168a8?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=1OFbPYuzRdGw0LwhACoEO9DBQNJYb2atIfopGG4gDJQ%3D",
+							"id": "7974e08b-9e03-4a84-869d-e5a1097168a8",
+							"email": null,
+							"givenName": "Rudolph",
+							"surname": "Kron",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-22T00:00:00+00:00",
+					"employmentEndDate": "2024-05-22T00:00:00+00:00",
+					"equalPayDate": "2025-01-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-21T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "5be696a3-96b6-4974-92dc-cd8dcc93fb4d",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/d1d28154-3379-476c-9ca8-c816296745b8?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=rRp4b%2BLGkzg%2FzvQxbG50rRnifD7ajFYqc%2BCWmMR3EEI%3D",
+							"id": "d1d28154-3379-476c-9ca8-c816296745b8",
+							"email": null,
+							"givenName": "Lisa",
+							"surname": "Lange",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-30T00:00:00+00:00",
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "fd3263fc-da18-4deb-94ad-dee29e915242",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/7974e08b-9e03-4a84-869d-e5a1097168a8?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=1OFbPYuzRdGw0LwhACoEO9DBQNJYb2atIfopGG4gDJQ%3D",
+							"id": "7974e08b-9e03-4a84-869d-e5a1097168a8",
+							"email": null,
+							"givenName": "Rudolph",
+							"surname": "Kron",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-30T00:00:00+00:00",
+					"equalPayDate": "2025-01-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "798cce72-2155-4bd4-b402-fff2047e20a8",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/e0490a75-9431-4692-a57c-e75970ae9a04?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=tREdIWWXPo62Q7ckz1m4dGE1vwqpoaKqhhSGkwtCfpQ%3D",
+							"id": "e0490a75-9431-4692-a57c-e75970ae9a04",
+							"email": null,
+							"givenName": "Christian",
+							"surname": "Kraft",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-30T00:00:00+00:00",
+					"equalPayDate": "2025-01-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "d38d402f-c182-4af6-ab81-6195e32a5304",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/cbb051dc-6e01-4f3a-9f70-46488ad5ed49?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=GiPdCcCGp43IXrPJ1Lv0bYUvAFBMX%2FQto%2BEj8TJr8KI%3D",
+							"id": "cbb051dc-6e01-4f3a-9f70-46488ad5ed49",
+							"email": null,
+							"givenName": "Klaus",
+							"surname": "Kliewer",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-30T00:00:00+00:00",
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "4e94b6dd-c7af-4d26-a653-c07d49673a75",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/f59571ae-f659-4592-bdc7-42c60d4ee0a9?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=%2FYYDLdsOsaH1oNctDCWT2F%2FTfdGhWtQrARlmqYh6cK0%3D",
+							"id": "f59571ae-f659-4592-bdc7-42c60d4ee0a9",
+							"email": null,
+							"givenName": "Max (MA TT)",
+							"surname": "Mustermann",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-26T00:00:00+00:00",
+					"equalPayDate": "2024-06-08T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-03-07T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "721b8f17-4d9b-4016-b660-2fcea28c5f11",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/820fbff6-a46b-4bbf-a320-a0ecc915f908?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=LKf5ytVuEYS%2B4QTgAfhmBQjuFmLR3WXwehR7bTABG6M%3D",
+							"id": "820fbff6-a46b-4bbf-a320-a0ecc915f908",
+							"email": null,
+							"givenName": "Jana",
+							"surname": "Meier",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-26T00:00:00+00:00",
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "d95bd38c-9def-44a5-b43b-566ea0fa9193",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": "Gabelstaplerfahrer/in",
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/2a8f9fd7-81de-4a28-9244-c2f51f3d4f2b?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=V8OPhkFoSWPLkNbQYpGrprzo9BLyf%2BWCLAFTZyIcgXc%3D",
+							"id": "2a8f9fd7-81de-4a28-9244-c2f51f3d4f2b",
+							"email": null,
+							"givenName": "Anna-Lena",
+							"surname": "Meichel",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": "2024-04-26T00:00:00+00:00",
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 4
+			},
+			{
+					"id": "b60f1011-ffd4-439f-b323-fe50b1209abb",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": null,
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/01768279-9761-4fb5-8f21-cf4082e7c28a?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=cVS38LLynVe%2FKkO61Iko%2BjD6vGxsc0ne7AjDnTiOcIo%3D",
+							"id": "01768279-9761-4fb5-8f21-cf4082e7c28a",
+							"email": null,
+							"givenName": "Marina",
+							"surname": "Gersten",
+							"title": null
+					},
+					"employmentStartDate": "2024-04-15T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2025-07-15T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-10-14T00:00:00+00:00",
+					"orderStatus": 2
+			},
+			{
+					"id": "94578bf9-c44d-449c-9ac6-9da2e20afae2",
+					"companyNameShort": "XYZ GMBH (KD TT)",
+					"companyName": "XYZ GmbH (Kunde TT) ",
+					"occupationName": null,
+					"employee": {
+							"profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-23T16%3A29%3A09Z&se=2025-02-24T16%3A29%3A09Z&sr=b&sp=r&sig=81Sj12cU9oj6h0PFr85VWrt99XXXIxWOGxWzK00zIW0%3D",
+							"id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+							"email": null,
+							"givenName": "Christian",
+							"surname": "Kraft",
+							"title": null
+					},
+					"employmentStartDate": "2024-03-19T00:00:00+00:00",
+					"employmentEndDate": null,
+					"equalPayDate": "2024-06-04T00:00:00+00:00",
+					"maximumLoanPeriod": "2025-03-03T00:00:00+00:00",
+					"orderStatus": 2
+			}
+	],
+	"message": null
+}
