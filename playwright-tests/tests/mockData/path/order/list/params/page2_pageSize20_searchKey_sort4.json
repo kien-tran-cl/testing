@@ -1,0 +1,387 @@
+{
+    "count": 60,
+    "facets": null,
+    "data": [
+        {
+            "id": "3b02ba31-09c4-4ba8-a35f-7ba9ee761046",
+            "companyNameShort": "XYZ GMBH (KD TT)",
+            "companyName": "XYZ GmbH (Kunde TT) ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2024-03-19T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2024-06-04T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-03T00:00:00+00:00",
+            "orderStatus": 2
+        },
+        {
+            "id": "b81c7608-c506-49e6-accf-2c81a1c4ae29",
+            "companyNameShort": "GEDAT MR",
+            "companyName": "GEDAT Montage GmbH ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2024-02-21T00:00:00+00:00",
+            "employmentEndDate": "2024-04-01T00:00:00+00:00",
+            "equalPayDate": "2024-12-20T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-19T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "71891828-f634-4307-92e6-684cba19093a",
+            "companyNameShort": "GEDAT MR",
+            "companyName": "GEDAT Montage GmbH ",
+            "occupationName": "Koch/Köchin",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/985765bd-4ec2-42c3-a43b-1d694a131f18?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=ZKg1dacnorXlcKS%2FWuboiaHySyfb6rKAFJ%2FUxuVWwO4%3D",
+                "id": "985765bd-4ec2-42c3-a43b-1d694a131f18",
+                "email": null,
+                "givenName": "Patrick",
+                "surname": "Winter-Müller (eAU)",
+                "title": null
+            },
+            "employmentStartDate": "2024-01-01T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2025-04-01T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-06-30T00:00:00+00:00",
+            "orderStatus": 2
+        },
+        {
+            "id": "f6f05e68-8018-4f32-bfde-74235ca23276",
+            "companyNameShort": "AGENDA GMBH (E-SIGN)",
+            "companyName": "Agenda GmbH ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2023-10-17T00:00:00+00:00",
+            "employmentEndDate": "2024-04-01T00:00:00+00:00",
+            "equalPayDate": "2025-01-17T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-10-16T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "57e4ea5e-ae23-44ab-9334-5256d0ba7c24",
+            "companyNameShort": "GEDAT MR",
+            "companyName": "GEDAT Montage GmbH ",
+            "occupationName": "Automobilmechaniker/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2023-09-20T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2024-12-20T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-19T00:00:00+00:00",
+            "orderStatus": 2
+        },
+        {
+            "id": "e6a1b8e3-6216-4081-b420-12bb85705ed7",
+            "companyNameShort": "MR REINHAUSEN",
+            "companyName": "Maschinenfabrik Reinhausen GmbH ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/f59571ae-f659-4592-bdc7-42c60d4ee0a9?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=wgQEl0EIgW9wN6AC%2BEUTL7fK%2F3qeSo2l2HsDw8UWZXY%3D",
+                "id": "f59571ae-f659-4592-bdc7-42c60d4ee0a9",
+                "email": null,
+                "givenName": "Max (MA TT)",
+                "surname": "Mustermann",
+                "title": null
+            },
+            "employmentStartDate": "2023-09-11T00:00:00+00:00",
+            "employmentEndDate": "2023-12-29T00:00:00+00:00",
+            "equalPayDate": "2024-12-11T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-10T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "57ae3d96-f5a8-4d59-8ec6-b35ea71def98",
+            "companyNameShort": "XYZ GMBH (KD TT)",
+            "companyName": "XYZ GmbH (Kunde TT) ",
+            "occupationName": "Gabelstaplerfahrer/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/f59571ae-f659-4592-bdc7-42c60d4ee0a9?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=wgQEl0EIgW9wN6AC%2BEUTL7fK%2F3qeSo2l2HsDw8UWZXY%3D",
+                "id": "f59571ae-f659-4592-bdc7-42c60d4ee0a9",
+                "email": null,
+                "givenName": "Max (MA TT)",
+                "surname": "Mustermann",
+                "title": null
+            },
+            "employmentStartDate": "2023-09-08T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2024-06-08T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-07T00:00:00+00:00",
+            "orderStatus": 2
+        },
+        {
+            "id": "d7179891-1313-469b-8eed-092ad08d17b9",
+            "companyNameShort": "XYZ GMBH (KD TT)",
+            "companyName": "XYZ GmbH (Kunde TT) ",
+            "occupationName": "Gabelstaplerfahrer/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/985765bd-4ec2-42c3-a43b-1d694a131f18?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=ZKg1dacnorXlcKS%2FWuboiaHySyfb6rKAFJ%2FUxuVWwO4%3D",
+                "id": "985765bd-4ec2-42c3-a43b-1d694a131f18",
+                "email": null,
+                "givenName": "Patrick",
+                "surname": "Winter-Müller (eAU)",
+                "title": null
+            },
+            "employmentStartDate": "2023-09-06T00:00:00+00:00",
+            "employmentEndDate": "2023-12-29T00:00:00+00:00",
+            "equalPayDate": "2024-06-05T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-04T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "70e4a393-68fe-4f84-802c-18e9f22072e4",
+            "companyNameShort": "XYZ GMBH (KD TT)",
+            "companyName": "XYZ GmbH (Kunde TT) ",
+            "occupationName": "Gabelstaplerfahrer/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/985765bd-4ec2-42c3-a43b-1d694a131f18?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=ZKg1dacnorXlcKS%2FWuboiaHySyfb6rKAFJ%2FUxuVWwO4%3D",
+                "id": "985765bd-4ec2-42c3-a43b-1d694a131f18",
+                "email": null,
+                "givenName": "Patrick",
+                "surname": "Winter-Müller (eAU)",
+                "title": null
+            },
+            "employmentStartDate": "2023-09-05T00:00:00+00:00",
+            "employmentEndDate": "2023-09-05T00:00:00+00:00",
+            "equalPayDate": "2024-06-05T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-04T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "339d921c-4e3d-4b77-a39b-f05dd0555e13",
+            "companyNameShort": "XYZ GMBH (KD TT)",
+            "companyName": "XYZ GmbH (Kunde TT) ",
+            "occupationName": "Gabelstaplerfahrer/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2023-09-04T00:00:00+00:00",
+            "employmentEndDate": "2024-04-01T00:00:00+00:00",
+            "equalPayDate": "2024-06-04T00:00:00+00:00",
+            "maximumLoanPeriod": "2025-03-03T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "9af837ed-5bf7-45b2-86a5-1abef4c541da",
+            "companyNameShort": "UNI REGENSBURG",
+            "companyName": "Universitätsklinikum Regensburg ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2023-07-04T00:00:00+00:00",
+            "employmentEndDate": "2023-09-04T00:00:00+00:00",
+            "equalPayDate": "2024-01-03T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-10-02T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "75a23913-4806-408e-9d11-9fcea8e91135",
+            "companyNameShort": "GEDAT TJO",
+            "companyName": "GEDAT GmbH ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/2a8f9fd7-81de-4a28-9244-c2f51f3d4f2b?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=yEZfuE4oB4gV07Iwb4ROQaGWTiOOFtXRLaOdmM%2FHauY%3D",
+                "id": "2a8f9fd7-81de-4a28-9244-c2f51f3d4f2b",
+                "email": null,
+                "givenName": "Anna-Lena",
+                "surname": "Meichel",
+                "title": null
+            },
+            "employmentStartDate": "2023-06-01T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2024-09-01T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-11-30T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "7c02f961-1c28-47b6-a046-d453d5ff7c82",
+            "companyNameShort": "UNI REGENSBURG",
+            "companyName": "Universitätsklinikum Regensburg ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/b9555f8f-f9fe-43ff-be87-fedda6496c96?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=nckflTPmfgS3nAXte1jZ7NnH6TZPhKrVIKzjtCdGOd8%3D",
+                "id": "b9555f8f-f9fe-43ff-be87-fedda6496c96",
+                "email": null,
+                "givenName": "Christian",
+                "surname": "Kraft",
+                "title": null
+            },
+            "employmentStartDate": "2023-04-03T00:00:00+00:00",
+            "employmentEndDate": "2023-07-03T00:00:00+00:00",
+            "equalPayDate": "2024-01-03T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-10-02T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "816a4304-0745-47c7-a0ab-0c98c5f8551c",
+            "companyNameShort": "MR REINHAUSEN",
+            "companyName": "Maschinenfabrik Reinhausen GmbH ",
+            "occupationName": "Maschinen- und Anlagenführer/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/ef928db5-9c48-4b87-bd02-164da2f8d3f1?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=PZxFzHTUAFtLrO8bL3%2BzQlg%2Bbz0s6Kinr%2B8n57YmC94%3D",
+                "id": "ef928db5-9c48-4b87-bd02-164da2f8d3f1",
+                "email": null,
+                "givenName": "Jochen ",
+                "surname": "Schäfer",
+                "title": null
+            },
+            "employmentStartDate": "2023-04-01T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2024-07-01T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-09-30T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "af11acc8-f971-4ebe-b5b7-ff6773e4694d",
+            "companyNameShort": "GELDSCHNEIDER BN",
+            "companyName": "GELDSCHNEIDER BN ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/985765bd-4ec2-42c3-a43b-1d694a131f18?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=ZKg1dacnorXlcKS%2FWuboiaHySyfb6rKAFJ%2FUxuVWwO4%3D",
+                "id": "985765bd-4ec2-42c3-a43b-1d694a131f18",
+                "email": null,
+                "givenName": "Patrick",
+                "surname": "Winter-Müller (eAU)",
+                "title": null
+            },
+            "employmentStartDate": "2023-02-13T00:00:00+00:00",
+            "employmentEndDate": "2023-09-04T00:00:00+00:00",
+            "equalPayDate": "2024-05-08T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-08-05T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "0985e005-2ebe-46f4-9031-812cd9b92de8",
+            "companyNameShort": "GEDAT MR",
+            "companyName": "GEDAT Montage GmbH ",
+            "occupationName": "Berufskraftfahrer/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/ef928db5-9c48-4b87-bd02-164da2f8d3f1?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=PZxFzHTUAFtLrO8bL3%2BzQlg%2Bbz0s6Kinr%2B8n57YmC94%3D",
+                "id": "ef928db5-9c48-4b87-bd02-164da2f8d3f1",
+                "email": null,
+                "givenName": "Jochen ",
+                "surname": "Schäfer",
+                "title": null
+            },
+            "employmentStartDate": "2023-01-01T00:00:00+00:00",
+            "employmentEndDate": "2023-03-31T00:00:00+00:00",
+            "equalPayDate": "2024-02-10T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-05-09T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "e5ce00eb-9b43-4299-a393-84b211a157f4",
+            "companyNameShort": "GEDAT MR",
+            "companyName": "GEDAT Montage GmbH ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/599e0823-692b-4010-9656-1837818426c7?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=vBMothkWcNN80V7QxbDtk1w1zAyrSy1kZwf62TquwFY%3D",
+                "id": "599e0823-692b-4010-9656-1837818426c7",
+                "email": null,
+                "givenName": "Denise",
+                "surname": "Hager",
+                "title": null
+            },
+            "employmentStartDate": "2022-12-16T00:00:00+00:00",
+            "employmentEndDate": "2022-12-31T00:00:00+00:00",
+            "equalPayDate": null,
+            "maximumLoanPeriod": null,
+            "orderStatus": 4
+        },
+        {
+            "id": "d71fefef-aaa8-4d8c-839c-4bba58e344cb",
+            "companyNameShort": "MUSTER",
+            "companyName": "Musterfirma GmbH ",
+            "occupationName": "Betriebsschlosser/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/820fbff6-a46b-4bbf-a320-a0ecc915f908?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=U6KSd0IedWpvoJjVctcLr0z%2FV%2FKL6vW9oKez%2Bfh07W8%3D",
+                "id": "820fbff6-a46b-4bbf-a320-a0ecc915f908",
+                "email": null,
+                "givenName": "Jana",
+                "surname": "Meier",
+                "title": null
+            },
+            "employmentStartDate": "2022-11-28T00:00:00+00:00",
+            "employmentEndDate": "2024-11-27T00:00:00+00:00",
+            "equalPayDate": null,
+            "maximumLoanPeriod": "2024-11-27T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "b3b9b31b-d6ff-4862-89d5-92250c1816f7",
+            "companyNameShort": "GEDAT TJO",
+            "companyName": "GEDAT GmbH ",
+            "occupationName": null,
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/f59571ae-f659-4592-bdc7-42c60d4ee0a9?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=wgQEl0EIgW9wN6AC%2BEUTL7fK%2F3qeSo2l2HsDw8UWZXY%3D",
+                "id": "f59571ae-f659-4592-bdc7-42c60d4ee0a9",
+                "email": null,
+                "givenName": "Max (MA TT)",
+                "surname": "Mustermann",
+                "title": null
+            },
+            "employmentStartDate": "2022-11-21T00:00:00+00:00",
+            "employmentEndDate": "2023-09-06T00:00:00+00:00",
+            "equalPayDate": "2024-02-21T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-05-20T00:00:00+00:00",
+            "orderStatus": 4
+        },
+        {
+            "id": "02f51d91-8292-4d4e-b78b-bbd7d3f0ba60",
+            "companyNameShort": "GEDAT TJO",
+            "companyName": "GEDAT GmbH ",
+            "occupationName": "Chemikant/in",
+            "employee": {
+                "profilePictureUrl": "https://kkk6p97lzavnd.blob.core.windows.net/contact/profile-pictures/62feed08-6fcd-457f-9cf9-1d801e46fdaa?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-02-21T10%3A35%3A39Z&ske=2025-02-28T10%3A35%3A39Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-02-22T09%3A05%3A40Z&se=2025-02-23T09%3A05%3A40Z&sr=b&sp=r&sig=k87MjtrP2SaAuf7wHd4f8goMd616JqCtuicq5oB136o%3D",
+                "id": "62feed08-6fcd-457f-9cf9-1d801e46fdaa",
+                "email": null,
+                "givenName": "Jens",
+                "surname": "Taler,",
+                "title": null
+            },
+            "employmentStartDate": "2022-11-10T00:00:00+00:00",
+            "employmentEndDate": null,
+            "equalPayDate": "2024-02-10T00:00:00+00:00",
+            "maximumLoanPeriod": "2024-05-09T00:00:00+00:00",
+            "orderStatus": 4
+        }
+    ],
+    "message": null
+}

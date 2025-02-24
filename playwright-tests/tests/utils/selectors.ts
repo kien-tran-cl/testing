@@ -131,9 +131,11 @@ headerTitle: 'gedat-header',
 };
 
 export const ordersPageSelectors = {
-backArrow: 'button.p-button-icon-only >> nth=0',
-headerTitle: 'gedat-header',
+  backArrow: 'button.p-button-icon-only >> nth=0',
+  headerTitle: 'gedat-header',
+  sortIconEle: '.icon-switch-vertical-02.text-xl',//class chain
 };
+
 
 export const workerComplaintsPageSelectors = {
 backArrow: 'button.p-button-icon-only >> nth=0',
