@@ -31,7 +31,7 @@ support: 'gedat-h5 >> nth=3',
 logout: 'gedat-h5 >> nth=4',
 userInfoFullName: '.user-info h4',
 userInfoEmail: '.user-info p',
-userInfoProfileImage: '.p-sidebar .p-avatar-image',
+userInfoProfileImage: '.p-sidebar lib-avatar',
 };
 
 export const informationPagesSelectors = {
@@ -42,7 +42,7 @@ headerTitle: 'gedat-home-header',
 export const activitiesSelectors = {
 headerTitle: 'gedat-home-header',
 greeting: 'gedat-h1',
-userInfoProfileImage: '.p-avatar-image',
+userInfoProfileImage: 'lib-avatar',
 inquiriesCard: '.card-item >> nth=0',
 salesActivitiesCard: '.card-item >> nth=1',
 sentProfileCard: '.card-item >> nth=2',
