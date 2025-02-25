@@ -105,8 +105,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
     });
 
     await test.step("Verify display of User Fullname", async () => {
-      await page.goto(appUrl(""));
-      await page.locator(sidebarSelectors.hamburgerIcon).click();
+      await page.locator(informationPagesSelectors.backArrow).click();
   
       try {
         const userInfo = await getUserInfo(page);
@@ -114,6 +113,9 @@ test.describe("E2E Test - Sidebar & Logout", () => {
         console.log('Surname:', userInfo.surname);
         console.log('Full Name:', userInfo.fullName);
         
+        // Open Sidebar 
+        await page.locator(sidebarSelectors.hamburgerIcon).click();
+
         // Verify user info full name in the UI
         const fullNameLocator = page.locator(sidebarSelectors.userInfoFullName);
   
