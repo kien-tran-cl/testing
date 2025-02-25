@@ -37,37 +37,37 @@ export async function loginBeforeTest(page: Page, email: string = "") {
  * Returns givenName, surname, and fullName
  */
 export const getUserInfo = async (page: Page) => {
-  return new Promise<{
-    givenName: string;
-    surname: string;
-    fullName: string;
-  }>((resolve, reject) => {
-    page.on('response', async (response) => {
+  let userInfo: any = null;
+
+  // Listen for API responses
+  page.on("response", async (response) => {
+    const url = response.url();
+    
+    // Check if the response is from the user info API
+    if (url.includes("/api/v1/user/info")) {
       try {
-        // Check if the response URL matches the user info endpoint
-        if (response.url().includes('/api/v1/user/info')) {
-          const data = await response.json();
-
-          // Ensure the response contains the expected data
-          if (data?.data?.givenName && data?.data?.surname) {
-            const givenName = data.data.givenName;
-            const surname = data.data.surname;
-            const fullName = `${givenName} ${surname}`; // Concatenate givenName and surname to get fullName
-
-            resolve({
-              givenName,
-              surname,
-              fullName,
-            });
-          } else {
-            reject(new Error("Missing expected fields in response"));
-          }
-        }
+        const body = await response.json();
+        console.log("✅ User info API response:", body);
+        userInfo = body.data;
       } catch (error) {
-        reject(new Error("Error parsing response: " + error));
+        console.error("❌ Error parsing user info response:", error);
       }
-    });
+    }
   });
+
+  // Reload the page to capture API requests in the Network tab
+  await page.reload();
+
+  // Wait to ensure the API response is captured
+  await page.waitForTimeout(2000);
+
+  if (!userInfo) throw new Error("User info API response not found");
+
+  return {
+    givenName: userInfo.givenName,
+    surname: userInfo.surname,
+    fullName: `${userInfo.givenName} ${userInfo.surname}`,
+  };
 };
 
 /**
