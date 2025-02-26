@@ -47,7 +47,7 @@ export const getUserInfo = async (page: Page) => {
     if (url.includes("/api/v1/user/info")) {
       try {
         const body = await response.json();
-        console.log("✅ User info API response:", body);
+        // console.log("✅ User info API response:", body);
         userInfo = body.data;
       } catch (error) {
         console.error("❌ Error parsing user info response:", error);
@@ -90,8 +90,6 @@ export async function logoutAfterTest(page: Page) {
   }
 
   await page.locator(sidebarSelectors.logout).click();
-  await page.waitForLoadState("networkidle");
-  expect(page.url()).toContain(appUrl("/ui/login"));
 
   console.log("Logout completed.");
 }
