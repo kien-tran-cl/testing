@@ -239,6 +239,7 @@ test.describe('E2E - Orders Search And Filtering', () => {
 
 			for (let i = 0; i < 21; i++) {
 				const orderEle = page.locator('//gedat-activity-item').nth(i);
+				await orderEle.waitFor({state: 'visible'});
 				if (await orderEle.locator('//gedat-activity-status//*[contains(@class,\'p-tag p-component\')]').count() == 0) {
 					// assert that the number of loaded order is equal to 20, means there is no item located at position 21 and the item at position 21 is having loading effect
 					expect(i).toEqual(20);
