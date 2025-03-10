@@ -93,6 +93,7 @@ title: '',
 export const salesActivitiesPageSelectors = {
   backArrow: 'button.p-button-icon-only >> nth=0',
   headerTitle: 'gedat-header',
+  itemcount: 'gedat-dialog-sort p',
   gedatActivitiesEle: 'gedat-activities',//ele
   salesActivitiesItem: 'gedat-activity-item',
   salesActivitiesSkeletonItem: 'gedat-activity-status lib-skeleton',
@@ -128,11 +129,21 @@ export const contactDetailSelectors = {
 export const sentProfilePageSelectors = {
 backArrow: 'button.p-button-icon-only >> nth=0',
 headerTitle: 'gedat-header',
+itemCount: 'gedat-dialog-sort p',
+profileItem: 'gedat-activity-item',
+profileSkeletonItem: 'gedat-activity-status lib-skeleton',
+status: '.p-tag',
+workerName: 'gedat-sent-profile-trigger h4.text-common-info-bold',
+occupation: 'gedat-sent-profile-trigger p.text-common-label.subtitle',
+companyName: 'p.font-medium.text-common-info',
+date: 'p.text-common-label.min-w-10',
+downloadButton: 'p-button[size="small"][icon="icon-solid-file-attachment-01"] button',
 };
 
 export const ordersPageSelectors = {
   backArrow: 'button.p-button-icon-only >> nth=0',
   headerTitle: 'gedat-header',
+  itemCount: 'gedat-dialog-sort p',
   sortIconEle: '.icon-switch-vertical-02.text-xl',//class chain
   ordersItem: 'gedat-activity-item',
   ordersSkeletonItem: 'gedat-activity-status lib-skeleton',
@@ -183,5 +194,5 @@ sortOptions: 'gedat-select-row',
 dateAscending: 'gedat-select-row>>nth=0',
 dateDescending: 'gedat-select-row>>nth=1',
 iconCheck: '.icon-check',
-applyButton: '.p-button-primary',
+applyButton: "div[role='dialog'] .p-dialog-content .p-button-primary",
 };
