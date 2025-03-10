@@ -47,6 +47,7 @@ test.describe("E2E - Sales Activities Search & Filtering", () => {
             // Scroll and validate new items are loaded
             const updatedVisibleItemCount = await scrollAndValidateLoadMore(
                 page,
+                salesActivitiesPageSelectors.itemcount,
                 salesActivitiesPageSelectors.salesActivitiesItem,
                 salesActivitiesPageSelectors.salesActivitiesSkeletonItem,
             );

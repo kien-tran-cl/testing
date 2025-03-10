@@ -49,6 +49,7 @@ test.describe("E2E - Orders Search & Filtering", () => {
             // Step 2.1: Scroll and validate new items are loaded
             const updatedVisibleItemCount = await scrollAndValidateLoadMore(
                 page,
+                ordersPageSelectors.itemCount,
                 ordersPageSelectors.ordersItem,
                 ordersPageSelectors.ordersSkeletonItem,
             );
