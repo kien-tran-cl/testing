@@ -1,4 +1,5 @@
 import { Locator, Page, expect } from "playwright/test";
+import { debugLog } from "./debug-utils";
 
 /**
  * Validate the number of visible items on a listing page.
@@ -71,22 +72,29 @@ export async function verifyFirstItemComponents(
  * @param waitTime - Time (ms) to wait after scrolling before counting items again (default: 10s)
  */
 export async function scrollAndValidateLoadMore(
-    page:Page,
+    page: Page,
+    totalItemSelector: string,
     itemSelector: string,
     skeletonSelectors?: string,
     waitTime: number = 5000
 ): Promise<number> {
+    // Get total items count from the page
+    const totalItemText = await page.locator(totalItemSelector).textContent();
+    const totalItems = totalItemText ? parseInt(totalItemText.match(/\d+/)?.[0] || "0", 10) : 0;
+
     // Get initial visible item count
     const initialTotalItems = await page.locator(itemSelector).count();
-    const initialSkeletonCount = skeletonSelectors ? await page.locator(skeletonSelectors).count() : 0; 
+    const initialSkeletonCount = skeletonSelectors ? await page.locator(skeletonSelectors).count() : 0;
     const initialVisibleItemCount = initialTotalItems - initialSkeletonCount;
 
-    console.log("Initial visible items:", initialVisibleItemCount);
+    debugLog("Total items from UI:", totalItems);
+    debugLog("Initial visible items:", initialVisibleItemCount);
 
     // Scroll to trigger loading
     await page.evaluate(() => {
         window.scrollTo(0, document.body.scrollHeight);
     });
+    debugLog("✅ Scrolled to bottom!");
 
     // Wait for items to load
     await page.waitForTimeout(waitTime);
@@ -96,10 +104,14 @@ export async function scrollAndValidateLoadMore(
     const updatedSkeletonCount = skeletonSelectors ? await page.locator(skeletonSelectors).count() : 0;
     const updatedVisibleItemCount = updatedTotalItems - updatedSkeletonCount;
 
-    console.log("Updated visible items:", updatedVisibleItemCount);
+    debugLog("Updated visible items:", updatedVisibleItemCount);
 
-    //Validate that more items are loaded
-    expect(updatedVisibleItemCount).toBeGreaterThan(initialVisibleItemCount);
+    // Validate based on total items
+    if (totalItems <= 20) {
+        expect(updatedVisibleItemCount).toBe(initialVisibleItemCount);
+    } else {
+        expect(updatedVisibleItemCount).toBeGreaterThan(initialVisibleItemCount);
+    }
 
     return updatedVisibleItemCount;
 }
