@@ -69,7 +69,7 @@ test.describe("E2E - Order Details", () => {
 
       //////////////////////////////////////////////////
       //click on the back arrow button
-      await pm.headerLevel2(expectedTextsInUI.ordersTitle).backArrowButtonEle().click();
+      await pm.headerLevel3(expectedTextsInUI.ordersTitle).backArrowButtonEle().click();
       await page.waitForLoadState();
       
       //assert that the title text in UI is visible
@@ -123,7 +123,7 @@ test.describe("E2E - Order Details", () => {
         await pm.orderDetailPage().verifyVisibilityOfOrderDetail(expectedTextsInUI, firstItemResponseData.data);
 
         //click on the back arrow button
-        await pm.headerLevel2(expectedTextsInUI.ordersTitle).backArrowButtonEle().click();
+        await pm.headerLevel3(expectedTextsInUI.ordersTitle).backArrowButtonEle().click();
         await page.waitForLoadState();
         
         //assert that the title text in UI is visible
@@ -164,7 +164,7 @@ test.describe("E2E - Order Details", () => {
       console.log('Step 2: Click on the back button');
       
       //click on the back arrow button
-      await pm.headerLevel2(expectedTextsInUI.ordersTitle).backArrowButtonEle().click();
+      await pm.headerLevel3(expectedTextsInUI.ordersTitle).backArrowButtonEle().click();
       await page.waitForLoadState();
       
       //assert that the title text in UI is visible
