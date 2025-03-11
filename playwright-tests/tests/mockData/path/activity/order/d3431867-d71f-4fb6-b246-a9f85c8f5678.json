@@ -1,0 +1,37 @@
+{
+  "data": {
+      "id": "d3431867-d71f-4fb6-b246-a9f85c8f5678",
+      "branchOfficeId": "4759e964-b5fe-42dc-931b-f9f1e31c7b49",
+      "customer": {
+          "id": "8e320e09-ab60-46fe-99c8-f9a0b3e9af80",
+          "companyNameShort": "LAHNBLICK",
+          "companyName": "Privatklinik Lahnblick ",
+          "sharedWithBranchOffices": [
+              "4759e964-b5fe-42dc-931b-f9f1e31c7b49",
+              "6e5d566a-7838-4692-9626-c6a55e8bb40e"
+          ],
+          "assignedToUsers": [
+              "83886101",
+              "83886096"
+          ]
+      },
+      "orderNumber": 226,
+      "employee": {
+          "id": "22c1ad3d-5ea0-4b41-9030-29b4cf82a4b2",
+          "email": null,
+          "givenName": "Allison",
+          "surname": "Becker",
+          "title": "Dr."
+      },
+      "occupation": {
+          "id": "cd10e9f2-c4a2-4312-b0b6-b47457051169",
+          "name": "Helfer/in - Lager, Versand"
+      },
+      "employmentStartDate": "2021-01-01T00:00:00+00:00",
+      "employmentEndDate": "2021-06-30T00:00:00+00:00",
+      "equalPayDate": "2021-09-28T00:00:00+00:00",
+      "maximumLoanPeriod": "2022-06-24T00:00:00+00:00",
+      "orderStatus": 4
+  },
+  "message": null
+}

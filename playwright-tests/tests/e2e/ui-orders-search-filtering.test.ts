@@ -7,8 +7,8 @@ import {
 } from '../utils/selectors';
 import { appUrl } from '../utils/auth-utils';
 import { loginBeforeTest } from '../common';
-import mockDataOrderListPage1Pagesize20Sort4 from '../mockData/path/order/list/params/page1_pageSize20_searchKey_sort4.json' assert { type: 'json' };
-import mockDataOrderListPage2Pagesize20Sort4 from '../mockData/path/order/list/params/page2_pageSize20_searchKey_sort4.json' assert { type: 'json' };
+import mockDataOrderListPage1Pagesize20Sort4 from '../mockData/path/activity/order/list/params/page1_pageSize20_searchKey_sort4.json' assert { type: 'json' };
+import mockDataOrderListPage2Pagesize20Sort4 from '../mockData/path/activity/order/list/params/page2_pageSize20_searchKey_sort4.json' assert { type: 'json' };
 import exp from 'constants';
 import { clear } from 'console';
 
