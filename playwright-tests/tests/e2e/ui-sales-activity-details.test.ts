@@ -24,7 +24,7 @@ test.describe("E2E - Sales Activity Details", () => {
     console.log('Precondition 1. Login:');
     await loginBeforeTest(page);
     console.log('Precondition 2. Go to sales-activity list:');
-    await page.goto('https://sales.timejob-online.dev/app/activities/sales-activities/list');
+    await page.goto(appUrl("/activities/sales-activities/list"));
     await page.waitForLoadState("networkidle");
   });
   
