@@ -186,7 +186,7 @@ export async function applyStatusFilterAndVerify(page: Page, parentFilterTotalIt
 }
 
 /**
- * Apply a occupation filter and verify the results.
+ * Apply an occupation filter and verify the results.
  * @param page Playwright page object
  * @param parentFilterTotalItems (A) The number of items after filtering by Company
  * @param selectedClientFilterText The name of the company selected in the previous step

@@ -160,6 +160,14 @@ export const ordersPageSelectors = {
 export const workerComplaintsPageSelectors = {
 backArrow: 'button.p-button-icon-only >> nth=0',
 headerTitle: 'gedat-header',
+itemCount: 'gedat-dialog-sort p',
+workerComplaintItem: 'gedat-activity-item',
+workerComplaintSkeletonItem: 'gedat-activity-status lib-skeleton',
+status: '.p-tag',
+title: 'h4.text-common-info-bold.title',
+contactPerson: 'p.text-common-label.subtitle',
+companyName: 'p.gap-1',
+date: 'p.text-common-label.min-w-10',
 };
 
 export const billingComplaintsPageSelectors = {
