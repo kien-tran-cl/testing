@@ -51,11 +51,10 @@ export async function applySingleCompanyFilterAndVerify(
         return; // Exit test early if no valid item found
     }
 
+    // Close the filter form
+    await page.locator(searchFilter.closeFilter).click();
     await page.waitForTimeout(3000);
-
-    // Verify the filter form automatically closes
     await page.waitForSelector(searchFilter.filterFormOverlay, { state: "hidden" });
-
 
     // Verify companyName is displayed on the search bar
     const clientFilterText = await page.locator(searchFilter.clientFilterText).innerText();
