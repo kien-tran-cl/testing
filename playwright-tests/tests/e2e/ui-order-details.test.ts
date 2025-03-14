@@ -39,7 +39,7 @@ test.describe("E2E - Order Details", () => {
       await pm.orderDetailPage().orderDetailRoute();
 
       console.log('Access the orders page');
-      pm.activitiesPage().navigateToCard(pm.expectedTextsInUI().ordersTitle);
+      await pm.activitiesPage().navigateToCard(pm.expectedTextsInUI().ordersTitle);
       await page.waitForResponse(response => 
         response.url().includes('/api/v1/activity/order?page=') && response.status() == 200,
         {timeout: 3000}
