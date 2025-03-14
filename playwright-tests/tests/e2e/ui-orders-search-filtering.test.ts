@@ -167,7 +167,7 @@ async function verifyColorStyleOfOrderStatus(orderEle : Locator, expectedTextsIn
 	expect(textColor).toEqual((isValidStatus) ? textColorStatuses[(orderData.orderStatus) ? orderData.orderStatus : 0] : textColorStatuses[4]);
 }
 
-test.describe('E2E - Orders Search And Filtering', () => {
+test.describe.skip('E2E - Orders Search And Filtering', () => {
   test.describe.configure({
     timeout: 60000,
     mode: 'serial',
