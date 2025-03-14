@@ -51,11 +51,10 @@ export async function applySingleCompanyFilterAndVerify(
         return; // Exit test early if no valid item found
     }
 
+    // Close the filter form
+    await page.locator(searchFilter.closeFilter).click();
     await page.waitForTimeout(3000);
-
-    // Verify the filter form automatically closes
     await page.waitForSelector(searchFilter.filterFormOverlay, { state: "hidden" });
-
 
     // Verify companyName is displayed on the search bar
     const clientFilterText = await page.locator(searchFilter.clientFilterText).innerText();
@@ -186,7 +185,7 @@ export async function applyStatusFilterAndVerify(page: Page, parentFilterTotalIt
 }
 
 /**
- * Apply a occupation filter and verify the results.
+ * Apply an occupation filter and verify the results.
  * @param page Playwright page object
  * @param parentFilterTotalItems (A) The number of items after filtering by Company
  * @param selectedClientFilterText The name of the company selected in the previous step

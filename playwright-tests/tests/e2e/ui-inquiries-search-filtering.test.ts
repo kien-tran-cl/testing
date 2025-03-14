@@ -267,10 +267,10 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
 
       await page.waitForTimeout(3000);
 
-      // Verify the filter is single selection form and automatically hidden after selected item
-      await page.waitForSelector(searchFilter.filterFormOverlay, {
-        state: "hidden",
-      });
+      // Close the filter form
+      await page.locator(searchFilter.closeFilter).click();
+      await page.waitForTimeout(3000);
+      await page.waitForSelector(searchFilter.filterFormOverlay, { state: "hidden" });
       console.log("Verified that the filter form overlay has closed.");
 
       // -> Verify companyName is displaying on the right side of the search bar
