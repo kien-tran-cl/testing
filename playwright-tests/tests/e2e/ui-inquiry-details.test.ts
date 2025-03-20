@@ -9,6 +9,7 @@ import {
 } from "../utils/selectors";
 import { appUrl } from "../utils/auth-utils";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E Test - Inquiry Details", () => {
     test.describe.configure({
         timeout: 60000,
@@ -16,7 +17,7 @@ test.describe("E2E Test - Inquiry Details", () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await loginBeforeTest(page);
+        await page.goto(appUrl());
     });
 
     test("Verify Inquiry Details", async ({ page, i18n }) => {
