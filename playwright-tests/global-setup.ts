@@ -3,7 +3,7 @@ import { loginBeforeTest } from "./tests/common";
 import { appUrl } from "./tests/utils/auth-utils";
 
 async function globalSetup() {
-    const browser: Browser = await chromium.launch({ headless: false});
+    const browser: Browser = await chromium.launch({ headless: true});
     const context = await browser.newContext({
         ...devices["Pixel 5"],
     });
