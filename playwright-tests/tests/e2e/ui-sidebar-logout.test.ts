@@ -19,7 +19,7 @@ const checkEnvVar = (varName: string, value: string | undefined) => {
 checkEnvVar("USER_EMAIL", process.env.USER_EMAIL);
 
 const { USER_EMAIL } = process.env;
-
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E Test - Sidebar & Logout", () => {
   test.describe.configure({
     timeout: 60000,
@@ -27,7 +27,7 @@ test.describe("E2E Test - Sidebar & Logout", () => {
   });
 
   test.beforeEach(async ({ page }) => {
-    await loginBeforeTest(page, USER_EMAIL);
+    await page.goto(appUrl());
   });
 
   test("Verify Sidebar and Logout", async ({ page, i18n }) => {
