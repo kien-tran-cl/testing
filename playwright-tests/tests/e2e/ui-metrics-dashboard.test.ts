@@ -12,6 +12,7 @@ import {
 import { loginBeforeTest, logoutAfterTest, getUserInfo } from "../common";
 import { appUrl } from "../utils/auth-utils";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E Test - Metrics Dashboard", () => {
     test.describe.configure({
         timeout: 60000,
@@ -19,7 +20,7 @@ test.describe("E2E Test - Metrics Dashboard", () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await loginBeforeTest(page);
+        await page.goto(appUrl());
     });
     test.afterEach(async ({ page }) => {
         await logoutAfterTest(page);

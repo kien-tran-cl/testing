@@ -13,6 +13,7 @@ import {
   validateItemDisplayOrder,
 } from "../utils/sorting-utils";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E - Inquiries Search & Filtering", () => {
   test.describe.configure({
     timeout: 90000,
@@ -20,7 +21,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
   });
 
   test.beforeEach(async ({ page }) => {
-    await loginBeforeTest(page);
+    await page.goto(appUrl());
   });
 
   test("Verify Inquiries Search & Filter", async ({ page, i18n }) => {

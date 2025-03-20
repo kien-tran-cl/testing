@@ -8,6 +8,7 @@ import { toggleAndSetDisplayOrder, validateItemDisplayOrder } from "../utils/sor
 import { applySingleCompanyFilterAndVerify, applyStatusFilterAndVerify } from "../utils/filter-utils";
 import { verifySearchFunction } from "../utils/search-utils";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E - Worker Complaints Search & Filtering", () => {
     test.describe.configure({
         timeout: 90000,
@@ -15,7 +16,7 @@ test.describe("E2E - Worker Complaints Search & Filtering", () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await loginBeforeTest(page);
+        await page.goto(appUrl());
         await page.locator(activitiesSelectors.workerComplaintsCard).click();
         await expect(page).toHaveURL(appUrl("/activities/tmp-worker-complaints/list"));
         await page.waitForLoadState("networkidle");

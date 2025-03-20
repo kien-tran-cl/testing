@@ -7,6 +7,7 @@ import { scrollAndValidateLoadMore, validateVisibleItems, verifyFirstItemCompone
 import { toggleAndSetDisplayOrder, validateItemDisplayOrder } from "../utils/sorting-utils";
 import { applyOccupationFilterAndVerify, applySingleCompanyFilterAndVerify, applyStatusFilterAndVerify } from "../utils/filter-utils";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E - Sent Profiles Search & Filtering", () => {
     test.describe.configure({
         timeout: 90000,
@@ -14,7 +15,7 @@ test.describe("E2E - Sent Profiles Search & Filtering", () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await loginBeforeTest(page);
+        await page.goto(appUrl());
         await page.locator(activitiesSelectors.sentProfileCard).click();
         await expect(page).toHaveURL(appUrl("/activities/sent-profiles/list"));
         await page.waitForLoadState("networkidle");

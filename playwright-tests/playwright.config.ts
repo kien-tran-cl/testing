@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import os from "os";
 
 /**
  * Read environment variables from file.
@@ -12,6 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  globalSetup: "./global-setup",
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true, 
@@ -19,8 +21,10 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : 1,
+  /* Limit the number of workers on CI */
+  workers: process.env.CI ? Math.min(4, os.cpus().length) : undefined, 
+  // Limits workers to 4 or the number of available CPUs, whichever is smaller.
+  // This helps balance speed and resource usage to avoid overloading CI.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */

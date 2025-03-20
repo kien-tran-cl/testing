@@ -7,6 +7,7 @@ import { scrollAndValidateLoadMore, validateVisibleItems, verifyFirstItemCompone
 import { toggleAndSetDisplayOrder, validateItemDisplayOrder } from "../utils/sorting-utils";
 import { applySingleCompanyFilterAndVerify, applyStatusFilterAndVerify } from "../utils/filter-utils";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E - Orders Search & Filtering", () => {
     test.describe.configure({
         timeout: 90000,
@@ -14,7 +15,7 @@ test.describe("E2E - Orders Search & Filtering", () => {
     });
 
     test.beforeEach(async ({ page }) => {
-        await loginBeforeTest(page);
+        await page.goto(appUrl());
         await page.locator(activitiesSelectors.ordersCard).click();
         await expect(page).toHaveURL(appUrl("/activities/orders/list"));
         await page.waitForLoadState("networkidle");
