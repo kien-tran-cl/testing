@@ -14,6 +14,7 @@ import {
 } from "../utils/sorting-utils";
 import exp from "constants";
 
+test.use ({ storageState: "./LoginAuth.json" });
 test.describe("E2E - Sales Activity Details", () => {
   const extentAPIEndpoint = 'activity/inquiry/list/'
   test.describe.configure({
@@ -21,8 +22,8 @@ test.describe("E2E - Sales Activity Details", () => {
     mode: "serial",
   });
   test.beforeEach(async ({ page }) => {
-    console.log('Precondition 1. Login:');
-    await loginBeforeTest(page);
+    console.log('Precondition 1. Access base url');
+    await page.goto(appUrl());
     console.log('Precondition 2. Go to sales-activity list:');
     await page.goto(appUrl("/activities/sales-activities/list"));
     await page.waitForLoadState("networkidle");
