@@ -22,6 +22,7 @@ checkEnvVar("INVALID_TENANT", process.env.INVALID_TENANT);
 
 const { USER_EMAIL, INVALID_EMAIL, INVALID_TENANT } = process.env;
 
+test.use ({ storageState: undefined });
 test.describe("E2E Tests - Login with email OTP code", () => {
     test.describe.configure({
         timeout: 60000,
