@@ -123,7 +123,7 @@ test.describe("E2E - Sales Activities Search & Filtering", () => {
                 `${searchFilter.filterOptions} div.grid p`,
             ); // Locator for the number part - which is C
             const textElements = await page.locator(
-                `${searchFilter.filterOptions} p.break-all`,
+                `${searchFilter.filterOptions} > p`,
             ); // Locator for the text part - which is D
 
             const numbers: number[] = [];

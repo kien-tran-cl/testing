@@ -6,7 +6,6 @@ import {
   inquiriesPageSelectors,
   searchFilter,
 } from "../utils/selectors";
-import { loginBeforeTest } from "../common";
 import { appUrl } from "../utils/auth-utils";
 import {
   toggleAndSetDisplayOrder,
@@ -517,7 +516,7 @@ test.describe("E2E - Inquiries Search & Filtering", () => {
         `${searchFilter.filterOptions} div.grid p`,
       ); // Locator for item count
       const textElements = await page.locator(
-        `${searchFilter.filterOptions} p.break-all`,
+        `${searchFilter.filterOptions} > p`,
       ); // Locator for company name
 
       const itemCount = await numberElements.count();

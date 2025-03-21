@@ -109,7 +109,7 @@ export const salesActivitiesDetailsSelectors = {
   headerTitle: 'gedat-header',
 
   itemTitle: 'gedat-h2 h2',//ele ele
-  itemCompanyName: '.font-medium.text-common-info.ng-star-inserted',//class chain
+  itemCompanyName: 'p.text-common-info span.w-max.cursor-pointer',
   itemStatus: 'gedat-activity-status span',//ele ele
   itemCreated: 'gedat-detail-item >> nth=0',//1st ele
   itemFollowUp: 'gedat-detail-item >> nth=1',//2nd ele
@@ -133,8 +133,8 @@ itemCount: 'gedat-dialog-sort p',
 profileItem: 'gedat-activity-item',
 profileSkeletonItem: 'gedat-activity-status gedat-skeleton',
 status: '.p-tag',
-workerName: 'gedat-sent-profile-trigger h4.text-common-info-bold',
-occupation: 'gedat-sent-profile-trigger p.text-common-label.subtitle',
+workerName: 'h4',
+occupation: 'p.subtitle',
 companyName: 'p.font-medium.text-common-info',
 date: 'p.text-common-label.min-w-10',
 downloadButton: 'p-button[size="small"][icon="icon-solid-file-attachment-01"] button',
@@ -199,7 +199,7 @@ closeFilter: 'gedat-close-button-dialog-form',
 emptyFilterMessage: 'gedat-empty-filtering >> div >> div >> nth=1',
 emptyFilterResetButton: 'gedat-empty-filtering button',
 statusFilterCount: "gedat-selectable-option div.grid p",
-statusFilterLabel: "gedat-selectable-option p.break-all",
+statusFilterLabel: 'gedat-selectable-option > p',
 };
 
 export const dialogSort = {
