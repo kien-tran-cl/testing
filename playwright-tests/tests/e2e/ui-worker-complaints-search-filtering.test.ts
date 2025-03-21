@@ -1,6 +1,5 @@
 import { expect } from "playwright/test";
 import { test } from "../base";
-import { loginBeforeTest } from "../common";
 import { activitiesSelectors, dialogSort, searchFilter, workerComplaintsPageSelectors } from "../utils/selectors";
 import { appUrl } from "../utils/auth-utils";
 import { scrollAndValidateLoadMore, validateVisibleItems, verifyFirstItemComponents } from "../utils/pageListing-utils";

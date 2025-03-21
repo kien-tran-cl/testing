@@ -1,6 +1,5 @@
 import { expect } from "playwright/test";
 import { test } from "../base";
-import { loginBeforeTest } from "../common";
 import { activitiesSelectors, dialogSort, inquiriesPageSelectors, ordersPageSelectors, searchFilter } from "../utils/selectors";
 import { appUrl } from "../utils/auth-utils";
 import { scrollAndValidateLoadMore, validateVisibleItems, verifyFirstItemComponents } from "../utils/pageListing-utils";
@@ -125,7 +124,7 @@ test.describe("E2E - Orders Search & Filtering", () => {
                 `${searchFilter.filterOptions} div.grid p`,
             ); // Locator for item count
             const textElements = await page.locator(
-                `${searchFilter.filterOptions} p.break-all`,
+                `${searchFilter.filterOptions} > p`,
             ); // Locator for company name
 
             const itemCount = await numberElements.count();
