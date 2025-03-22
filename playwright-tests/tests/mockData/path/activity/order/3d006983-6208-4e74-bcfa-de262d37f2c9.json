@@ -1,0 +1,17 @@
+{
+  "data": {
+      "id": "3d006983-6208-4e74-bcfa-de262d37f2c9",
+      "branchOfficeId": "6e5d566a-7838-4692-9626-c6a55e8bb40e",
+      "customer": null,
+      "status": null,
+      "activityCreationDate": null,
+      "kind": null,
+      "contactPerson": null,
+      "reporter": null,
+      "forwardedTo": null,
+      "title": null,
+      "followUpDate": null,
+      "description": null
+  },
+  "message": null
+}

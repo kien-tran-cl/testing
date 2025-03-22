@@ -1,0 +1,45 @@
+{
+  "count": 2,
+  "facets": null,
+  "data": [
+    {
+      "id": "d3431867-d71f-4fb6-b246-a9f85c8f5678",
+      "companyNameShort": "LAHNBLICK",
+      "companyName": "Privatklinik Lahnblick ",
+      "occupationName": "Helfer/in - Lager, Versand",
+      "employee": {
+        "profilePictureUrl": "https://llld0wlcoapqa.blob.core.windows.net/contact/profile-pictures/22c1ad3d-5ea0-4b41-9030-29b4cf82a4b2?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-03-05T09%3A15%3A04Z&ske=2025-03-12T09%3A15%3A04Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-03-05T17%3A58%3A40Z&se=2025-03-06T17%3A58%3A40Z&sr=b&sp=r&sig=eWKFn8Vq7VeRu35YDlAyUQTzJH5iy1DYAr13Seni%2Bus%3D",
+        "id": "22c1ad3d-5ea0-4b41-9030-29b4cf82a4b2",
+        "email": null,
+        "givenName": "Tim",
+        "surname": "Fiedler",
+        "title": "Dr."
+      },
+      "employmentStartDate": "2021-01-01T00:00:00+00:00",
+      "employmentEndDate": null,
+      "equalPayDate": "2021-09-28T00:00:00+00:00",
+      "maximumLoanPeriod": "2022-06-24T00:00:00+00:00",
+      "orderStatus": 1
+    },
+    {
+      "id": "3d006983-6208-4e74-bcfa-de262d37f2c9",
+      "companyNameShort": "LAHNBLICK",
+      "companyName": "Privatklinik Lahnblick ",
+      "occupationName": "Helfer/in - Lager, Versand",
+      "employee": {
+        "profilePictureUrl": "https://llld0wlcoapqa.blob.core.windows.net/contact/profile-pictures/22c1ad3d-5ea0-4b41-9030-29b4cf82a4b2?skoid=97bdc9b7-0944-4538-882e-88cb252e2f74&sktid=e5c6c241-a33c-4dd2-866a-0fc0aa466e06&skt=2025-03-05T09%3A15%3A04Z&ske=2025-03-12T09%3A15%3A04Z&sks=b&skv=2025-01-05&sv=2025-01-05&spr=https&st=2025-03-05T17%3A58%3A40Z&se=2025-03-06T17%3A58%3A40Z&sr=b&sp=r&sig=eWKFn8Vq7VeRu35YDlAyUQTzJH5iy1DYAr13Seni%2Bus%3D",
+        "id": "22c1ad3d-5ea0-4b41-9030-29b4cf82a4b2",
+        "email": null,
+        "givenName": "Tim",
+        "surname": "Fiedler",
+        "title": "Dr."
+      },
+      "employmentStartDate": "2021-01-01T00:00:00+00:00",
+      "employmentEndDate": null,
+      "equalPayDate": "2021-09-28T00:00:00+00:00",
+      "maximumLoanPeriod": "2022-06-24T00:00:00+00:00",
+      "orderStatus": 2
+    }
+  ],
+  "message": null
+}
