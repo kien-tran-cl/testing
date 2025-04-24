@@ -22,7 +22,8 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Limit the number of workers on CI */
-  workers: process.env.CI ? Math.min(4, os.cpus().length) : undefined, 
+  // workers: process.env.CI ? Math.min(4, os.cpus().length) : undefined, 
+  workers: os.cpus().length,
   // Limits workers to 4 or the number of available CPUs, whichever is smaller.
   // This helps balance speed and resource usage to avoid overloading CI.
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
