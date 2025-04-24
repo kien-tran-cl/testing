@@ -58,7 +58,7 @@ jobs:
           INVALID_TENANT: ${{ secrets.INVALID_TENANT }}
           OTP_API_KEY: ${{ secrets.OTP_API_KEY }}
           OTP_API_URL: ${{ secrets.OTP_API_URL }}
-        run: npm run test
+        run: npm test
 
       - name: Upload Playwright traces
         uses: actions/upload-artifact@v4
